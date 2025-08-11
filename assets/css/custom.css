@@ -1,0 +1,243 @@
+/* body{
+    color: #081b43;
+} */
+.feature-icon {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+}
+.navbar-brand img {
+    height: 50px; /* Adjust as needed */
+    width: auto; /* Adjust width automatically to keep the aspect ratio */
+    object-fit: contain; /* This will make sure all parts of your image are visible, including transparent parts */
+    object-position: left; /* Align the image to the left, it might help to cut off some of the blue if it's not needed */
+  }
+/* Basic styles for navbar links */
+.nav-link {
+    position: relative;
+    display: inline-block;
+    color: #081b43;
+    text-decoration: none;
+    /* Remove default underline */
+}
+
+.nav-top {
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+}
+
+/* Create the underline effect on hover */
+.nav-link:hover::after,
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(1);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #3cb6a3;
+    transform-origin: bottom left;
+    transition: transform 0.25s ease-out;
+}
+
+/* Initially, the underline should not be visible */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    transform-origin: bottom left;
+    transition: transform 0.25s ease-out;
+}
+
+/* Team Card Styling */
+.card-team {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Smooth transition for transform and shadow */
+}
+
+.card-team:hover {
+    transform: translateY(-10px);
+    /* Slightly raise the card */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    /* Add shadow for depth */
+}
+
+.footer .footer-heading {
+    font-size: 1.15rem;
+    /* Slightly larger font size for headings */
+    font-weight: 500;
+    /* Medium font weight for slight emphasis */
+}
+
+.image-hero {
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0)70%, #f8f9fa), url('/assets/images/hero-background.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 720px;
+}
+
+/* Adjust the height for devices with a width of 768px or less (Tablets and mobile phones) */
+@media (max-width: 768px) {
+    .image-hero {
+        height: 400px;
+        /* Smaller height for mobile devices */
+    }
+}
+
+/* Further adjust for very small devices if necessary */
+@media (max-width: 480px) {
+    .image-hero {
+        height: 300px;
+        /* Even smaller height for very small devices */
+    }
+}
+
+
+
+.hero-subheadline {
+    max-width: 400px;
+    /* Ensures text is not too wide on larger screens */
+}
+
+.bg-body-team {
+    background-color: #f8f9fa;
+    background-image: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.team-member.card {
+    border: none;
+    overflow: hidden;
+
+    border-radius: 15px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.team-member.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.team-member.card-body {
+    background-color: white;
+    transition: background-color 0.3s ease;
+}
+
+.team-member.card-title,
+.team-member.role {
+    font-weight: 600;
+}
+
+.team-member.description {
+    color: #666;
+}
+
+@media (min-width: 992px) {
+    .team-member {
+        max-width: 350px;
+        margin: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .team-member.card {
+        margin-bottom: 30px;
+    }
+}
+
+.page-title {
+    letter-spacing: -.035em;
+    color:#081b43;
+    line-height: 0.9;
+    text-transform: uppercase;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center
+}
+
+.page-title-long {
+    letter-spacing: -.035em;
+    color:#081b43;
+    line-height: 0.9;
+    text-transform: uppercase;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center
+}
+
+.hero-subheadline {
+    letter-spacing: -.04em;
+    text-transform: uppercase;
+    line-height: 1.245;
+    font-weight: 400;
+    margin-top: 2em;
+}
+
+.hero-section {
+    padding-top: 120px;
+    padding-bottom: 50px;
+}
+
+.hero-image {
+    max-width: 90%;
+    /* Adjust based on your layout */
+    margin: auto;
+    /* animation: float 5s ease-in-out infinite; */
+    /* Adds a subtle floating animation */
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+    /* Softens the edges of your image */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    /* Adds depth to your image */
+}
+
+@media (min-width: 1680px) {
+    .page-title {
+        font-size: 9.375vw
+    }
+    .page-title-long {
+        font-size: 6vw
+    }
+
+}
+
+@media (max-width: 1024px) {
+    .page-title {
+        font-size: 105px
+    }
+    .page-title-long {
+        font-size: 90px
+    }
+
+
+}
+
+@media (max-width: 640px) {
+    .page-title {
+        font-size: 12.5vw
+    }
+    .page-title-long {
+        font-size: 10.5vw
+    }
+
+}
+
+.gradient-text-darkblue {
+    color: #111c41; /* Fallback color */
+    background: linear-gradient(to right, #111c41, #96c3dc, #6db3a3);
+    -webkit-background-clip: text; /* For Safari */
+    background-clip: text; /* Standard syntax */
+    -webkit-text-fill-color: transparent; /* For Safari */
+    display: inline-block;
+}
