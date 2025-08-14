@@ -309,12 +309,36 @@
 }
 
 /* New styles for Projects and Highlights */
-.project-row{display:flex; gap:1.5rem; align-items:flex-start; padding:2rem; border-radius:18px; background:#fff; box-shadow:0 10px 30px rgba(0,0,0,.08); transition:transform .25s ease, box-shadow .25s ease}
-.project-row:hover{transform:translateY(-6px); box-shadow:0 18px 50px rgba(0,0,0,.12)}
-.icon-bubble{flex:0 0 64px; height:64px; width:64px; border-radius:14px; display:flex; align-items:center; justify-content:center; font-size:1.75rem; background: linear-gradient(135deg, var(--teal), var(--sky)); color:#fff}
+.project-row{
+  display:flex;
+  gap:1.5rem;
+  align-items:flex-start;
+  padding:3rem 0;
+  border-top:1px solid var(--hr);
+  transition:transform .25s ease, box-shadow .25s ease;
+}
+.project-row:hover h3 { text-decoration: underline; }
+.icon-bubble{flex:0 0 64px; height:64px; width:64px; border-radius:14px; display:flex; align-items:center; justify-content:center; font-size:1.75rem; background: transparent; border:2px solid var(--teal); color:var(--teal)}
 .project-meta{display:flex; flex-wrap:wrap; gap:.5rem; margin-top:.5rem}
 .project-meta .badge{background:rgba(11,18,33,.06); color:var(--navy);}
 .project-cta a{ text-decoration:none; font-weight:600 }
+
+/* Big-type editorial titles for projects */
+.project-title{
+  font-family:'Manrope', sans-serif;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:-.02em;
+  line-height:.95;
+  font-size:clamp(28px,4.8vw,56px);
+  margin:0 0 .35rem;
+}
+/* Lighter, more editorial skim bar */
+.skim-bar{opacity:.75; font-size:.9rem; letter-spacing:.01em}
+/* Keep hover minimal: underline only the title */
+.project-row:hover .project-title{ text-decoration: underline; }
+/* Slightly slimmer metric badge for eyebrow feel */
+.metric-badge{ padding:.25rem .6rem; }
 
 .impact-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:1.25rem}
 @media(max-width:992px){.impact-grid{grid-template-columns:repeat(2,1fr)}}
@@ -399,6 +423,44 @@
   }
   /* Wider container on large screens */
   @media (min-width:1400px){ .container{ max-width:1200px; } }
+  @media (max-width: 768px) {
+  .contact-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact-buttons a {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 16px;
+    border-radius: 8px;
+    font-size: 1.05em;
+    text-align: center;
+  }
+  .contact-buttons i {
+    font-size: 1.4em;
+    margin-right: 8px;
+  }
+}
+@media (min-width: 769px) {
+  .contact-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+  }
+}
+.contact-buttons a {
+  transition: all 0.2s ease-in-out;
+}
+.contact-buttons a:hover {
+  transform: translateY(-2px);
+  background-color: #333;
+  color: #fff;
+}
+.contact-buttons a.cv-button {
+  background-color: #015056;
+  color: white;
+}
   </style>
 </head>
 
@@ -428,9 +490,8 @@
     <div class="container" data-aos="fade-up">
       <h1 class="mega-title" data-aos="fade-down" data-aos-delay="200">Diego Alcocer</h1>
       <p class="lead" data-aos="fade-up" data-aos-delay="400">Project manager & software engineer. I turn complex workflows into simple, scalable products.</p>
-      <div class="mt-4" data-aos="fade-up" data-aos-delay="600">
+      <div class="mt-4 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="600">
         <a href="#projects" class="btn btn-primary btn-lg">Explore My Work</a>
-        <a href="#contact" class="btn btn-outline-light btn-lg">Let's Connect</a>
       </div>
     </div>
     <div class="scroll-indicator">
@@ -453,13 +514,13 @@
     <div class="container">
       <div class="eyebrow" data-aos="fade-right">Work</div>
       <h2 class="mega-title" data-aos="fade-right">Projects</h2>
-      <hr class="title-rule">
+      
       <div class="d-flex flex-column gap-4">
       <div class="project-row" data-aos="fade-up">
         <div class="icon-bubble"><i class="bi bi-shield-lock"></i></div>
         <div>
           <span class="metric-badge">95% faster archiving</span>
-          <h3 class="h2 mb-2">Gaia – OAS</h3>
+          <h3 class="project-title mb-2">Gaia – OAS</h3>
           <p class="mb-2">Mission‑critical human rights system. Workflow automation, SharePoint & Azure integration, and UX‑first redesign.</p>
           <div class="skim-bar">
             <div class="dot">Problem: slow manual archiving</div>
@@ -468,7 +529,7 @@
             <div class="dot">Stack: Azure, SharePoint, ASP.NET</div>
           </div>
           <div class="project-meta">
-            <span class="badge rounded-pill">Senior Sofware Engineer</span>
+            <span class="badge rounded-pill">Senior Software Engineer</span>
             <span class="badge rounded-pill">Project Manager</span>
           </div>
           <!-- <div class="project-cta mt-3"><a href="#" class="link-dark">View case →</a></div> -->
@@ -478,7 +539,7 @@
         <div class="icon-bubble"><i class="bi bi-shield-lock"></i></div>
         <div>
           <span class="metric-badge">Secure, auditable votes</span>
-          <h3 class="h2 mb-2">eVote – OAS</h3>
+          <h3 class="project-title mb-2">eVote – OAS</h3>
           <p class="mb-2">Internal voting platform for CIDH. Supports voting sessions, results reporting, and multilingual translation with role-based access control.</p>
           <div class="skim-bar">
             <div class="dot">Problem: manual voting process</div>
@@ -487,7 +548,7 @@
             <div class="dot">Stack: ASP.NET, Azure Cognitive Services</div>
           </div>
           <div class="project-meta">
-            <span class="badge rounded-pill">Senior Sofware Engineer</span>
+            <span class="badge rounded-pill">Senior Software Engineer</span>
             <span class="badge rounded-pill">Project Manager</span>
           </div>
           <!-- <div class="project-cta mt-3"><a href="#" class="link-dark">View case →</a></div> -->
@@ -498,7 +559,7 @@
         <div class="icon-bubble"><i class="bi bi-heart-pulse"></i></div>
         <div>
           <span class="metric-badge">100+ People connected</span>
-          <h3 class="h2 mb-2">Nanay</h3>
+          <h3 class="project-title mb-2">Nanay</h3>
           <p class="mb-2">Social‑impact matching platform. Product vision, team leadership, and user research to scale volunteer impact.</p>
           <div class="skim-bar">
             <div class="dot">Problem: fragmented help</div>
@@ -518,7 +579,7 @@
         <div class="icon-bubble"><i class="bi bi-robot"></i></div>
         <div>
           <span class="metric-badge">Hours → minutes responses</span>
-          <h3 class="h2 mb-2">Agentic Bot</h3>
+          <h3 class="project-title mb-2">Agentic Bot</h3>
           <p class="mb-2">AI‑powered mediation assistant using FastAPI, LangChain, and LlamaIndex. Guides users through legal flows.</p>
           <div class="skim-bar">
             <div class="dot">Problem: slow intake</div>
@@ -538,7 +599,7 @@
   <div class="icon-bubble"><i class="bi bi-currency-exchange"></i></div>
   <div>
     <span class="metric-badge">Recognized for innovation & leadership</span>
-    <h3 class="h2 mb-2">FRIDA – IDB</h3>
+    <h3 class="project-title mb-2">FRIDA – IDB</h3>
     <p class="mb-2">Treasury management web application for the Inter-American Development Bank, designed to streamline financial operations and improve decision-making through better data visibility and control.</p>
     <div class="skim-bar">
       <div class="dot">Problem: fragmented treasury workflows</div>
@@ -691,10 +752,9 @@
       <h2 class="mega-title" data-aos="fade-up">Let’s Connect</h2>
       <hr class="title-rule">
       <p data-aos="fade-up">I'm open to impactful collaborations, tech leadership roles, and sharing ideas about the future of software.</p>
-      <div class="d-flex justify-content-center gap-3 mt-3" data-aos="fade-up" data-aos-delay="100">
+      <div class="d-flex justify-content-center gap-3 mt-3 contact-buttons" data-aos="fade-up" data-aos-delay="100">
         <a href="https://linkedin.com/in/diego-alcocer-palacios" class="btn btn-outline-dark"><i class="bi bi-linkedin"></i> LinkedIn</a>
         <a href="https://github.com/diegoalcocer" class="btn btn-outline-dark"><i class="bi bi-github"></i> GitHub</a>
-        <a href="mailto:alcocerd86@gmail.com" class="btn btn-outline-dark"><i class="bi bi-envelope"></i> Email</a>
         <a href="CV_Diego_Alcocer.pdf" class="btn btn-info text-white"><i class="bi bi-download"></i> Download CV</a>
       </div>
     </div>
