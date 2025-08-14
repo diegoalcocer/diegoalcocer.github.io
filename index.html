@@ -26,15 +26,14 @@
       min-height: 100vh;
       display: flex;
       align-items: center;
-      padding-top: 6rem; /* space for nav on small screens */
-      padding-bottom: 4rem;
+      padding-top: 8rem; /* space for nav on small screens */
+      padding-bottom: 6rem;
     }
     .nav-scrolled{
       background-color: rgba(11,18,33,0.9)!important;
       box-shadow: 0 4px 30px rgba(0,0,0,.2);
     }
-    body { font-family: 'Segoe UI', sans-serif; }
-    .hero { min-height: 100vh; background: linear-gradient(270deg, #111c41, #3cb6a3, #96c3dc, #111c41); background-size: 800% 800%; animation: gradientShift 20s ease infinite; color: white; display: flex; align-items: center; justify-content: center; text-align: center; position: relative; padding: 0 1rem;}
+    .hero { min-height: 100vh; background: #ffffff; color: inherit; display: flex; align-items: center; justify-content: center; text-align: center; position: relative; padding: 0 1rem;}
     @keyframes gradientShift {
       0% {background-position: 0% 50%;}
       50% {background-position: 100% 50%;}
@@ -49,7 +48,7 @@
       left: 50%;
       transform: translateX(-50%);
       font-size: 2rem;
-      color: rgba(255, 255, 255, 0.7);
+      color: rgba(11, 18, 33, 0.5);
       animation: bounce 2s infinite;
       cursor: pointer;
     }
@@ -309,16 +308,9 @@
 }
 
 /* New styles for Projects and Highlights */
-.project-row{
-  display:flex;
-  gap:1.5rem;
-  align-items:flex-start;
-  padding:3rem 0;
-  border-top:1px solid var(--hr);
-  transition:transform .25s ease, box-shadow .25s ease;
-}
-.project-row:hover h3 { text-decoration: underline; }
-.icon-bubble{flex:0 0 64px; height:64px; width:64px; border-radius:14px; display:flex; align-items:center; justify-content:center; font-size:1.75rem; background: transparent; border:2px solid var(--teal); color:var(--teal)}
+.project-row{display:flex;gap:1.5rem;align-items:flex-start;padding:4rem 0;border-top:1px solid var(--hr);}
+.project-row:hover .project-title{ text-decoration: underline; }
+.icon-bubble{flex:0 0 64px;height:64px;width:64px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.75rem;background:transparent;border:2px solid var(--teal);color:var(--teal)}
 .project-meta{display:flex; flex-wrap:wrap; gap:.5rem; margin-top:.5rem}
 .project-meta .badge{background:rgba(11,18,33,.06); color:var(--navy);}
 .project-cta a{ text-decoration:none; font-weight:600 }
@@ -343,7 +335,7 @@
 .impact-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:1.25rem}
 @media(max-width:992px){.impact-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:576px){.impact-grid{grid-template-columns:1fr}}
-.impact-tile{background:#0b1221; color:#fff; border-radius:18px; padding:2rem; text-align:center; box-shadow:0 12px 40px rgba(0,0,0,.2)}
+  .impact-tile{background:transparent;color:var(--navy);border:1px solid var(--hr);border-radius:0;padding:2rem;text-align:center;box-shadow:none}
     .impact-tile .kpi{font-size:3rem; font-weight:800; letter-spacing:-.02em}
     .impact-tile .label{opacity:.85; margin-top:.25rem}
     .impact-tile .note{opacity:.7; font-size:.95rem; margin-top:.5rem}
@@ -351,7 +343,7 @@
     .skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2.5rem}
     @media(max-width:992px){.skills-grid{grid-template-columns:1fr 1fr}}
     @media(max-width:576px){.skills-grid{grid-template-columns:1fr}}
-    .cap-card{padding:2.25rem;border-radius:20px;background:#fff;box-shadow:0 12px 40px rgba(0,0,0,.06)}
+    .cap-card{padding:2.25rem;border:1px solid var(--hr);border-radius:0;background:transparent;box-shadow:none}
     .cap-title{font-size:2rem;font-weight:700;letter-spacing:-.02em;margin:0 0 .5rem}
     .cap-note{opacity:.8;margin:0}
     .tool-pills{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.25rem}
@@ -366,24 +358,22 @@
 .process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem}
 @media(max-width:992px){.process-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:576px){.process-grid{grid-template-columns:1fr}}
-.process-card{background:#fff;border-radius:18px;padding:2rem;box-shadow:0 10px 30px rgba(0,0,0,.06)}
-.process-step{display:inline-flex;align-items:center;justify-content:center;height:40px;min-width:40px;border-radius:999px;background:linear-gradient(135deg,var(--teal),var(--sky));color:#fff;font-weight:700;margin-bottom:1rem}
+.process-card{background:transparent;border:1px solid var(--hr);border-radius:0;padding:2rem;box-shadow:none}
+.process-step{display:inline-flex;align-items:center;justify-content:center;height:40px;min-width:40px;border-radius:999px;background:transparent;border:2px solid var(--teal);color:var(--teal);font-weight:700;margin-bottom:1rem}
 .process-title{font-size:1.5rem;font-weight:700;letter-spacing:-.01em}
 .process-note{opacity:.85;}
 
 /* --- Projects additions --- */
-.metric-badge{display:inline-block;font-weight:700;border-radius:999px;padding:.35rem .75rem;background:rgba(60,182,163,.12);color:var(--teal);margin-bottom:.5rem}
-.skim-bar{display:flex;gap:1rem;flex-wrap:wrap;opacity:.8;font-size:.95rem;margin-top:.75rem}
 .skim-bar .dot::before{content:"• ";opacity:.5}
 
 /* --- CTA band --- */
-.cta-band{background:linear-gradient(90deg, #111c41, #0b1221);color:#fff;border-radius:22px;padding:3rem;box-shadow:0 18px 50px rgba(0,0,0,.2)}
+.cta-band{background:transparent;color:var(--navy);border:1px solid var(--hr);border-radius:0;padding:3rem;box-shadow:none}
 
 /* --- Testimonials --- */
 .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
 @media(max-width:992px){.testi-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:576px){.testi-grid{grid-template-columns:1fr}}
-.testi{background:#fff;border-radius:18px;padding:2rem;box-shadow:0 10px 30px rgba(0,0,0,.06)}
+.testi{background:transparent;border:1px solid var(--hr);border-radius:0;padding:2rem;box-shadow:none}
 .testi .who{font-weight:700}
 .testi .role{opacity:.75}
 
@@ -395,7 +385,7 @@
 .insights-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
 @media(max-width:992px){.insights-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:576px){.insights-grid{grid-template-columns:1fr}}
-.insight-card{background:#fff;border-radius:18px;padding:1.5rem;box-shadow:0 10px 30px rgba(0,0,0,.06)}
+.insight-card{background:transparent;border:1px solid var(--hr);border-radius:0;padding:1.5rem;box-shadow:none}
 .insight-card h3{font-size:1.25rem}
 
 /* --- Skills tweak: emphasize AI card subtly --- */
@@ -417,10 +407,7 @@
     font-weight: 400;
     text-shadow: none;
   }
-  .hero .lead {
-    color: #fff;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
-  }
+  .hero .lead { color: #333; text-shadow: none; }
   /* Wider container on large screens */
   @media (min-width:1400px){ .container{ max-width:1200px; } }
   @media (max-width: 768px) {
@@ -500,7 +487,7 @@
   </section>
 
   <!-- About Section -->
-  <section class="py-5 bg-white section-full" id="about">
+  <section class="py-5 bg-light section-full" id="about">
     <div class="container">
       <div class="eyebrow" data-aos="fade-right">About</div>
       <h2 class="mega-title" data-aos="fade-right">About Me</h2>
@@ -510,7 +497,7 @@
   </section>
 
   <!-- Projects Section -->
-  <section class="py-5 bg-light section-full" id="projects">
+  <section class="py-5 bg-white section-full" id="projects">
     <div class="container">
       <div class="eyebrow" data-aos="fade-right">Work</div>
       <h2 class="mega-title" data-aos="fade-right">Projects</h2>
@@ -532,8 +519,7 @@
             <span class="badge rounded-pill">Senior Software Engineer</span>
             <span class="badge rounded-pill">Project Manager</span>
           </div>
-          <!-- <div class="project-cta mt-3"><a href="#" class="link-dark">View case →</a></div> -->
-        </div>
+          </div>
       </div>
       <div class="project-row" data-aos="fade-up">
         <div class="icon-bubble"><i class="bi bi-shield-lock"></i></div>
@@ -551,14 +537,13 @@
             <span class="badge rounded-pill">Senior Software Engineer</span>
             <span class="badge rounded-pill">Project Manager</span>
           </div>
-          <!-- <div class="project-cta mt-3"><a href="#" class="link-dark">View case →</a></div> -->
         </div>
       </div>
 
       <div class="project-row" data-aos="fade-up" data-aos-delay="100">
         <div class="icon-bubble"><i class="bi bi-heart-pulse"></i></div>
         <div>
-          <span class="metric-badge">100+ People connected</span>
+          <span class="metric-badge">Helped hundreds in need</span>
           <h3 class="project-title mb-2">Nanay</h3>
           <p class="mb-2">Social‑impact matching platform. Product vision, team leadership, and user research to scale volunteer impact.</p>
           <div class="skim-bar">
@@ -571,7 +556,6 @@
             <span class="badge rounded-pill">Founder</span>
             <span class="badge rounded-pill">CTO</span>
           </div>
-          <div class="project-cta mt-3"><a href="#" class="link-dark">View case →</a></div>
         </div>
       </div>
 
@@ -591,7 +575,6 @@
             <span class="badge rounded-pill">Founder</span>
             <span class="badge rounded-pill">CEO</span>
           </div>
-          <div class="project-cta mt-3"><a href="#" class="link-dark">View case →</a></div>
         </div>
       </div>
 
@@ -611,7 +594,6 @@
       <span class="badge rounded-pill">Product Owner</span>
       <span class="badge rounded-pill">Senior Software Engineer</span>
     </div>
-    <div class="project-cta mt-3"><a href="#" class="link-dark">View case →</a></div>
   </div>
 </div>
     </div>
@@ -620,7 +602,7 @@
 
   <hr class="hr-hairline">
 
-  <section class="py-5 bg-white section-full" id="process">
+  <section class="py-5 bg-light section-full" id="process">
     <div class="container">
       <div class="eyebrow" data-aos="fade-right">Process</div>
       <h2 class="mega-title" data-aos="fade-right">How I Work</h2>
@@ -652,18 +634,6 @@
 
   <hr class="hr-hairline">
 
-  <section class="py-5 section-full section-muted" id="cta">
-    <div class="container">
-      <div class="cta-band" data-aos="fade-up">
-        <div class="d-flex flex-column flex-lg-row align-items-start align-items-lg-center justify-content-between gap-3">
-          <div class="h2 mb-0">Have a challenge? Let’s make it simple.</div>
-          <a href="#contact" class="btn btn-info btn-lg text-white">Start a conversation</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <hr class="hr-hairline">
 
 
   <!-- Skills Section -->
