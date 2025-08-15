@@ -80,7 +80,7 @@
     }
 
     .section-full {
-      min-height: 100vh;
+      min-height: 100svh;
       display: flex;
       align-items: center;
       padding-top: 8rem;
@@ -94,7 +94,7 @@
     }
 
     .hero {
-      min-height: 100vh;
+      min-height: 100svh;
       background: #ffffff;
       color: inherit;
       display: flex;
@@ -104,6 +104,11 @@
       padding: 0 1rem;
       padding-top: 10rem;
       padding-bottom: 8rem;
+    }
+
+    @supports (height: 100dvh) {
+      .section-full { min-height: 100dvh; }
+      .hero         { min-height: 100dvh; }
     }
 
     @keyframes gradientShift {
@@ -283,6 +288,7 @@
         margin-left: auto;
         margin-right: auto;
       }
+      .hero { padding-top: 7rem; padding-bottom: 4rem; }
     }
 
     .scroll-indicator {
@@ -917,6 +923,7 @@
     body {
       font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
       color: #495057;
+      overflow-x: hidden;           /* NEW: prevents tiny horizontal scroll without touching container widths */
     }
 
     h1,
@@ -1097,6 +1104,8 @@
         min-width: auto;
       }
     }
+    .mega-title { overflow-wrap: anywhere; word-break: break-word; }
+    img, svg { max-width: 100%; height: auto; display: block; }
   </style>
   <script type="application/ld+json">
   {
