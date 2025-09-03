@@ -14,7 +14,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Diego Alcocer – Project Manager & Senior Software Engineer | AI, Data, .NET</title>
+  <title>Diego Alcocer – Engineering Leader | AI, Data, .NET</title>
   <meta name="description" content="Diego Alcocer – project manager and senior software engineer. I design clear workflows, build reliable systems, and align teams from problem to release. Currently at IDB Invest; previous roles at ThoughtWorks, Halliburton, OAS/CIDH, and IDB. Master’s in Data Science (UC Chile).">
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://diegoalcocer.github.io/">
@@ -22,14 +22,14 @@
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Diego Alcocer">
-  <meta property="og:title" content="Diego Alcocer – Project Manager & Senior Software Engineer">
+  <meta property="og:title" content="Diego Alcocer – Engineering Leader">
   <meta property="og:description" content="I design clear workflows, build reliable systems, and align teams from problem to release. AI & data-driven, IDB Invest.">
   <meta property="og:url" content="https://diegoalcocer.github.io/">
   <meta property="og:image" content="/assets/og-card.png">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Diego Alcocer – Project Manager & Senior Software Engineer">
+  <meta name="twitter:title" content="Diego Alcocer – Engineering Leader">
   <meta name="twitter:description" content="AI & data-driven delivery. Currently at IDB Invest. Previous: ThoughtWorks, Halliburton, OAS/CIDH, IDB.">
   <meta name="twitter:image" content="/assets/og-card.png">
 
@@ -137,6 +137,8 @@
       margin-top: 1.5rem;
     }
 
+    .hero-metrics .lead { margin-top: .45rem; }
+
     .hero .btn-primary {
       margin-right: 1rem;
       min-width: 150px;
@@ -162,6 +164,7 @@
       max-width: 52ch;
       line-height: 1.6;
     }
+    .about-lead p { margin: 0 0 0.85rem; }
     /* About skim line */
     .about-skim{ opacity:.75; font-size:.95rem; margin-top:.75rem; letter-spacing:.01em; }
     /* Extra breathing room under the About title rule */
@@ -841,38 +844,64 @@
     }
 
     /* --- Testimonials --- */
-    .testi-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.25rem
+    .testi-list{
+      list-style:none;
+      padding:0;
+      margin:0;
+      display:grid;
+      gap:2.25rem;
     }
-
-    @media(max-width:992px) {
-      .testi-grid {
-        grid-template-columns: 1fr 1fr
-      }
+    .testi-item{ padding:0; }
+    .testi-figure{ margin:0; }
+    .testi-quote{
+      position:relative;
+      font-size: clamp(1.1rem, 1.2rem + 0.4vw, 1.5rem);
+      line-height:1.8;
+      font-style:italic;
+      color:#0b1221;
+      max-width: 72ch;
+      margin: 0 auto 0.75rem;
     }
-
-    @media(max-width:576px) {
-      .testi-grid {
-        grid-template-columns: 1fr
-      }
+    .testi-quote:before{
+      content:"“";
+      position:absolute;
+      left:-0.6em;
+      top:-0.15em;
+      font-size:2.75rem;
+      line-height:1;
+      color: var(--teal);
+      opacity:.3;
+      pointer-events:none;
     }
-
-    .testi {
-      background: transparent;
-      border: 1px solid var(--hr);
-      border-radius: 0;
-      padding: 2rem;
-      box-shadow: none
+    .testi-quote:after{
+      content:"”";
+      position:absolute;
+      right:-0.4em;
+      bottom:-0.5em;
+      font-size:2.75rem;
+      line-height:1;
+      color: var(--teal);
+      opacity:.25;
+      pointer-events:none;
     }
-
-    .testi .who {
-      font-weight: 700
+    .testi-meta{
+      text-align:center;
+      font-weight:600;
+      color: var(--navy);
     }
-
-    .testi .role {
-      opacity: .75
+    .testi-meta .role{
+      display:block;
+      font-weight:400;
+      opacity:.7;
+      margin-top:.15rem;
+      letter-spacing:.01em;
+    }
+    .testi-divider{
+      height:1px;
+      background: linear-gradient(90deg, transparent, rgba(11,18,33,.12), transparent);
+      border:0;
+      margin:.75rem auto 0;
+      width:min(640px, 90%);
     }
 
     /* --- FAQ --- */
@@ -1118,7 +1147,7 @@
     "publisher": {
       "@type": "Person",
       "name": "Diego Alcocer",
-      "jobTitle": "Project Manager & Senior Software Engineer",
+      "jobTitle": "Engineering Leader"
       "worksFor": { "@type": "Organization", "name": "IDB Invest" },
       "sameAs": [
         "https://www.linkedin.com/in/diego-alcocer-palacios",
@@ -1127,6 +1156,23 @@
     }
   }
   </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Diego Alcocer",
+  "jobTitle": "Engineering Leader",
+  "url": "https://diegoalcocer.github.io/",
+  "alumniOf": [
+    { "@type": "CollegeOrUniversity", "name": "Pontificia Universidad Católica de Chile", "sameAs": "https://www.uc.cl/" },
+    { "@type": "CollegeOrUniversity", "name": "George Washington University — FinTech Program", "sameAs": "https://www.gwu.edu/" }
+  ],
+  "sameAs": [
+    "https://www.linkedin.com/in/diego-alcocer-palacios",
+    "https://github.com/diegoalcocer"
+  ]
+}
+</script>
 </head>
 
 <body class="bg-body-tertiary">
@@ -1145,6 +1191,7 @@
           <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
           <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
           <li class="nav-item"><a class="nav-link" href="#achievements">Highlights</a></li>
+          <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
       </div>
@@ -1157,8 +1204,13 @@
       <h1 class="mega-title mega-title-hero hero-title-align text-center text-lg-start" data-aos="fade-down"
         data-aos-delay="200">Diego Alcocer</h1>
       <p class="lead text-secondary text-center text-lg-start" data-aos="fade-up" data-aos-delay="400">
-        Project manager &amp; software engineer. I turn complex workflows into simple, scalable products.
+        Engineering leader.
       </p>
+      <div class="hero-metrics">
+        <p class="lead text-secondary text-center text-lg-start" data-aos="fade-up" data-aos-delay="410">95% faster archiving — OAS</p>
+        <p class="lead text-secondary text-center text-lg-start" data-aos="fade-up" data-aos-delay="420">2× weekly throughput — IDB</p>
+        <p class="lead text-secondary text-center text-lg-start" data-aos="fade-up" data-aos-delay="430">10+ years of delivery leadership</p>
+      </div>
       <div class="mt-4 text-center text-lg-start" data-aos="fade-up" data-aos-delay="600">
         <a href="#scrollIndicator" class="hero-cta">Explore my work &rarr;</a>
       </div>
@@ -1175,8 +1227,16 @@
       <div class="eyebrow text-center text-lg-start" data-aos="fade-right">About</div>
       <h2 class="mega-title text-center text-lg-start" data-aos="fade-right">About Me</h2>
       <hr class="title-rule">
-      <div class="lead about-lead text-center text-lg-start" data-aos="fade-up">Project manager and senior software engineer. I design clear workflows, build reliable systems, and align teams from problem to release. Currently at IDB Invest, driving initiatives in AI and operational efficiency. Previous roles at ThoughtWorks, Halliburton, OAS/CIDH, and IDB. Pursuing a Master’s in Data Science (UC Chile) with a focus on applied AI and analytics.</div>
-      <div class="about-skim text-center text-lg-start" data-aos="fade-up" data-aos-delay="100"><strong>Focus</strong> — strategic roadmapping &amp; applied AI • <strong>Strength</strong> — data‑driven decisions • <strong>Edge</strong> — smart tools for operational efficiency</div>
+      <div class="lead about-lead text-center text-lg-start" data-aos="fade-up">
+        <p>I’m a product‑minded engineering leader with 10+ years shipping mission‑critical systems.</p>
+        <p>I design clear workflows, build reliable platforms, and align legal, finance, and operations from problem to release.</p>
+        <p>Experienced in RFP processes—from requirements and prioritization to documentation and vendor evaluation.</p>
+        <p>Recent work at IDB Invest (throughput ↑2×), previously ThoughtWorks, Halliburton, OAS/CIDH, IDB.</p>
+        <p>Master’s in Data Science (UC Chile) and in Data Management & Technology Innovation (Universitat de Barcelona).</p>
+      </div>
+      <div class="about-skim text-center text-lg-start" data-aos="fade-up" data-aos-delay="100">
+        <strong>Focus</strong> — strategic roadmaps &amp; AI‑assisted operations • <strong>Strength</strong> — data‑driven execution • <strong>Edge</strong> — turning domain knowledge into reliable assistants (RAG)
+      </div>
     </div>
   </section>
 
@@ -1188,13 +1248,13 @@
       <hr class="title-rule">
       <div class="d-flex flex-column gap-4">
         <div class="project-row" data-aos="fade-up">
-          <div class="icon-bubble"><i class="bi bi-shield-lock"></i></div>
+          <div class="icon-bubble"><i class="bi bi-archive"></i></div>
           <div>
             <span class="metric-badge">95% faster archiving</span>
             <h3 class="project-title mb-2">Gaia – OAS</h3>
-            <p class="mb-2">Mission-critical case and document system for CIDH. Automates petitions to decisions, with SharePoint and Azure AD integration.</p>
+            <p class="mb-2">Mission‑critical case &amp; document system for CIDH; high auditability, multilingual users, SharePoint &amp; Azure AD integration. Led roadmap, delivery cadence, and cross‑functional alignment.</p>
             <div class="skim-bar">
-              Problem: manual archiving bottleneck — Approach: workflow automation and UX — Result: 95% faster archiving — Stack: ASP.NET MVC • MSSQL • SharePoint • Azure AD • Lucene.NET
+              Context: legal deadlines &amp; audit risk — Approach: workflow redesign, UX, observability — Result: 95% faster archiving, higher adoption — Team: 6‑10 engineers · Stack: ASP.NET MVC • MSSQL • SharePoint • Azure AD • Lucene.NET
             </div>
             <div class="project-meta">
               <span class="badge rounded-pill">Senior Software Engineer</span>
@@ -1203,7 +1263,7 @@
           </div>
         </div>
         <div class="project-row" data-aos="fade-up">
-          <div class="icon-bubble"><i class="bi bi-shield-lock"></i></div>
+          <div class="icon-bubble"><i class="bi bi-ui-checks-grid"></i></div>
           <div>
             <span class="metric-badge">Auditable decisions</span>
             <h3 class="project-title mb-2">eVote – OAS</h3>
@@ -1303,7 +1363,7 @@
           <div class="process-number" data-aos="fade-right">004</div>
           <div data-aos="fade-left">
             <div class="process-title">Ship &amp; Scale</div>
-            <p class="process-note">Measure and iterate. Scale. Document and hand off with training.</p>
+            <p class="process-note">Measure and iterate. Scale. Document and hand off with training. Govern for reliability with SLAs, incident reviews, cost dashboards, and lasting documentation.</p>
           </div>
         </div>
       </div>
@@ -1317,7 +1377,7 @@
   <!-- Skills Section -->
   <section class="py-5 bg-white section-full" id="skills">
     <div class="container">
-      <div class="eyebrow text-center text-lg-start" data-aos="fade-right">Capabilities</div>
+      <div class="eyebrow text-center text-lg-start" data-aos="fade-right">Leadership &amp; Capabilities</div>
       <h2 class="mega-title text-center text-lg-start" data-aos="fade-right">From Vision to Execution</h2>
       <hr class="title-rule">
 
@@ -1364,8 +1424,7 @@
             <div class="cap-number" data-aos="fade-right">005</div>
             <div data-aos="fade-left">
               <div class="cap-title">AI & Data-Driven Solutions</div>
-              <p class="cap-note">RAG patterns, evaluation, and orchestration to turn domain knowledge into reliable
-                assistants.</p>
+              <p class="cap-note">RAG patterns, evaluation, and orchestration to turn domain knowledge into reliable assistants — with guardrails and monitoring.</p>
               <div class="tool-pills">
                 <span class="badge-ghost">LangChain</span>
                 <span class="badge-ghost">LlamaIndex</span>
@@ -1374,6 +1433,12 @@
                 <span class="badge-ghost">Retrieval</span>
                 <span class="badge-ghost">Evaluation</span>
               </div>
+  <section class="py-5 bg-light">
+    <div class="container text-center">
+      <p class="lead">Now exploring: AI‑assisted operations, platform governance, and simple dashboards that drive better decisions.</p>
+    </div>
+  </section>
+
             </div>
           </div>
           <!-- 006 -->
@@ -1454,18 +1519,50 @@
     </div>
   </section>
 
+  <section class="py-5 bg-white section-full" id="testimonials">
+    <div class="container">
+      <div class="eyebrow" data-aos="fade-right">What others say</div>
+      <h2 class="mega-title" data-aos="fade-right">Testimonials</h2>
+      <hr class="title-rule">
+      <div class="testi-list" data-aos="fade-up">
+        <div class="testi-item" data-aos="fade-up" data-aos-delay="50">
+          <figure class="testi-figure">
+            <blockquote class="testi-quote">
+              Diego worked under my supervision in a project to develop an accounting interface between the Summit Treasury System and the ERP SAP. He is an outstanding developer. His work is solid and he performs in a timely manner. He is the type of developer that can design both the backbone of a system as well as the look and feel of it. His GUI designs were very visually appealing and easy to use. I was fortunate to have Diego in my team and highly recommend him for any position or project where his valuable skills can be put to use.
+            </blockquote>
+            <figcaption class="testi-meta">
+              Ivo Maric
+              <span class="role">Systems Analyst — Direct Manager • November 18, 2022</span>
+            </figcaption>
+          </figure>
+          <hr class="testi-divider">
+        </div>
+        <div class="testi-item" data-aos="fade-up" data-aos-delay="100">
+          <figure class="testi-figure">
+            <blockquote class="testi-quote">
+              Diego was a wonderful student of mine and he will be a great asset on any team he joins. He consistently asked insightful questions during class and was always looking for ways to apply what he was learning to outside projects. Not only did he demonstrate technical skills that will help him succeed in the workplace, he also showed leadership and communication skills that will take him far. I strongly recommend Diego!
+            </blockquote>
+            <figcaption class="testi-meta">
+              Alexi Himarios
+              <span class="role">Technical Architect (Analytics) — Course Instructor, GW FinTech Program • November 1, 2022</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Contact -->
   <section class="py-5 bg-white section-full" id="contact">
     <div class="container text-center">
       <div class="eyebrow" data-aos="fade-up">Contact</div>
       <h2 class="mega-title" data-aos="fade-up">Let’s Connect</h2>
       <hr class="title-rule">
-      <p data-aos="fade-up">I'm open to impactful collaborations, tech leadership roles, and sharing ideas about the
-        future of software.</p>
+      <p data-aos="fade-up">I'm open to impactful collaborations, senior tech leadership roles, and sharing ideas about the future of software. Open to Director of Engineering / Head of Platform / CTO‑track conversations.</p>
       <div class="d-flex justify-content-center gap-3 mt-3 contact-buttons" data-aos="fade-up" data-aos-delay="100">
         <a href="https://linkedin.com/in/diego-alcocer-palacios" class="btn btn-outline-dark" rel="noopener noreferrer" target="_blank"><i class="bi bi-linkedin"></i> LinkedIn</a>
-<a href="https://github.com/diegoalcocer" class="btn btn-outline-dark" rel="noopener noreferrer" target="_blank"><i class="bi bi-github"></i> GitHub</a>
-        <a href="CV_Diego_Alcocer.pdf" class="btn btn-info text-white"><i class="bi bi-download"></i> Download CV</a>
+        <a href="https://github.com/diegoalcocer" class="btn btn-outline-dark" rel="noopener noreferrer" target="_blank"><i class="bi bi-github"></i> GitHub</a>
+        <!-- <a href="CV_Diego_Alcocer.pdf" class="btn btn-info text-white"><i class="bi bi-download"></i> Download CV</a> -->
       </div>
     </div>
   </section>
