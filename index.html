@@ -352,6 +352,17 @@
       transition: background-color .3s ease, box-shadow .3s ease;
     }
 
+    .navbar.nav-top {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1200;
+      width: 100%;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
     .navbar .nav-link,
     .navbar .navbar-brand {
       color: #fff;
@@ -626,6 +637,241 @@
     .project-meta .badge {
       background: rgba(11, 18, 33, .06);
       color: var(--navy);
+    }
+
+    /* --- Nanay case study --- */
+    #nanay .nanay-intro {
+      max-width: 52ch;
+      margin-bottom: 3rem;
+    }
+
+    #nanay .nanay-hero {
+      margin-bottom: 3rem;
+      align-items: center;
+    }
+
+    #nanay .nanay-media {
+      border: 1px solid var(--hr);
+      border-radius: 12px;
+      overflow: hidden;
+      position: relative;
+      background: #fff;
+    }
+
+    #nanay .nanay-hero img {
+      width: 100%;
+      object-fit: cover;
+    }
+
+    #nanay .nanay-image-card {
+      border: 1px solid var(--hr);
+      border-radius: 12px;
+      overflow: hidden;
+      background: #fff;
+    }
+
+    #nanay .nanay-image-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    #nanay .nanay-motto {
+      padding: 2.25rem;
+      border: 1px solid var(--hr);
+      border-radius: 0;
+      background: transparent;
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+
+    #nanay .nanay-motto em {
+      font-style: normal;
+      font-weight: 600;
+      letter-spacing: .06em;
+      display: inline-block;
+      margin-top: 1rem;
+      color: var(--teal);
+    }
+
+    #nanay .nanay-stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+    }
+
+    #nanay .nanay-stat-card {
+      border: 1px solid var(--hr);
+      border-radius: 0;
+      padding: 2rem;
+      background: transparent;
+      position: relative;
+    }
+
+    #nanay .nanay-stat-card::after {
+      content: '';
+      position: absolute;
+      inset: 1.5rem 1.25rem auto;
+      height: 1px;
+      background: var(--hr);
+      opacity: .3;
+    }
+
+    #nanay .nanay-stat-card .value {
+      font-family: 'Manrope', sans-serif;
+      font-weight: 800;
+      font-size: clamp(32px, 4.6vw, 56px);
+      letter-spacing: -.02em;
+      color: var(--navy);
+      margin-bottom: 1.5rem;
+    }
+
+    #nanay .nanay-stat-card .caption {
+      text-transform: uppercase;
+      letter-spacing: .18em;
+      font-weight: 600;
+      font-size: .78rem;
+      color: rgba(11, 18, 33, 0.65);
+    }
+
+    #nanay .nanay-scope {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 2rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      font-size: .78rem;
+      color: rgba(11, 18, 33, 0.6);
+    }
+
+    #nanay .nanay-scope span {
+      position: relative;
+      padding-right: 1.25rem;
+    }
+
+    #nanay .nanay-scope span:not(:last-child)::after {
+      content: '•';
+      position: absolute;
+      right: .15rem;
+      color: rgba(11, 18, 33, 0.35);
+    }
+
+    #nanay .nanay-press {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    #nanay .nanay-press-card {
+      border: 1px solid var(--hr);
+      border-radius: 0;
+      padding: 2.25rem 2.5rem 2.75rem;
+      background: transparent;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      position: relative;
+    }
+
+    #nanay .nanay-press-card::before {
+      content: '';
+      position: absolute;
+      left: 2.5rem;
+      right: 2.5rem;
+      top: 4rem;
+      height: 1px;
+      background: rgba(11, 18, 33, 0.12);
+    }
+
+    #nanay .press-source {
+      font-size: .7rem;
+      text-transform: uppercase;
+      letter-spacing: .16em;
+      font-weight: 600;
+      color: rgba(11, 18, 33, 0.5);
+      display: flex;
+      align-items: center;
+      gap: .65rem;
+    }
+
+    #nanay .press-source span {
+      display: inline-block;
+      height: 3px;
+      width: 3px;
+      border-radius: 50%;
+      background: rgba(11, 18, 33, 0.35);
+    }
+
+    #nanay .press-quote {
+      font-size: 1.05rem;
+      line-height: 1.75;
+      color: var(--navy);
+      font-style: italic;
+      margin: 0;
+      max-width: 42ch;
+    }
+
+    #nanay .press-link {
+      display: inline-flex;
+      align-items: center;
+      gap: .35rem;
+      font-weight: 600;
+      letter-spacing: .05em;
+      padding-bottom: .35rem;
+      border-bottom: 1px solid rgba(11, 18, 33, 0.18);
+      transition: border-color .2s ease, color .2s ease;
+    }
+
+    #nanay .press-link::after {
+      content: '→';
+      font-size: 1rem;
+      transition: transform .2s ease;
+    }
+
+    #nanay .press-link:hover {
+      border-bottom-color: var(--teal);
+      color: var(--teal);
+    }
+
+    #nanay .press-link:hover::after {
+      transform: translateX(4px);
+    }
+
+    #nanay .nanay-outro {
+      max-width: 58ch;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    #nanay .nanay-outro p {
+      margin-bottom: 1.1rem;
+    }
+
+    @media(max-width:992px) {
+      #nanay .nanay-stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      #nanay .nanay-press {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media(max-width:576px) {
+      #nanay .nanay-stats {
+        grid-template-columns: 1fr;
+      }
+
+      #nanay .nanay-motto {
+        padding: 2rem;
+      }
     }
 
     .project-cta a {
@@ -1189,6 +1435,7 @@
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
           <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#nanay">Nanay</a></li>
           <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
           <li class="nav-item"><a class="nav-link" href="#achievements">Highlights</a></li>
           <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
@@ -1326,6 +1573,112 @@
           </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- Nanay Case Study -->
+  <section class="py-5 bg-white section-full" id="nanay">
+    <div class="container">
+      <div class="eyebrow text-center text-lg-start" data-aos="fade-right">Technology for empathy.</div>
+      <h2 class="mega-title text-center text-lg-start" data-aos="fade-right" data-aos-delay="50">Nanay</h2>
+      <hr class="title-rule">
+
+      <div class="row g-4 g-lg-5 nanay-hero" data-aos="fade-up">
+        <div class="col-lg-6">
+          <div class="nanay-intro">
+            <p>When the world stopped, connection became essential.</p>
+            <p>In the middle of the pandemic, together with Santiago Pesántez, I built Nanay, a web platform that connected people who needed help with volunteers ready to offer it.</p>
+            <p>The idea was simple.</p>
+            <p>Building it was hard.</p>
+          </div>
+        </div>
+        <div class="col-lg-5 offset-lg-1">
+          <figure class="nanay-media m-0">
+            <img src="/assets/images/nanay_joinus.jpg" alt="Nanay platform join-us screen inviting volunteers to participate" width="1080" height="1080" loading="lazy" decoding="async">
+            <figcaption class="visually-hidden">Screenshot of the Nanay platform showing a join-us call to action.</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="row gy-4 align-items-start" data-aos="fade-up" data-aos-delay="100">
+        <div class="col-lg-7">
+          <h3 class="section-title mb-3">A name with meaning</h3>
+          <p>In Quichua, Nanay means pain.</p>
+          <p>In other languages, it means mother.</p>
+          <p>For us, it meant both: understanding people’s needs, and responding with care.</p>
+        </div>
+        <div class="col-lg-5">
+          <div class="nanay-motto-wrap d-flex flex-column gap-4">
+            
+            <figure class="nanay-image-card m-0">
+              <img src="/assets/images/nanay_meaning.jpg" alt="Meaning of Nanay illustrated with caring hands supporting each other" width="1080" height="1080" loading="lazy" decoding="async">
+              <figcaption class="visually-hidden">Photograph illustrating the meaning of Nanay with supportive hands.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-5" data-aos="fade-up" data-aos-delay="150">
+        <h3 class="section-title mb-3">The impact</h3>
+        <p>In just a few months, Nanay gathered over 1,000 users.</p>
+        <p>We helped more than 250 families receive food, medicine, and essentials, right when they needed them most.</p>
+        <p>Our final campaign became our proudest moment: a Christmas drive that brought hope to 90+ families through community donations.</p>
+        <p>Every delivery was personal. Every action, human.</p>
+        <div class="nanay-stats">
+          <div class="nanay-stat-card">
+            <div class="value">1,000+</div>
+            <div class="caption">registered users</div>
+          </div>
+          <div class="nanay-stat-card">
+            <div class="value">250+</div>
+            <div class="caption">families assisted</div>
+          </div>
+          <div class="nanay-stat-card">
+            <div class="value">90+</div>
+            <div class="caption">families in Christmas campaign</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-5" data-aos="fade-up" data-aos-delay="200">
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-7">
+            <h3 class="section-title mb-3">Behind the scenes</h3>
+            <p>Nanay wasn’t just an app. It was an ecosystem. We managed volunteers, coordinated donations, handled logistics, built campaigns, and kept everything running in real time while working remotely and under strict restrictions.</p>
+            <p>Grateful for the incredible Nanay team who showed up every day with heart and grit.</p>
+            <div class="nanay-scope">
+              <span>Volunteers</span>
+              <span>Logistics</span>
+              <span>Campaigns</span>
+              <span>Operations</span>
+              <span>Engineering</span>
+            </div>
+          </div>
+          <div class="col-lg-4 offset-lg-1">
+            <figure class="nanay-image-card m-0">
+              <img src="/assets/images/nanay_historias.jpg" alt="Volunteer stories highlighted within the Nanay community platform" width="1080" height="1080" loading="lazy" decoding="async">
+              <figcaption class="visually-hidden">Screenshot showcasing volunteer stories shared through Nanay.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+
+      <div class="my-5" data-aos="fade-up" data-aos-delay="250">
+        <h3 class="section-title mb-3">Press</h3>
+        <div class="nanay-press">
+          <div class="nanay-press-card">
+            <span class="press-source">El Universo <span></span> May 2020</span>
+            <p class="press-quote mb-0">Nanay, una app de ayuda creada por dos ecuatorianos contra el coronavirus.</p>
+            <a class="hero-cta press-link" href="https://www.eluniverso.com/larevista/2020/05/12/nota/7839771/nanay-app-ayuda-creada-dos-ecuatorianos-contra-coronavirus/" target="_blank" rel="noopener noreferrer">Read the article</a>
+          </div>
+          <div class="nanay-press-card">
+            <span class="press-source">Vistazo <span></span> 2020</span>
+            <p class="press-quote mb-0">Dos ingenieros ecuatorianos residentes en Estados Unidos han creado una plataforma para unir a personas con necesidad y voluntarios dispuestos a ayudar.</p>
+            <a class="hero-cta press-link" href="https://www.vistazo.com/actualidad/nacional/dos-ecuatorianos-crean-una-plataforma-de-ayuda-durante-la-pandemia-HWVI181556" target="_blank" rel="noopener noreferrer">Read the article</a>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
