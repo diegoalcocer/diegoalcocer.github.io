@@ -15,7 +15,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>Diego Alcocer – Engineering Leader | AI, Data, .NET</title>
-  <meta name="description" content="Diego Alcocer – project manager and senior software engineer. I design clear workflows, build reliable systems, and align teams from problem to release. Currently at IDB Invest; previous roles at ThoughtWorks, Halliburton, OAS/CIDH, and IDB. Master’s in Data Science (UC Chile).">
+  <meta name="description" content="Diego Alcocer – project manager and senior software engineer. I design clear workflows, build reliable systems, and align teams from problem to release.">
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://diegoalcocer.github.io/">
 
@@ -23,14 +23,14 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Diego Alcocer">
   <meta property="og:title" content="Diego Alcocer – Engineering Leader">
-  <meta property="og:description" content="I design clear workflows, build reliable systems, and align teams from problem to release. AI & data-driven, IDB Invest.">
+  <meta property="og:description" content="I design clear workflows, build reliable systems, and align teams from problem to release. AI & data-driven.">
   <meta property="og:url" content="https://diegoalcocer.github.io/">
   <meta property="og:image" content="/assets/og-card.png">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Diego Alcocer – Engineering Leader">
-  <meta name="twitter:description" content="AI & data-driven delivery. Currently at IDB Invest. Previous: ThoughtWorks, Halliburton, OAS/CIDH, IDB.">
+  <meta name="twitter:description" content="AI & data-driven delivery.">
   <meta name="twitter:image" content="/assets/og-card.png">
 
   <!-- Performance & preconnects -->
@@ -703,38 +703,44 @@
     }
 
     #nanay .nanay-stat-card {
-      border: 1px solid var(--hr);
-      border-radius: 0;
-      padding: 2rem;
-      background: transparent;
+      border: 1px solid rgba(11, 18, 33, 0.08);
+      border-radius: 28px;
+      padding: 2.5rem;
+      background: #fff;
       position: relative;
+      box-shadow: 0 22px 45px -28px rgba(10, 18, 33, 0.55);
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      min-height: 220px;
+      transition: transform .25s ease, box-shadow .25s ease;
     }
 
-    #nanay .nanay-stat-card::after {
-      content: '';
-      position: absolute;
-      inset: 1.5rem 1.25rem auto;
-      height: 1px;
-      background: var(--hr);
-      opacity: .3;
+    #nanay .nanay-stat-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 25px 55px -30px rgba(10, 18, 33, 0.6);
     }
 
-    #nanay .nanay-stat-card .value {
-      font-family: 'Manrope', sans-serif;
-      font-weight: 800;
-      font-size: clamp(32px, 4.6vw, 56px);
-      letter-spacing: -.02em;
-      color: var(--navy);
-      margin-bottom: 1.5rem;
+    #nanay .nanay-card-icon {
+      font-size: 1.8rem;
+      line-height: 1;
     }
 
-    #nanay .nanay-stat-card .caption {
-      text-transform: uppercase;
-      letter-spacing: .18em;
-      font-weight: 600;
-      font-size: .78rem;
-      color: rgba(11, 18, 33, 0.65);
+    #nanay .nanay-card-copy {
+      font-size: 1.15rem;
+      line-height: 1.5;
+      color: #0f172a;
+      max-width: 32ch;
     }
+
+    #nanay .nanay-card-copy .nanay-card-accent {
+      font-weight: 700;
+      display: inline-block;
+    }
+
+    #nanay .accent-purple { color: #7a5cff; }
+    #nanay .accent-orange { color: #ff7a18; }
+    #nanay .accent-teal { color: #00a6c2; }
 
     #nanay .nanay-scope {
       display: flex;
@@ -769,25 +775,21 @@
     }
 
     #nanay .nanay-press-card {
-      border: 1px solid var(--hr);
-      border-radius: 0;
-      padding: 2.25rem 2.5rem 2.75rem;
-      background: transparent;
+      border: 1px solid rgba(11, 18, 33, 0.08);
+      border-radius: 28px;
+      padding: 2.5rem;
+      background: #fff;
       height: 100%;
       display: flex;
       flex-direction: column;
-      gap: 1.5rem;
-      position: relative;
+      gap: 1.25rem;
+      box-shadow: 0 22px 45px -28px rgba(10, 18, 33, 0.55);
+      transition: transform .25s ease, box-shadow .25s ease;
     }
 
-    #nanay .nanay-press-card::before {
-      content: '';
-      position: absolute;
-      left: 2.5rem;
-      right: 2.5rem;
-      top: 4rem;
-      height: 1px;
-      background: rgba(11, 18, 33, 0.12);
+    #nanay .nanay-press-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 25px 55px -30px rgba(10, 18, 33, 0.6);
     }
 
     #nanay .press-source {
@@ -813,7 +815,6 @@
       font-size: 1.05rem;
       line-height: 1.75;
       color: var(--navy);
-      font-style: italic;
       margin: 0;
       max-width: 42ch;
     }
@@ -914,47 +915,60 @@
 
     .impact-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1.25rem
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1.5rem;
     }
 
     @media(max-width:992px) {
       .impact-grid {
-        grid-template-columns: repeat(2, 1fr)
+        grid-template-columns: repeat(2, 1fr);
       }
     }
 
     @media(max-width:576px) {
       .impact-grid {
-        grid-template-columns: 1fr
+        grid-template-columns: 1fr;
       }
     }
 
     .impact-tile {
-      background: transparent;
-      color: var(--navy);
-      border: 1px solid var(--hr);
-      border-radius: 0;
-      padding: 2rem;
-      text-align: center;
-      box-shadow: none
+      border: 1px solid rgba(11, 18, 33, 0.08);
+      border-radius: 28px;
+      padding: 2.5rem;
+      background: #fff;
+      box-shadow: 0 22px 45px -28px rgba(10, 18, 33, 0.55);
+      display: flex;
+      flex-direction: column;
+      gap: .6rem;
+      min-height: 220px;
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+
+    .impact-tile:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 25px 55px -30px rgba(10, 18, 33, 0.6);
+    }
+
+    .impact-tile .kpi-icon {
+      font-size: 1.8rem;
+      margin-bottom: .15rem;
     }
 
     .impact-tile .kpi {
-      font-size: 3rem;
+      font-size: 2.75rem;
       font-weight: 800;
-      letter-spacing: -.02em
+      letter-spacing: -.02em;
     }
 
     .impact-tile .label {
-      opacity: .85;
-      margin-top: .25rem
+      font-weight: 600;
+      opacity: .92;
+      margin-top: .2rem;
     }
 
     .impact-tile .note {
-      opacity: .7;
-      font-size: .95rem;
-      margin-top: .5rem
+      opacity: .75;
+      font-size: 1rem;
     }
 
     .skills-wrap {
@@ -1087,6 +1101,39 @@
     }
 
     /* --- Projects additions --- */
+
+    /* Apple-style accents for cards */
+    .accent-teal{ color: var(--teal); }
+    .accent-orange{ color: #ff7a18; }
+    .accent-purple{ color: #7a5cff; }
+    .accent-blue{ color: #2563eb; }
+    .accent-gold{ color: #ffb347; }
+
+    .nanay-card-icon{ font-size:1.25rem; margin-bottom:.75rem; display:inline-block; }
+
+    /* --- Impact: Awards tile special styling --- */
+    .impact-tile.awards-tile { border-color: rgba(60,182,163,.3); position: relative; }
+    .impact-tile.awards-tile:hover, .impact-tile.awards-tile:focus { border-color: rgba(60,182,163,.5); }
+    @media (prefers-reduced-motion: reduce) {
+      .impact-tile.awards-tile:hover, .impact-tile.awards-tile:focus { transform: none; }
+    }
+    /* One-time gentle ping */
+    .impact-tile.awards-tile.ping::after { content: ""; position: absolute; inset: -6px; border-radius: 32px; box-shadow: 0 0 0 6px rgba(60,182,163,.10); animation: awardsPing 900ms ease-out 1 forwards; }
+    @keyframes awardsPing { from { opacity: .8; } to { opacity: 0; box-shadow: 0 0 0 14px rgba(60,182,163,0); } }
+
+    /* --- Hero awards badge --- */
+    .hero-awards{margin-top:.75rem; opacity:.9; font-weight:600; letter-spacing:.04em}
+    .hero-awards .icon{margin-right:.4rem}
+
+    /* --- Award badge on project cards --- */
+    .award-badge{display:inline-block; font-size:.72rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; padding:.18rem .5rem; border:1px solid var(--teal); background:rgba(60,182,163,.08); color:var(--navy); margin:.2rem 0 .35rem}
+
+    /* --- Awards section --- */
+    #awards .awards-grid{display:grid; grid-template-columns: repeat(2,1fr); gap:1.25rem}
+    #awards .award-card{border:1px solid var(--hr); border-radius:0; background:transparent; padding:1.75rem}
+    #awards .award-title{font-weight:700; letter-spacing:.01em; margin:0 0 .35rem}
+    #awards .award-note{opacity:.8; margin:0}
+    @media(max-width:768px){ #awards .awards-grid{ grid-template-columns:1fr } }
 
     /* --- CTA band --- */
     .cta-band {
@@ -1402,8 +1449,7 @@
     "publisher": {
       "@type": "Person",
       "name": "Diego Alcocer",
-      "jobTitle": "Engineering Leader"
-      "worksFor": { "@type": "Organization", "name": "IDB Invest" },
+      "jobTitle": "Engineering Leader",
       "sameAs": [
         "https://www.linkedin.com/in/diego-alcocer-palacios",
         "https://github.com/diegoalcocer"
@@ -1445,9 +1491,9 @@
           <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
           <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
           <li class="nav-item"><a class="nav-link" href="#nanay">Nanay</a></li>
-          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#process">Skills</a></li>
           <li class="nav-item"><a class="nav-link" href="#achievements">Highlights</a></li>
-          <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+          <!-- <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li> -->
           <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
       </div>
@@ -1460,12 +1506,19 @@
       <h1 class="mega-title mega-title-hero hero-title-align text-center text-lg-start" data-aos="fade-down"
         data-aos-delay="200">Diego Alcocer</h1>
       <p class="lead text-secondary text-center text-lg-start" data-aos="fade-up" data-aos-delay="400">
-        Engineering leader.
+        Project Manager &amp; Engineering Leader
       </p>
-      <div class="hero-metrics">
-        <p class="lead text-secondary text-center text-lg-start" data-aos="fade-up" data-aos-delay="410">10+ years in engineering leadership</p>
-        <p class="lead text-secondary text-center text-lg-start" data-aos="fade-up" data-aos-delay="420">Workflow design &amp; automation</p>
-        <p class="lead text-secondary text-center text-lg-start" data-aos="fade-up" data-aos-delay="430">AI &amp; data, RFP &amp; vendor evaluation</p>
+      <p class="lead text-secondary text-center text-lg-start" data-aos="fade-up" data-aos-delay="410">
+        Bridging technology, operations, and transformation.
+      </p>
+      <p class="lead text-secondary text-center text-lg-start" data-aos="fade-up" data-aos-delay="420">
+        10+ years delivering AI, data, and enterprise systems.
+      </p>
+      <p class="lead text-secondary text-center text-lg-start" data-aos="fade-up" data-aos-delay="430">
+        Focused on workflows, automation, and measurable impact.
+      </p>
+      <div class="hero-awards text-center text-lg-start" data-aos="fade-up" data-aos-delay="450">
+        <i class="bi bi-trophy-fill icon" aria-hidden="true"></i> Institutional awards — IDB & OAS
       </div>
       <div class="mt-4 text-center text-lg-start" data-aos="fade-up" data-aos-delay="600">
         <a href="#scrollIndicator" class="hero-cta">Explore my work &rarr;</a>
@@ -1484,14 +1537,14 @@
       <h2 class="mega-title text-center text-lg-start" data-aos="fade-right">About Me</h2>
       <hr class="title-rule">
       <div class="lead about-lead text-center text-lg-start" data-aos="fade-up">
-        <p>I’m a product‑minded engineering leader with 10+ years shipping mission‑critical systems.</p>
-        <p>I design clear workflows, build reliable platforms, and align legal, finance, and operations from problem to release.</p>
-        <p>Experienced in RFP processes—from requirements and prioritization to documentation and vendor evaluation.</p>
-        <p>Recent work at IDB Invest (throughput ↑2×), previously ThoughtWorks, Halliburton, OAS/CIDH, IDB.</p>
-        <p>Master’s in Data Science (UC Chile) and in Data Management & Technology Innovation (Universitat de Barcelona).</p>
+        <p>I lead projects that connect <strong>technology with institutional transformation</strong> aligning every initiative with the organization's roadmap.</p>
+        <p>My work blends <strong>architecture, process, and business</strong> to translate goals into measurable results.</p>
+        <p>I manage <strong>vendors and cross-functional teams</strong>, guide <strong>RFI/RFP evaluations</strong>, and collaborate with finance and operations on <strong>ROI, planning, and chronograms</strong>. My focus is on execution that’s <strong>predictable, data-driven, and scalable</strong>.</p>
+        <p>Previously, worked at <strong>ThoughtWorks, Halliburton, OAS</strong>, and <strong>IDB</strong>.</p>
+        <p>I hold a <strong>Master’s in Data Science (UC Chile)</strong> and a <strong>Master’s in Data Management &amp; Technology Innovation (Universitat de Barcelona)</strong>.</p>
       </div>
       <div class="about-skim text-center text-lg-start" data-aos="fade-up" data-aos-delay="100">
-        <strong>Focus</strong> — strategic roadmaps &amp; AI‑assisted operations • <strong>Strength</strong> — data‑driven execution • <strong>Edge</strong> — turning domain knowledge into reliable assistants (RAG)
+        <strong>Focus</strong> — bridging tech and transformation • <strong>Strength</strong> — data-driven delivery • <strong>Edge</strong> — design clarity at scale
       </div>
     </div>
   </section>
@@ -1508,6 +1561,7 @@
           <div>
             <span class="metric-badge">95% faster archiving</span>
             <h3 class="project-title mb-2">Gaia – OAS</h3>
+            <span class="award-badge" title="Institutional recognition for impact (OAS)">AWARDED</span>
             <p class="mb-2">Mission‑critical case &amp; document system for CIDH; high auditability, multilingual users, SharePoint &amp; Azure AD integration. Led roadmap, delivery cadence, and cross‑functional alignment.</p>
             <div class="skim-bar">
               Context: legal deadlines &amp; audit risk — Approach: workflow redesign, UX, observability — Result: 95% faster archiving, higher adoption — Team: 6‑10 engineers · Stack: ASP.NET MVC • MSSQL • SharePoint • Azure AD • Lucene.NET
@@ -1571,6 +1625,7 @@
           <div>
             <span class="metric-badge">Recognized for delivery</span>
             <h3 class="project-title mb-2">FRIDA – IDB</h3>
+            <span class="award-badge" title="Institutional recognition for delivery (IDB)">AWARDED</span>
             <p class="mb-2">Treasury platform for IDB—unified workflows and real-time visibility for cash operations.</p>
             <div class="skim-bar">
               Problem: fragmented treasury processes — Approach: product vision and agile delivery — Result: higher throughput and transparency — Stack: ASP.NET • Oracle
@@ -1635,16 +1690,16 @@
         <p>Every delivery was personal. Every action, human.</p>
         <div class="nanay-stats">
           <div class="nanay-stat-card">
-            <div class="value">1,000+</div>
-            <div class="caption">registered users</div>
+            <div class="nanay-card-icon accent-purple"><i class="bi bi-people" aria-hidden="true"></i></div>
+            <p class="nanay-card-copy">Connected with <span class="nanay-card-accent accent-purple">1,000+</span> registered users ready to help.</p>
           </div>
           <div class="nanay-stat-card">
-            <div class="value">250+</div>
-            <div class="caption">families assisted</div>
+            <div class="nanay-card-icon accent-orange"><i class="bi bi-heart" aria-hidden="true"></i></div>
+            <p class="nanay-card-copy">Brought essentials to <span class="nanay-card-accent accent-orange">250+</span> families—food, medicine, and care.</p>
           </div>
           <div class="nanay-stat-card">
-            <div class="value">90+</div>
-            <div class="caption">families in Christmas campaign</div>
+            <div class="nanay-card-icon accent-teal"><i class="bi bi-gift" aria-hidden="true"></i></div>
+            <p class="nanay-card-copy">Delivered holiday kits to <span class="nanay-card-accent accent-teal">90+</span> families through community donations.</p>
           </div>
         </div>
       </div>
@@ -1676,11 +1731,13 @@
         <h3 class="section-title mb-3">Press</h3>
         <div class="nanay-press">
           <div class="nanay-press-card">
+            <div class="press-icon"><i class="bi bi-newspaper" aria-hidden="true"></i></div>
             <span class="press-source">El Universo <span></span> May 2020</span>
             <p class="press-quote mb-0">Nanay, una app de ayuda creada por dos ecuatorianos contra el coronavirus.</p>
             <a class="hero-cta press-link" href="https://www.eluniverso.com/larevista/2020/05/12/nota/7839771/nanay-app-ayuda-creada-dos-ecuatorianos-contra-coronavirus/" target="_blank" rel="noopener noreferrer">Read the article</a>
           </div>
           <div class="nanay-press-card">
+            <div class="press-icon"><i class="bi bi-newspaper" aria-hidden="true"></i></div>
             <span class="press-source">Vistazo <span></span> 2020</span>
             <p class="press-quote mb-0">Una plataforma para unir a personas con necesidad y voluntarios dispuestos a ayudar.</p>
             <a class="hero-cta press-link" href="https://www.vistazo.com/actualidad/nacional/dos-ecuatorianos-crean-una-plataforma-de-ayuda-durante-la-pandemia-HWVI181556" target="_blank" rel="noopener noreferrer">Read the article</a>
@@ -1696,37 +1753,47 @@
 
   <section class="bg-white section-full" id="process">
     <div class="container">
-      <div class="eyebrow text-center text-lg-start" data-aos="fade-right">Process</div>
-      <h2 class="mega-title text-center text-lg-start" data-aos="fade-right">How I Work</h2>
+      <div class="eyebrow text-center text-lg-start" data-aos="fade-right">How I Work &amp; What I Bring</div>
+      <h2 class="mega-title text-center text-lg-start" data-aos="fade-right">From Vision to Execution</h2>
       <hr class="title-rule">
       <div class="process-rows" data-aos="fade-up">
         <div class="process-row">
           <div class="process-number" data-aos="fade-right">001</div>
           <div data-aos="fade-left">
-            <div class="process-title">Discover</div>
-            <p class="process-note">Align goals, constraints and success metrics. Map risks; set shared definitions of
-              done.</p>
+            <div class="process-title">Leadership &amp; Ownership</div>
+            <p class="process-note">From discovery to delivery, I align teams, vendors, and priorities with institutional goals. Clear direction, measurable outcomes, and predictable execution.</p>
           </div>
         </div>
+
         <div class="process-row">
           <div class="process-number" data-aos="fade-right">002</div>
           <div data-aos="fade-left">
-            <div class="process-title">Design</div>
-            <p class="process-note">Map flows and data. Design the simplest path to value.</p>
+            <div class="process-title">Architecture &amp; Systems Thinking</div>
+            <p class="process-note">Scalable, maintainable systems with clean boundaries, observability, and security by default—balanced with long‑term business context.</p>
           </div>
         </div>
+
         <div class="process-row">
           <div class="process-number" data-aos="fade-right">003</div>
           <div data-aos="fade-left">
-            <div class="process-title">Build</div>
-            <p class="process-note">Ship in weekly slices with clean architecture, tests and CI/CD.</p>
+            <div class="process-title">AI &amp; Data‑Driven Delivery</div>
+            <p class="process-note">RAG, automation, and analytics to accelerate decisions and build reliable assistants—with evaluation, guardrails, and governance.</p>
           </div>
         </div>
+
         <div class="process-row">
           <div class="process-number" data-aos="fade-right">004</div>
           <div data-aos="fade-left">
-            <div class="process-title">Ship &amp; Scale</div>
-            <p class="process-note">Measure and iterate. Scale. Document and hand off with training. Govern for reliability with SLAs, incident reviews, cost dashboards, and lasting documentation.</p>
+            <div class="process-title">Operational Excellence</div>
+            <p class="process-note">Planning, ROI analysis, RFI/RFP leadership, and cross‑team coordination. Structure and rhythm for complex initiatives—without slowing innovation.</p>
+          </div>
+        </div>
+
+        <div class="process-row">
+          <div class="process-number" data-aos="fade-right">005</div>
+          <div data-aos="fade-left">
+            <div class="process-title">Collaboration &amp; Communication</div>
+            <p class="process-note">Partnering across legal, finance, and tech to translate business needs into shippable products. Transparent documentation and clear narratives that build trust.</p>
           </div>
         </div>
       </div>
@@ -1737,150 +1804,44 @@
 
 
 
-  <!-- Skills Section -->
-  <section class="py-5 bg-white section-full" id="skills">
-    <div class="container">
-      <div class="eyebrow text-center text-lg-start" data-aos="fade-right">Leadership &amp; Capabilities</div>
-      <h2 class="mega-title text-center text-lg-start" data-aos="fade-right">From Vision to Execution</h2>
-      <hr class="title-rule">
-
-      <div class="skills-wrap">
-        <div class="cap-rows" data-aos="fade-up" data-aos-delay="100">
-          <!-- 001 -->
-          <div class="cap-row">
-            <div class="cap-number" data-aos="fade-right">001</div>
-            <div data-aos="fade-left">
-              <div class="cap-title">Strategic Leadership</div>
-              <p class="cap-note">From problem framing to delivery—aligning vision, teams, and roadmaps to measurable
-                outcomes.</p>
-            </div>
-          </div>
-          <!-- 002 -->
-          <div class="cap-row">
-            <div class="cap-number" data-aos="fade-right">002</div>
-            <div data-aos="fade-left">
-              <div class="cap-title">Product Ownership</div>
-              <p class="cap-note">Prioritizing value, shaping scope, and shipping in slices to validate fast and de-risk
-                decisions.</p>
-            </div>
-          </div>
-          <!-- 003 -->
-          <div class="cap-row">
-            <div class="cap-number" data-aos="fade-right">003</div>
-            <div data-aos="fade-left">
-              <div class="cap-title">Agile Delivery</div>
-              <p class="cap-note">Scrum & Kanban in practice—clear ceremonies, tight feedback loops, and predictable
-                throughput.</p>
-            </div>
-          </div>
-          <!-- 004 -->
-          <div class="cap-row">
-            <div class="cap-number" data-aos="fade-right">004</div>
-            <div data-aos="fade-left">
-              <div class="cap-title">Software Architecture</div>
-              <p class="cap-note">Designing scalable, maintainable systems with clean boundaries, observability, and
-                security by default.</p>
-            </div>
-          </div>
-          <!-- 005 -->
-          <div class="cap-row">
-            <div class="cap-number" data-aos="fade-right">005</div>
-            <div data-aos="fade-left">
-              <div class="cap-title">AI & Data-Driven Solutions</div>
-              <p class="cap-note">RAG patterns, evaluation, and orchestration to turn domain knowledge into reliable assistants — with guardrails and monitoring.</p>
-              <div class="tool-pills">
-                <span class="badge-ghost">LangChain</span>
-                <span class="badge-ghost">LlamaIndex</span>
-                <span class="badge-ghost">OpenAI API</span>
-                <span class="badge-ghost">Embeddings</span>
-                <span class="badge-ghost">Retrieval</span>
-                <span class="badge-ghost">Evaluation</span>
-              </div>
-  <section class="py-5 bg-light">
-    <div class="container text-center">
-      <p class="lead">Now exploring: AI‑assisted operations, platform governance, and simple dashboards that drive better decisions.</p>
-    </div>
-  </section>
-
-            </div>
-          </div>
-          <!-- 006 -->
-          <div class="cap-row">
-            <div class="cap-number" data-aos="fade-right">006</div>
-            <div data-aos="fade-left">
-              <div class="cap-title">Full-Stack Platforms</div>
-              <p class="cap-note">Fast, secure delivery across backend, frontend, data, and cloud.</p>
-              <div class="tool-pills">
-                <span class="badge-ghost">FastAPI</span>
-                <span class="badge-ghost">Python</span>
-                <span class="badge-ghost">.NET / C#</span>
-                <span class="badge-ghost">SQL</span>
-                <span class="badge-ghost">Azure</span>
-                <span class="badge-ghost">CI/CD</span>
-              </div>
-            </div>
-          </div>
-          <!-- 007 -->
-          <div class="cap-row">
-            <div class="cap-number" data-aos="fade-right">007</div>
-            <div data-aos="fade-left">
-              <div class="cap-title">Cross-Functional Collaboration</div>
-              <p class="cap-note">Partnering with design, legal, and ops to translate constraints into shippable
-                software.</p>
-            </div>
-          </div>
-          <!-- 008 -->
-          <div class="cap-row">
-            <div class="cap-number" data-aos="fade-right">008</div>
-            <div data-aos="fade-left">
-              <div class="cap-title">Mentorship & Team Growth</div>
-              <p class="cap-note">Coaching engineers and establishing practices that raise quality and velocity.</p>
-            </div>
-          </div>
-          <!-- 009 -->
-          <div class="cap-row">
-            <div class="cap-number" data-aos="fade-right">009</div>
-            <div data-aos="fade-left">
-              <div class="cap-title">Stakeholder Communication</div>
-              <p class="cap-note">Clear status, risk framing, and trade-off narratives that build trust and momentum.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- Achievements -->
   <section class="py-5 bg-light section-full" id="achievements">
     <div class="container">
-      <div class="eyebrow" data-aos="fade-right">Impact</div>
-      <h2 class="mega-title" data-aos="fade-right">Highlights</h2>
+      <div class="eyebrow" data-aos="fade-right">Measurable Results</div>
+      <h2 class="mega-title" data-aos="fade-right">Impact &amp; Recognition</h2>
       <hr class="title-rule">
       <div class="impact-grid" data-aos="fade-up">
+        <div class="impact-tile awards-tile" id="awardsTile">
+          <div class="kpi accent-gold"><i class="bi bi-trophy-fill" aria-hidden="true"></i></div>
+          <div class="label">Institutional recognition</div>
+          <div class="note">OAS — Impact Award</div>
+          <div class="note">IDB — Extra Mile Award</div>
+          <div class="note accent-teal">Honors for innovation and delivery.</div>
+        </div>
         <div class="impact-tile">
+          <!-- <div class="kpi-icon accent-blue"><i class="bi bi-speedometer2" aria-hidden="true"></i></div> -->
           <div class="kpi">95%</div>
           <div class="label">Faster archiving</div>
-          <div class="note">Gaia – OAS (workflow + UX)</div>
+          <div class="note">Gaia – OAS workflow + UX overhaul.</div>
         </div>
         <div class="impact-tile">
+          <!-- <div class="kpi-icon accent-orange"><i class="bi bi-lightning-charge" aria-hidden="true"></i></div> -->
           <div class="kpi">2×</div>
           <div class="label">Throughput increase</div>
-          <div class="note">Weekly delivery rate at IDB Invest</div>
+          <div class="note">Weekly delivery rate at IDB Invest.</div>
         </div>
         <div class="impact-tile">
+          <!-- <div class="kpi-icon accent-teal"><i class="bi bi-person-gear" aria-hidden="true"></i></div> -->
           <div class="kpi">10+ yrs</div>
-          <div class="label">Leadership in engineering</div>
-          <div class="note">Product, architecture, delivery</div>
-        </div>
-        <div class="impact-tile">
-          <div class="kpi"><i class="bi bi-trophy-fill"></i></div>
-          <div class="label">Awards for impact</div>
-          <div class="note">OAS & IDB recognition</div>
+          <div class="label">Engineering</div>
+          <div class="note">Product, architecture, delivery.</div>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- Awards section removed -->
 
   <section class="py-5 bg-white section-full" id="testimonials">
     <div class="container">
@@ -1956,6 +1917,27 @@
     }
     document.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
+
+    // Awards tile: one-time gentle ping when entering viewport
+    (function(){
+      var el = document.getElementById('awardsTile');
+      if (!el) return;
+      var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (!reduceMotion && 'IntersectionObserver' in window) {
+        var seen = false;
+        var io = new IntersectionObserver(function(entries){
+          entries.forEach(function(entry){
+            if (!seen && entry.isIntersecting) {
+              seen = true;
+              el.classList.add('ping');
+              setTimeout(function(){ el.classList.remove('ping'); }, 1000);
+              io.disconnect();
+            }
+          });
+        }, { threshold: 0.5 });
+        io.observe(el);
+      }
+    })();
   </script>
 </body>
 
