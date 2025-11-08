@@ -717,59 +717,156 @@
     }
 
     /* --- Nanay case study --- */
-    #nanay .nanay-intro {
-      max-width: 52ch;
-      margin-bottom: 3rem;
-    }
-
     #nanay .nanay-hero {
-      margin-bottom: 3rem;
+      margin-bottom: 3.5rem;
       align-items: center;
     }
 
-    #nanay .nanay-media {
-      border: 1px solid var(--hr);
-      border-radius: 12px;
-      overflow: hidden;
+    #nanay .nanay-hero-copy {
+      max-width: 52ch;
+    }
+
+    #nanay .nanay-hero-copy p {
+      font-size: 1.05rem;
+      color: rgba(11, 18, 33, 0.82);
+    }
+
+    #nanay .nanay-hero-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .7rem;
+      margin: 1.5rem 0 2rem;
+    }
+
+    #nanay .nanay-chip {
+      padding: .45rem .9rem;
+      border-radius: 999px;
+      background: rgba(11, 18, 33, 0.06);
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      font-size: .78rem;
+      font-weight: 600;
+    }
+
+    #nanay .nanay-hero-cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    #nanay .nanay-link {
+      text-decoration: none;
+      font-weight: 600;
+      color: var(--navy);
       position: relative;
-      background: #fff;
+      padding-bottom: .2rem;
     }
 
-    #nanay .nanay-hero img {
+    #nanay .nanay-link::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
       width: 100%;
-      object-fit: cover;
+      height: 1px;
+      background: currentColor;
+      opacity: .3;
+      transition: opacity .25s ease;
     }
 
-    #nanay .nanay-image-card {
+    #nanay .nanay-link:hover::after {
+      opacity: 1;
+    }
+
+    #nanay .nanay-media-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    #nanay .nanay-media-stack figure {
       border: 1px solid var(--hr);
-      border-radius: 12px;
+      border-radius: 16px;
       overflow: hidden;
       background: #fff;
+      box-shadow: 0 25px 50px -35px rgba(10, 18, 33, 0.55);
     }
 
-    #nanay .nanay-image-card img {
+    #nanay .nanay-media-stack figure img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       display: block;
     }
 
-    #nanay .nanay-motto {
-      padding: 2.25rem;
-      border: 1px solid var(--hr);
-      border-radius: 0;
-      background: transparent;
-      font-size: 1.05rem;
-      line-height: 1.6;
+    #nanay .nanay-story-grid {
+      margin-top: 3.5rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
     }
 
-    #nanay .nanay-motto em {
-      font-style: normal;
-      font-weight: 600;
-      letter-spacing: .06em;
-      display: inline-block;
-      margin-top: 1rem;
-      color: var(--teal);
+    #nanay .nanay-story-card {
+      border: 1px solid rgba(11, 18, 33, 0.08);
+      border-radius: 20px;
+      padding: 2rem;
+      background: #fff;
+      box-shadow: 0 25px 60px -40px rgba(10, 18, 33, 0.5);
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    #nanay .nanay-story-card figure {
+      margin: 0;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid var(--hr);
+    }
+
+    #nanay .nanay-story-card figure img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    #nanay .nanay-story-card .nanay-panel-eyebrow {
+      font-size: .78rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: rgba(11, 18, 33, 0.6);
+    }
+
+    #nanay .nanay-story-card h3 {
+      margin-bottom: .35rem;
+    }
+
+    #nanay .nanay-story-list {
+      list-style: none;
+      padding: 0;
+      margin: .5rem 0 0;
+      display: grid;
+      gap: .35rem;
+      font-size: .95rem;
+      color: rgba(11, 18, 33, 0.8);
+    }
+
+    #nanay .nanay-story-list li {
+      padding-left: 1rem;
+      position: relative;
+    }
+
+    #nanay .nanay-story-list li::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--teal);
+      position: absolute;
+      top: .45rem;
+      left: 0;
     }
 
     #nanay .nanay-stats {
@@ -822,26 +919,12 @@
     #nanay .nanay-scope {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
-      gap: 1rem;
-      margin-top: 2rem;
-      font-weight: 600;
+      gap: .65rem;
+      margin-top: .5rem;
       text-transform: uppercase;
-      letter-spacing: .12em;
-      font-size: .78rem;
-      color: rgba(11, 18, 33, 0.6);
-    }
-
-    #nanay .nanay-scope span {
-      position: relative;
-      padding-right: 1.25rem;
-    }
-
-    #nanay .nanay-scope span:not(:last-child)::after {
-      content: '•';
-      position: absolute;
-      right: .15rem;
-      color: rgba(11, 18, 33, 0.35);
+      letter-spacing: .1em;
+      font-size: .75rem;
+      color: rgba(11, 18, 33, 0.65);
     }
 
     #nanay .nanay-press {
@@ -954,10 +1037,6 @@
     @media(max-width:576px) {
       #nanay .nanay-stats {
         grid-template-columns: 1fr;
-      }
-
-      #nanay .nanay-motto {
-        padding: 2rem;
       }
     }
 
@@ -1636,18 +1715,17 @@
         <article class="project-card" data-aos="fade-up">
           <div class="project-card-icon accent-sky"><i class="bi bi-archive"></i></div>
           <div class="project-chip-group">
-            <span class="project-chip">Flagship</span>
-            <span class="project-chip">95% faster archiving</span>
+           
             <span class="project-chip">Awarded</span>
           </div>
           <h3 class="project-title">Gaia – OAS</h3>
-          <p>Mission-critical case &amp; document platform for CIDH with multilingual workflows plus SharePoint, Lucene, and Azure AD integration.</p>
+          <p>Mission-critical case &amp; document platform with multilingual workflows plus SharePoint, Lucene, and Azure AD integration.</p>
           <div class="project-pills">
             <span class="project-pill">Problem · Deadline-sensitive legal intake</span>
-            <span class="project-pill">Approach · Workflow redesign + observability</span>
+            <span class="project-pill">Approach · Workflow + observability</span>
             <span class="project-pill">Result · 95% faster archiving</span>
           </div>
-          <div class="project-stack">Stack: ASP.NET MVC · MSSQL · SharePoint · Azure AD · Lucene.NET</div>
+          <div class="project-stack">Stack: Agile (Scrum) · Sprint boards · .NET · MSSQL · SharePoint · Azure AD · Lucene.NET</div>
           <div class="project-tags">
             <span class="badge rounded-pill">Senior Software Engineer</span>
             <span class="badge rounded-pill">Project Manager</span>
@@ -1661,11 +1739,11 @@
           <h3 class="project-title">eVote – OAS</h3>
           <p>Secure internal voting suite covering proposals, sessions, and results with RBAC and full audit trail.</p>
           <div class="project-pills">
-            <span class="project-pill">Problem · Manual votes lacked traceability</span>
-            <span class="project-pill">Approach · Role-based workflows + logging</span>
+            <span class="project-pill">Problem · Manual process</span>
+            <span class="project-pill">Approach · Role-based + logging</span>
             <span class="project-pill">Result · Transparent multilingual outcomes</span>
           </div>
-          <div class="project-stack">Stack: ASP.NET MVC · MSSQL · Azure Cognitive Services</div>
+          <div class="project-stack">Stack: Agile (Scrum) · Sprint boards · .NET · MSSQL · Azure Cognitive Services</div>
           <div class="project-tags">
             <span class="badge rounded-pill">Senior Software Engineer</span>
             <span class="badge rounded-pill">Project Manager</span>
@@ -1680,10 +1758,10 @@
           <p>Social-impact matching platform that connects people in need with volunteers through an accessibility-first experience.</p>
           <div class="project-pills">
             <span class="project-pill">Problem · Fragmented access to help</span>
-            <span class="project-pill">Approach · Matching engine + plain-language UX</span>
+            <span class="project-pill">Approach · Matching engine</span>
             <span class="project-pill">Result · 1,000+ users and 250+ families served</span>
           </div>
-          <div class="project-stack">Stack: ASP.NET Core · Azure · MSSQL</div>
+          <div class="project-stack">Stack: Agile Delivery · Operations Management · ASP.NET Core · Azure · MSSQL</div>
           <div class="project-tags">
             <span class="badge rounded-pill">Founder</span>
             <span class="badge rounded-pill">CTO</span>
@@ -1698,19 +1776,18 @@
           <p>Agentic RAG assistant for mediation teams that guides users through legal flows with evals and guardrails.</p>
           <div class="project-pills">
             <span class="project-pill">Problem · Slow intake + handoffs</span>
-            <span class="project-pill">Approach · Tool orchestration with LangChain</span>
+            <span class="project-pill">Approach · Orchestration with LangChain</span>
             <span class="project-pill">Result · Minutes to trusted responses</span>
           </div>
           <div class="project-stack">Stack: FastAPI · LangChain · LlamaIndex</div>
           <div class="project-tags">
             <span class="badge rounded-pill">Founder</span>
-            <span class="badge rounded-pill">CEO</span>
           </div>
         </article>
         <article class="project-card" data-aos="fade-up" data-aos-delay="250">
           <div class="project-card-icon accent-amber"><i class="bi bi-currency-exchange"></i></div>
           <div class="project-chip-group">
-            <span class="project-chip">Delivery recognition</span>
+            <span class="project-chip">Awarded</span>
           </div>
           <h3 class="project-title">FRIDA – IDB</h3>
           <p>Treasury platform that unified workflows and real-time visibility for IDB cash operations and settlements.</p>
@@ -1738,40 +1815,65 @@
 
       <div class="row g-4 g-lg-5 nanay-hero" data-aos="fade-up">
         <div class="col-lg-6">
-          <div class="nanay-intro">
-            <p>When the world stopped, connection became essential.</p>
-            <p>In the middle of the pandemic, I led the creation of Nanay, a web platform that connected people who needed help with volunteers ready to offer it.</p>
-            <p>The idea was simple.</p>
-            <p>Building it was hard.</p>
+          <div class="nanay-hero-copy">
+            <p>When the world stopped, connection became essential. We created Nanay: a web platform that matched people asking for help with volunteers who could safely deliver it.</p>
+            <p>We designed every flow for clarity under pressure: categorized requests, verifiable identities, and transparent follow-ups so regulators, donors, and communities could trust the outcome.</p>
+            <div class="nanay-hero-chips">
+              <span class="nanay-chip">Mutual aid</span>
+              <span class="nanay-chip">Geo-located</span>
+              <span class="nanay-chip">Verified volunteers</span>
+            </div>
+            <div class="nanay-hero-cta">
+              
+              <a class="nanay-link" href="https://www.eluniverso.com/larevista/2020/05/12/nota/7839771/nanay-app-ayuda-creada-dos-ecuatorianos-contra-coronavirus/" target="_blank" rel="noopener noreferrer">See it in the news</a>
+            </div>
           </div>
         </div>
         <div class="col-lg-5 offset-lg-1">
-          <figure class="nanay-media m-0">
-            <img src="/assets/images/nanay_joinus.jpg" alt="Nanay platform join-us screen inviting volunteers to participate" width="1080" height="1080" loading="lazy" decoding="async">
-            <figcaption class="visually-hidden">Screenshot of the Nanay platform showing a join-us call to action.</figcaption>
-          </figure>
-        </div>
-      </div>
-
-      <div class="row gy-4 align-items-start" data-aos="fade-up" data-aos-delay="100">
-        <div class="col-lg-7">
-          <h3 class="section-title mb-3">A name with meaning</h3>
-          <p>In Quichua, Nanay means pain.</p>
-          <p>In other languages, it means mother.</p>
-          <p>For us, it meant both: understanding people’s needs, and responding with care.</p>
-        </div>
-        <div class="col-lg-5">
-          <div class="nanay-motto-wrap d-flex flex-column gap-4">
-            
-            <figure class="nanay-image-card m-0">
-              <img src="/assets/images/nanay_meaning.jpg" alt="Meaning of Nanay illustrated with caring hands supporting each other" width="1080" height="1080" loading="lazy" decoding="async">
-              <figcaption class="visually-hidden">Photograph illustrating the meaning of Nanay with supportive hands.</figcaption>
+          <div class="nanay-media-stack">
+            <figure class="nanay-media-primary m-0">
+              <img src="/assets/images/nanay_joinus.jpg" alt="Nanay platform join-us screen inviting volunteers to participate" width="1080" height="1080" loading="lazy" decoding="async">
+              <figcaption class="visually-hidden">Screenshot of the Nanay platform showing a join-us call to action.</figcaption>
             </figure>
           </div>
         </div>
       </div>
 
-      <div class="mt-5" data-aos="fade-up" data-aos-delay="150">
+      <div class="nanay-story-grid" data-aos="fade-up" data-aos-delay="100">
+        <article class="nanay-story-card">
+          <div class="nanay-panel-eyebrow">Meaning</div>
+          <h3>Why we called it Nanay</h3>
+          <p>In Quichua, Nanay means pain. In other languages, it evokes a caring mother. We embraced both ideas: naming a platform that listens to each story and responds with dignity.</p>
+          <figure>
+            <img src="/assets/images/nanay_meaning.jpg" alt="Meaning of Nanay illustrated with caring hands supporting each other" width="1080" height="1080" loading="lazy" decoding="async">
+            <figcaption class="visually-hidden">Photograph illustrating the meaning of Nanay with supportive hands.</figcaption>
+          </figure>
+        </article>
+        <article class="nanay-story-card">
+          <div class="nanay-panel-eyebrow">Operations</div>
+          <h3>More than an app</h3>
+          <p>Nanay ran as an ecosystem: volunteers, donors, logistics teams, campaigns, and on-call operators coordinating everything remotely.</p>
+          
+          <figure>
+            <img src="/assets/images/nanay_historias.jpg" alt="Volunteer stories highlighted within the Nanay community platform" width="1080" height="1080" loading="lazy" decoding="async">
+            <figcaption class="visually-hidden">Screenshot showcasing volunteer stories shared through Nanay.</figcaption>
+          </figure>
+          <div class="nanay-scope">
+            <span>Volunteers</span>
+            <span>Logistics</span>
+            <span>Campaigns</span>
+            <span>Operations</span>
+            <span>Engineering</span>
+          </div>
+          <ul class="nanay-story-list">
+            <li>Onboarding &amp; verifying helpers before any request went live.</li>
+            <li>Routing donations by proximity, language, and urgency.</li>
+            <li>Storytelling campaigns (like our Christmas drive) to keep help flowing.</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="mt-5 py-3" data-aos="fade-up" data-aos-delay="150">
         <h3 class="section-title mb-3">The impact</h3>
         <p>In just a few months, Nanay gathered over 1,000 users.</p>
         <p>We helped more than 250 families receive food, medicine, and essentials, right when they needed them most.</p>
@@ -1789,29 +1891,6 @@
           <div class="nanay-stat-card">
             <div class="nanay-card-icon accent-teal"><i class="bi bi-gift" aria-hidden="true"></i></div>
             <p class="nanay-card-copy">Delivered holiday kits to <span class="nanay-card-accent accent-teal">90+</span> families through community donations.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="mt-5 py-5" data-aos="fade-up" data-aos-delay="200">
-        <div class="row g-4 align-items-center">
-          <div class="col-lg-7">
-            <h3 class="section-title mb-3">Behind the scenes</h3>
-            <p>Nanay wasn’t just an app. It was an ecosystem. We managed volunteers, coordinated donations, handled logistics, built campaigns, and kept everything running in real time while working remotely and under strict restrictions.</p>
-            <p>Grateful for the incredible Nanay team who showed up every day with heart and grit.</p>
-            <div class="nanay-scope">
-              <span>Volunteers</span>
-              <span>Logistics</span>
-              <span>Campaigns</span>
-              <span>Operations</span>
-              <span>Engineering</span>
-            </div>
-          </div>
-          <div class="col-lg-4 offset-lg-1">
-            <figure class="nanay-image-card m-0">
-              <img src="/assets/images/nanay_historias.jpg" alt="Volunteer stories highlighted within the Nanay community platform" width="1080" height="1080" loading="lazy" decoding="async">
-              <figcaption class="visually-hidden">Screenshot showcasing volunteer stories shared through Nanay.</figcaption>
-            </figure>
           </div>
         </div>
       </div>
