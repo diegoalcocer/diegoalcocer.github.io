@@ -604,39 +604,116 @@
       display: inline-block;
     }
 
-    /* New styles for Projects and Highlights */
-    .project-row {
-      display: flex;
+    /* Projects */
+    #projects .projects-grid {
+      margin-top: 2rem;
+      display: grid;
       gap: 1.5rem;
-      align-items: flex-start;
-      padding: 4rem 0;
-      border-top: 1px solid var(--hr);
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     }
 
-    .icon-bubble {
-      flex: 0 0 64px;
-      height: 64px;
-      width: 64px;
-      border-radius: 14px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.75rem;
-      background: transparent;
-      border: 2px solid var(--teal);
-      color: var(--teal)
-    }
-
-    .project-meta {
+    #projects .project-chip-group {
       display: flex;
       flex-wrap: wrap;
       gap: .5rem;
-      margin-top: .5rem
     }
 
-    .project-meta .badge {
-      background: rgba(11, 18, 33, .06);
-      color: var(--navy);
+    #projects .project-card {
+      border-radius: 24px;
+      padding: 1.75rem;
+      background: #fbfcff;
+      border: 1px solid rgba(15, 23, 42, 0.08);
+      box-shadow: 0 30px 60px -48px rgba(15, 23, 42, 0.8);
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      transition: transform .4s cubic-bezier(.19, 1, .22, 1), box-shadow .4s cubic-bezier(.19, 1, .22, 1);
+      height: 100%;
+    }
+
+    #projects .project-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 35px 70px -45px rgba(15, 23, 42, 0.75);
+    }
+
+    #projects .project-card-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 16px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      color: #0a1221;
+    }
+
+    #projects .project-card-icon.accent-mint {
+      background: linear-gradient(135deg, #d4fff1, #8df0c3);
+      color: #0c4f3a;
+    }
+
+    #projects .project-card-icon.accent-violet {
+      background: linear-gradient(135deg, #ebe3ff, #c4b1ff);
+      color: #2e1f5c;
+    }
+
+    #projects .project-card-icon.accent-amber {
+      background: linear-gradient(135deg, #fff2d8, #ffd18d);
+      color: #5f3b05;
+    }
+
+    #projects .project-card-icon.accent-sky {
+      background: linear-gradient(135deg, #dff2ff, #a3d8ff);
+      color: #10395c;
+    }
+
+    #projects .project-card-icon.accent-rose {
+      background: linear-gradient(135deg, #ffe4ee, #ffb6cf);
+      color: #681534;
+    }
+
+    #projects .project-chip {
+      display: inline-flex;
+      align-items: center;
+      font-size: .85rem;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      padding: .35rem .85rem;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.08);
+      color: #102241;
+      font-weight: 600;
+    }
+
+    #projects .project-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .6rem;
+    }
+
+    #projects .project-pill {
+      padding: .45rem .85rem;
+      border-radius: 999px;
+      background: rgba(10, 18, 33, 0.05);
+      font-size: .9rem;
+      color: #111c41;
+    }
+
+    #projects .project-stack {
+      font-size: .85rem;
+      color: rgba(16, 34, 65, 0.7);
+    }
+
+    #projects .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .4rem;
+      margin-top: auto;
+    }
+
+    #projects .project-tags .badge {
+      background: rgba(10, 18, 33, 0.08);
+      color: #0a1221;
     }
 
     /* --- Nanay case study --- */
@@ -1555,87 +1632,99 @@
       <div class="eyebrow" data-aos="fade-right">Work</div>
       <h2 class="mega-title" data-aos="fade-right">Projects</h2>
       <hr class="title-rule">
-      <div class="d-flex flex-column gap-4">
-        <div class="project-row" data-aos="fade-up">
-          <div class="icon-bubble"><i class="bi bi-archive"></i></div>
-          <div>
-            <span class="metric-badge">95% faster archiving</span>
-            <h3 class="project-title mb-2">Gaia – OAS</h3>
-            <span class="award-badge" title="Institutional recognition for impact (OAS)">AWARDED</span>
-            <p class="mb-2">Mission‑critical case &amp; document system for CIDH; high auditability, multilingual users, SharePoint &amp; Azure AD integration. Led roadmap, delivery cadence, and cross‑functional alignment.</p>
-            <div class="skim-bar">
-              Context: legal deadlines &amp; audit risk — Approach: workflow redesign, UX, observability — Result: 95% faster archiving, higher adoption — Team: 6‑10 engineers · Stack: ASP.NET MVC • MSSQL • SharePoint • Azure AD • Lucene.NET
-            </div>
-            <div class="project-meta">
-              <span class="badge rounded-pill">Senior Software Engineer</span>
-              <span class="badge rounded-pill">Project Manager</span>
-            </div>
+      <div class="projects-grid">
+        <article class="project-card" data-aos="fade-up">
+          <div class="project-card-icon accent-sky"><i class="bi bi-archive"></i></div>
+          <div class="project-chip-group">
+            <span class="project-chip">Flagship</span>
+            <span class="project-chip">95% faster archiving</span>
+            <span class="project-chip">Awarded</span>
           </div>
-        </div>
-        <div class="project-row" data-aos="fade-up">
-          <div class="icon-bubble"><i class="bi bi-ui-checks-grid"></i></div>
-          <div>
-            <span class="metric-badge">Auditable decisions</span>
-            <h3 class="project-title mb-2">eVote – OAS</h3>
-            <p class="mb-2">Secure internal voting for CIDH, from proposals to sessions to results, with RBAC, audit trail, and translation.</p>
-            <div class="skim-bar">
-              Problem: opaque manual votes — Approach: role-based platform with logging — Result: transparent, traceable outcomes — Stack: ASP.NET MVC • MSSQL • Azure Cognitive Services
-            </div>
-            <div class="project-meta">
-              <span class="badge rounded-pill">Senior Software Engineer</span>
-              <span class="badge rounded-pill">Project Manager</span>
-            </div>
+          <h3 class="project-title">Gaia – OAS</h3>
+          <p>Mission-critical case &amp; document platform for CIDH with multilingual workflows plus SharePoint, Lucene, and Azure AD integration.</p>
+          <div class="project-pills">
+            <span class="project-pill">Problem · Deadline-sensitive legal intake</span>
+            <span class="project-pill">Approach · Workflow redesign + observability</span>
+            <span class="project-pill">Result · 95% faster archiving</span>
           </div>
-        </div>
-
-        <div class="project-row" data-aos="fade-up" data-aos-delay="100">
-          <div class="icon-bubble"><i class="bi bi-heart-pulse"></i></div>
-          <div>
-            <span class="metric-badge">Helped hundreds in need</span>
-            <h3 class="project-title mb-2">Nanay</h3>
-            <p class="mb-2">Social-impact matching platform connecting people in need with volunteers—accessibility-first and community-driven.</p>
-            <div class="skim-bar">
-              Problem: fragmented access to help — Approach: matching engine with simple UX — Result: broadened reach and engagement — Stack: ASP.NET Core • Azure • MSSQL
-            </div>
-            <div class="project-meta">
-              <span class="badge rounded-pill">Founder</span>
-              <span class="badge rounded-pill">CTO</span>
-            </div>
+          <div class="project-stack">Stack: ASP.NET MVC · MSSQL · SharePoint · Azure AD · Lucene.NET</div>
+          <div class="project-tags">
+            <span class="badge rounded-pill">Senior Software Engineer</span>
+            <span class="badge rounded-pill">Project Manager</span>
           </div>
-        </div>
-
-        <div class="project-row" data-aos="fade-up" data-aos-delay="200">
-          <div class="icon-bubble"><i class="bi bi-robot"></i></div>
-          <div>
-            <span class="metric-badge">Faster responses</span>
-            <h3 class="project-title mb-2">Agentic Bot</h3>
-            <p class="mb-2">Agentic RAG assistant for mediation—guides users through legal flows (FastAPI, LangChain, LlamaIndex).</p>
-            <div class="skim-bar">
-              Problem: slow intake and triage — Approach: RAG with tool orchestration — Result: minutes to answers — Stack: FastAPI • LangChain • LlamaIndex
-            </div>
-            <div class="project-meta">
-              <span class="badge rounded-pill">Founder</span>
-              <span class="badge rounded-pill">CEO</span>
-            </div>
+        </article>
+        <article class="project-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="project-card-icon accent-violet"><i class="bi bi-ui-checks-grid"></i></div>
+          <div class="project-chip-group">
+            <span class="project-chip">Auditable decisions</span>
           </div>
-        </div>
-
-        <div class="project-row" data-aos="fade-up">
-          <div class="icon-bubble"><i class="bi bi-currency-exchange"></i></div>
-          <div>
-            <span class="metric-badge">Recognized for delivery</span>
-            <h3 class="project-title mb-2">FRIDA – IDB</h3>
-            <span class="award-badge" title="Institutional recognition for delivery (IDB)">AWARDED</span>
-            <p class="mb-2">Treasury platform for IDB—unified workflows and real-time visibility for cash operations.</p>
-            <div class="skim-bar">
-              Problem: fragmented treasury processes — Approach: product vision and agile delivery — Result: higher throughput and transparency — Stack: ASP.NET • Oracle
-            </div>
-            <div class="project-meta">
-              <span class="badge rounded-pill">Product Owner</span>
-              <span class="badge rounded-pill">Senior Software Engineer</span>
-            </div>
+          <h3 class="project-title">eVote – OAS</h3>
+          <p>Secure internal voting suite covering proposals, sessions, and results with RBAC and full audit trail.</p>
+          <div class="project-pills">
+            <span class="project-pill">Problem · Manual votes lacked traceability</span>
+            <span class="project-pill">Approach · Role-based workflows + logging</span>
+            <span class="project-pill">Result · Transparent multilingual outcomes</span>
           </div>
-        </div>
+          <div class="project-stack">Stack: ASP.NET MVC · MSSQL · Azure Cognitive Services</div>
+          <div class="project-tags">
+            <span class="badge rounded-pill">Senior Software Engineer</span>
+            <span class="badge rounded-pill">Project Manager</span>
+          </div>
+        </article>
+        <article class="project-card" data-aos="fade-up" data-aos-delay="150">
+          <div class="project-card-icon accent-rose"><i class="bi bi-heart-pulse"></i></div>
+          <div class="project-chip-group">
+            <span class="project-chip">Community impact</span>
+          </div>
+          <h3 class="project-title">Nanay</h3>
+          <p>Social-impact matching platform that connects people in need with volunteers through an accessibility-first experience.</p>
+          <div class="project-pills">
+            <span class="project-pill">Problem · Fragmented access to help</span>
+            <span class="project-pill">Approach · Matching engine + plain-language UX</span>
+            <span class="project-pill">Result · 1,000+ users and 250+ families served</span>
+          </div>
+          <div class="project-stack">Stack: ASP.NET Core · Azure · MSSQL</div>
+          <div class="project-tags">
+            <span class="badge rounded-pill">Founder</span>
+            <span class="badge rounded-pill">CTO</span>
+          </div>
+        </article>
+        <article class="project-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="project-card-icon accent-mint"><i class="bi bi-robot"></i></div>
+          <div class="project-chip-group">
+            <span class="project-chip">AI assistant</span>
+          </div>
+          <h3 class="project-title">Agentic Bot</h3>
+          <p>Agentic RAG assistant for mediation teams that guides users through legal flows with evals and guardrails.</p>
+          <div class="project-pills">
+            <span class="project-pill">Problem · Slow intake + handoffs</span>
+            <span class="project-pill">Approach · Tool orchestration with LangChain</span>
+            <span class="project-pill">Result · Minutes to trusted responses</span>
+          </div>
+          <div class="project-stack">Stack: FastAPI · LangChain · LlamaIndex</div>
+          <div class="project-tags">
+            <span class="badge rounded-pill">Founder</span>
+            <span class="badge rounded-pill">CEO</span>
+          </div>
+        </article>
+        <article class="project-card" data-aos="fade-up" data-aos-delay="250">
+          <div class="project-card-icon accent-amber"><i class="bi bi-currency-exchange"></i></div>
+          <div class="project-chip-group">
+            <span class="project-chip">Delivery recognition</span>
+          </div>
+          <h3 class="project-title">FRIDA – IDB</h3>
+          <p>Treasury platform that unified workflows and real-time visibility for IDB cash operations and settlements.</p>
+          <div class="project-pills">
+            <span class="project-pill">Problem · Fragmented treasury processes</span>
+            <span class="project-pill">Approach · Product vision + agile delivery</span>
+            <span class="project-pill">Result · Higher throughput &amp; transparency</span>
+          </div>
+          <div class="project-stack">Stack: ASP.NET · Oracle</div>
+          <div class="project-tags">
+            <span class="badge rounded-pill">Product Owner</span>
+            <span class="badge rounded-pill">Senior Software Engineer</span>
+          </div>
+        </article>
       </div>
     </div>
   </section>
