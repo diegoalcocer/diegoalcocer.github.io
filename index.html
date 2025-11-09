@@ -161,10 +161,42 @@
 
     /* About section refinements */
     .about-lead {
-      max-width: 52ch;
-      line-height: 1.6;
+      max-width: 58ch;
+      line-height: 1.65;
+      font-size: 1.05rem;
+      margin: 0 auto;
+      position: relative;
+      padding-left: 2.5rem;
+      border-left: 1px solid rgba(11, 18, 33, 0.12);
     }
-    .about-lead p { margin: 0 0 0.85rem; }
+    .about-lead::before {
+      content: "001";
+      position: absolute;
+      left: -2.6rem;
+      top: 0;
+      font-size: .78rem;
+      letter-spacing: .3em;
+      color: rgba(11, 18, 33, 0.4);
+      font-weight: 600;
+    }
+    .about-lead p { margin: 0; }
+    .about-lead p + p { margin-top: 1.2rem; }
+    .about-preface{
+      display:inline-block;
+      font-size:.78rem;
+      letter-spacing:.32em;
+      text-transform:uppercase;
+      color:rgba(11,18,33,0.55);
+      margin-bottom:1.5rem;
+    }
+    @media(max-width:768px){
+      .about-lead{
+        padding-left:1.5rem;
+      }
+      .about-lead::before{
+        left:-1.5rem;
+      }
+    }
     /* About skim line */
     .about-skim{ opacity:.75; font-size:.95rem; margin-top:.75rem; letter-spacing:.01em; }
     /* Extra breathing room under the About title rule */
@@ -612,12 +644,6 @@
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     }
 
-    #projects .project-chip-group {
-      display: flex;
-      flex-wrap: wrap;
-      gap: .5rem;
-    }
-
     #projects .project-card {
       border-radius: 24px;
       padding: 1.75rem;
@@ -637,66 +663,34 @@
     }
 
     #projects .project-card-icon {
-      width: 56px;
-      height: 56px;
-      border-radius: 16px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.5rem;
-      color: #0a1221;
+      font-size: 1.6rem;
+      color: var(--navy);
     }
+    #projects .project-card-icon.accent-sky { color: #7b87ff; }
+    #projects .project-card-icon.accent-violet { color: #a985ff; }
+    #projects .project-card-icon.accent-rose { color: #ff86b1; }
+    #projects .project-card-icon.accent-mint { color: #3dcfb0; }
+    #projects .project-card-icon.accent-amber { color: #f6a85d; }
 
-    #projects .project-card-icon.accent-mint {
-      background: linear-gradient(135deg, #d4fff1, #8df0c3);
-      color: #0c4f3a;
-    }
-
-    #projects .project-card-icon.accent-violet {
-      background: linear-gradient(135deg, #ebe3ff, #c4b1ff);
-      color: #2e1f5c;
-    }
-
-    #projects .project-card-icon.accent-amber {
-      background: linear-gradient(135deg, #fff2d8, #ffd18d);
-      color: #5f3b05;
-    }
-
-    #projects .project-card-icon.accent-sky {
-      background: linear-gradient(135deg, #dff2ff, #a3d8ff);
-      color: #10395c;
-    }
-
-    #projects .project-card-icon.accent-rose {
-      background: linear-gradient(135deg, #ffe4ee, #ffb6cf);
-      color: #681534;
-    }
-
-    #projects .project-chip {
-      display: inline-flex;
-      align-items: center;
-      font-size: .85rem;
-      text-transform: uppercase;
-      letter-spacing: .08em;
-      padding: .35rem .85rem;
-      border-radius: 999px;
-      background: rgba(15, 23, 42, 0.08);
-      color: #102241;
-      font-weight: 600;
-    }
-
-    #projects .project-pills {
+    #projects .project-stat {
       display: flex;
-      flex-wrap: wrap;
-      gap: .6rem;
+      flex-direction: column;
+      gap: .2rem;
+      margin: .75rem 0 1rem;
     }
 
-    #projects .project-pill {
-      padding: .45rem .85rem;
-      border-radius: 999px;
-      background: rgba(10, 18, 33, 0.05);
-      font-size: .9rem;
-      color: #111c41;
+    #projects .project-stat-label {
+      text-transform: uppercase;
+      letter-spacing: .18em;
+      font-size: .75rem;
+      color: rgba(11, 18, 33, 0.55);
+    }
+
+    #projects .project-stat-value {
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: -.01em;
+      color: #0f172a;
     }
 
     #projects .project-stack {
@@ -1662,7 +1656,7 @@
       <h1 class="mega-title mega-title-hero hero-title-align text-center text-lg-start" data-aos="fade-down"
         data-aos-delay="200">Diego Alcocer</h1>
       <p class="lead text-secondary text-center text-lg-start" data-aos="fade-up" data-aos-delay="400">
-        Project Manager &amp; Engineering Leader
+        Project Manager &amp; Engineering Leader.
       </p>
       <p class="lead text-secondary text-center text-lg-start" data-aos="fade-up" data-aos-delay="410">
         Bridging technology, operations, and transformation.
@@ -1670,14 +1664,11 @@
       <p class="lead text-secondary text-center text-lg-start" data-aos="fade-up" data-aos-delay="420">
         10+ years delivering AI, data, and enterprise systems.
       </p>
-      <p class="lead text-secondary text-center text-lg-start" data-aos="fade-up" data-aos-delay="430">
-        Focused on workflows, automation, and measurable impact.
-      </p>
       <div class="hero-awards text-center text-lg-start" data-aos="fade-up" data-aos-delay="450">
         <i class="bi bi-trophy-fill icon" aria-hidden="true"></i> Institutional awards — IDB & OAS
       </div>
       <div class="mt-4 text-center text-lg-start" data-aos="fade-up" data-aos-delay="600">
-        <a href="#scrollIndicator" class="hero-cta">Explore my work &rarr;</a>
+        <a href="#scrollIndicator" class="hero-cta mt-3">Explore my work &rarr;</a>
       </div>
     </div>
     <hr class="title-rule">
@@ -1689,17 +1680,17 @@
   <!-- About Section -->
   <section class="bg-white section-full" id="about">
     <div class="container">
-      <div class="eyebrow text-center text-lg-start" data-aos="fade-right">About</div>
+      <div class="eyebrow text-center text-lg-start" data-aos="fade-right">Profile</div>
       <h2 class="mega-title text-center text-lg-start" data-aos="fade-right">About Me</h2>
       <hr class="title-rule">
+      <div class="about-preface" data-aos="fade-right" data-aos-delay="50"></div>
       <div class="lead about-lead text-center text-lg-start" data-aos="fade-up">
-        <p>I lead projects that connect <strong>technology with institutional transformation</strong> aligning every initiative with the organization's roadmap.</p>
-        <p>My work blends <strong>architecture, process, and business</strong> to translate goals into measurable results.</p>
-        <p>I manage <strong>vendors and cross-functional teams</strong>, guide <strong>RFI/RFP evaluations</strong>, and collaborate with finance and operations on <strong>ROI, planning, and chronograms</strong>. My focus is on execution that’s <strong>predictable, data-driven, and scalable</strong>.</p>
-        <p>Previously, worked at <strong>ThoughtWorks, Halliburton, OAS</strong>, and <strong>IDB</strong>.</p>
-        <p>I hold a <strong>Master’s in Data Science (UC Chile)</strong> and a <strong>Master’s in Data Management &amp; Technology Innovation (Universitat de Barcelona)</strong>.</p>
+        <p>I lead projects that connect <b>technology with institutional transformation</b>, keeping discovery, governance, and delivery tied to the roadmap.</p>
+        <p>My work blends <b>architecture, process, and business</b> so executive intent becomes measurable workstreams.</p>
+        <p>I manage <b>vendors and cross-functional teams</b>, guide RFI/RFP evaluations, and collaborate with finance and operations on ROI, planning, and chronograms. My focus is execution that stays <b>predictable, data-driven, and scalable.</b></p>
+        <p>Previously with ThoughtWorks, Halliburton, OAS, and IDB. Master’s in Data Science (UC Chile) and Master’s in Data Management &amp; Technology Innovation (Universitat de Barcelona).</p>
       </div>
-      <div class="about-skim text-center text-lg-start" data-aos="fade-up" data-aos-delay="100">
+      <div class="about-skim text-center text-lg-start my-5" data-aos="fade-up" data-aos-delay="100">
         <strong>Focus</strong> — bridging tech and transformation • <strong>Strength</strong> — data-driven delivery • <strong>Edge</strong> — design clarity at scale
       </div>
     </div>
@@ -1714,18 +1705,13 @@
       <div class="projects-grid">
         <article class="project-card" data-aos="fade-up">
           <div class="project-card-icon accent-sky"><i class="bi bi-archive"></i></div>
-          <div class="project-chip-group">
-           
-            <span class="project-chip">Awarded</span>
+          <div class="project-stat">
+            <span class="project-stat-label">Result</span>
+            <span class="project-stat-value">95% faster</span>
           </div>
           <h3 class="project-title">Gaia – OAS</h3>
           <p>Mission-critical case &amp; document platform with multilingual workflows plus SharePoint, Lucene, and Azure AD integration.</p>
-          <div class="project-pills">
-            <span class="project-pill">Problem · Deadline-sensitive legal intake</span>
-            <span class="project-pill">Approach · Workflow + observability</span>
-            <span class="project-pill">Result · 95% faster archiving</span>
-          </div>
-          <div class="project-stack">Stack: Agile (Scrum) · Sprint boards · .NET · MSSQL · SharePoint · Azure AD · Lucene.NET</div>
+          <div class="project-stack">Stack: Agile (Scrum) · .NET · MSSQL · SharePoint · Azure AD · Lucene.NET</div>
           <div class="project-tags">
             <span class="badge rounded-pill">Senior Software Engineer</span>
             <span class="badge rounded-pill">Project Manager</span>
@@ -1733,17 +1719,13 @@
         </article>
         <article class="project-card" data-aos="fade-up" data-aos-delay="100">
           <div class="project-card-icon accent-violet"><i class="bi bi-ui-checks-grid"></i></div>
-          <div class="project-chip-group">
-            <span class="project-chip">Auditable decisions</span>
+          <div class="project-stat">
+            <span class="project-stat-label">Outcome</span>
+            <span class="project-stat-value">Auditable votes</span>
           </div>
           <h3 class="project-title">eVote – OAS</h3>
-          <p>Secure internal voting suite covering proposals, sessions, and results with RBAC and full audit trail.</p>
-          <div class="project-pills">
-            <span class="project-pill">Problem · Manual process</span>
-            <span class="project-pill">Approach · Role-based + logging</span>
-            <span class="project-pill">Result · Transparent multilingual outcomes</span>
-          </div>
-          <div class="project-stack">Stack: Agile (Scrum) · Sprint boards · .NET · MSSQL · Azure Cognitive Services</div>
+          <p>Secure internal voting suite covering proposals, sessions, and results with RBAC, multilingual UX, and traceable logs.</p>
+          <div class="project-stack">Stack: Agile delivery · .NET · MSSQL · Azure Cognitive Services</div>
           <div class="project-tags">
             <span class="badge rounded-pill">Senior Software Engineer</span>
             <span class="badge rounded-pill">Project Manager</span>
@@ -1751,17 +1733,13 @@
         </article>
         <article class="project-card" data-aos="fade-up" data-aos-delay="150">
           <div class="project-card-icon accent-rose"><i class="bi bi-heart-pulse"></i></div>
-          <div class="project-chip-group">
-            <span class="project-chip">Community impact</span>
+          <div class="project-stat">
+            <span class="project-stat-label">Reach</span>
+            <span class="project-stat-value">1,000+ helpers</span>
           </div>
           <h3 class="project-title">Nanay</h3>
-          <p>Social-impact matching platform that connects people in need with volunteers through an accessibility-first experience.</p>
-          <div class="project-pills">
-            <span class="project-pill">Problem · Fragmented access to help</span>
-            <span class="project-pill">Approach · Matching engine</span>
-            <span class="project-pill">Result · 1,000+ users and 250+ families served</span>
-          </div>
-          <div class="project-stack">Stack: Agile Delivery · Operations Management · ASP.NET Core · Azure · MSSQL</div>
+          <p>Social-impact matching platform connecting people in need with volunteers through an accessibility-first experience.</p>
+          <div class="project-stack">Stack: Agile Ops · ASP.NET Core · Azure · MSSQL</div>
           <div class="project-tags">
             <span class="badge rounded-pill">Founder</span>
             <span class="badge rounded-pill">CTO</span>
@@ -1769,33 +1747,26 @@
         </article>
         <article class="project-card" data-aos="fade-up" data-aos-delay="200">
           <div class="project-card-icon accent-mint"><i class="bi bi-robot"></i></div>
-          <div class="project-chip-group">
-            <span class="project-chip">AI assistant</span>
+          <div class="project-stat">
+            <span class="project-stat-label">Response</span>
+            <span class="project-stat-value">Minutes, not days</span>
           </div>
           <h3 class="project-title">Agentic Bot</h3>
-          <p>Agentic RAG assistant for mediation teams that guides users through legal flows with evals and guardrails.</p>
-          <div class="project-pills">
-            <span class="project-pill">Problem · Slow intake + handoffs</span>
-            <span class="project-pill">Approach · Orchestration with LangChain</span>
-            <span class="project-pill">Result · Minutes to trusted responses</span>
-          </div>
+          <p>Agentic RAG assistant for mediation teams with tool orchestration, evaluation loops, and guardrails.</p>
           <div class="project-stack">Stack: FastAPI · LangChain · LlamaIndex</div>
           <div class="project-tags">
             <span class="badge rounded-pill">Founder</span>
+            <span class="badge rounded-pill">CEO</span>
           </div>
         </article>
         <article class="project-card" data-aos="fade-up" data-aos-delay="250">
           <div class="project-card-icon accent-amber"><i class="bi bi-currency-exchange"></i></div>
-          <div class="project-chip-group">
-            <span class="project-chip">Awarded</span>
+          <div class="project-stat">
+            <span class="project-stat-label">Visibility</span>
+            <span class="project-stat-value">Real-time ops</span>
           </div>
           <h3 class="project-title">FRIDA – IDB</h3>
-          <p>Treasury platform that unified workflows and real-time visibility for IDB cash operations and settlements.</p>
-          <div class="project-pills">
-            <span class="project-pill">Problem · Fragmented treasury processes</span>
-            <span class="project-pill">Approach · Product vision + agile delivery</span>
-            <span class="project-pill">Result · Higher throughput &amp; transparency</span>
-          </div>
+          <p>Treasury platform that unified workflows and gave IDB cash operations real-time visibility and throughput.</p>
           <div class="project-stack">Stack: ASP.NET · Oracle</div>
           <div class="project-tags">
             <span class="badge rounded-pill">Product Owner</span>
