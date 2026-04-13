@@ -14,18 +14,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Diego Alcocer – Engineering Leader | AI, Data, .NET</title>
-  <meta name="description" content="Diego Alcocer – project manager and senior software engineer. I design clear workflows, build reliable systems, and align teams from problem to release.">
+  <title>Diego Alcocer – Engineering Leader | AI, Data & Enterprise Systems</title>
+  <meta name="description" content="Diego Alcocer – Engineering Leader and Project Manager with 10+ years delivering AI, data, and enterprise systems at IDB, OAS, and ThoughtWorks. Award recipient.">
   <meta name="robots" content="index,follow">
+  <meta name="author" content="Diego Alcocer">
+  <link rel="icon" type="image/png" href="/assets/og-card.png">
   <link rel="canonical" href="https://diegoalcocer.github.io/">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Diego Alcocer">
   <meta property="og:title" content="Diego Alcocer – Engineering Leader">
-  <meta property="og:description" content="I design clear workflows, build reliable systems, and align teams from problem to release. AI & data-driven.">
+  <meta property="og:description" content="Engineering Leader with 10+ years delivering AI, data, and enterprise systems. Award recipient at IDB &amp; OAS.">
   <meta property="og:url" content="https://diegoalcocer.github.io/">
-  <meta property="og:image" content="/assets/og-card.png">
+  <meta property="og:image" content="https://diegoalcocer.github.io/assets/og-card.png">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
@@ -43,7 +45,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap"
     rel="stylesheet">
   <style>
     .skills-highlight {
@@ -60,6 +62,7 @@
       --teal: #3cb6a3;
       --sky: #96c3dc;
       --light: #f5f7fa;
+      --hr: rgba(11, 18, 33, .15);
     }
 
     html {
@@ -96,7 +99,9 @@
 
     .hero {
       min-height: 100svh;
-      background: #ffffff;
+      background-color: #ffffff;
+      background-image: radial-gradient(circle, rgba(11,18,33,0.07) 1px, transparent 1px);
+      background-size: 28px 28px;
       color: inherit;
       display: flex;
       align-items: center;
@@ -107,23 +112,91 @@
       padding-bottom: 8rem;
     }
 
+    .hero-portrait {
+      width: min(340px, 90%);
+      height: auto;
+      border-radius: 24px;
+      box-shadow: 0 32px 64px -20px rgba(11,18,33,0.22);
+      object-fit: cover;
+    }
+
+    /* Animated network SVG */
+    .hero-network {
+      width: min(360px, 100%);
+      height: auto;
+    }
+
+    /* Edges */
+    .net-edge {
+      stroke: rgba(60, 182, 163, 0.28);
+      stroke-width: 1.2;
+      animation: edgePulse 4s ease-in-out infinite;
+    }
+    .edge-a { animation-delay: 0s; }
+    .edge-b { animation-delay: .5s; }
+    .edge-c { animation-delay: 1s; }
+    .edge-d { animation-delay: 1.5s; }
+    .edge-e { animation-delay: 2s; }
+    .edge-f { animation-delay: 2.5s; }
+    .edge-g { animation-delay: .3s; }
+    .edge-h { animation-delay: .8s; }
+    .edge-i { animation-delay: 1.3s; }
+    .edge-j { animation-delay: 1.8s; }
+    .edge-k { animation-delay: 2.3s; }
+    .edge-l { animation-delay: 2.8s; }
+    .edge-m { animation-delay: .1s; }
+
+    @keyframes edgePulse {
+      0%, 100% { stroke-opacity: 0.18; }
+      50%       { stroke-opacity: 0.6;  }
+    }
+
+    /* Node base */
+    .net-node {
+      animation: nodePulse 3.5s ease-in-out infinite;
+    }
+
+    /* Node variants */
+    .node-hub {
+      fill: #3cb6a3;
+      stroke: #0b1221;
+      stroke-width: 2;
+      animation-duration: 2.8s;
+    }
+    .node-secondary {
+      fill: #96c3dc;
+      stroke: #3cb6a3;
+      stroke-width: 1.5;
+      animation-delay: .3s;
+    }
+    .node-teal-light {
+      fill: rgba(60, 182, 163, 0.55);
+      stroke: #3cb6a3;
+      stroke-width: 1;
+    }
+    .node-sky {
+      fill: rgba(150, 195, 220, 0.6);
+      stroke: #96c3dc;
+      stroke-width: 1;
+    }
+    .node-outer {
+      fill: rgba(11, 18, 33, 0.12);
+      stroke: rgba(60, 182, 163, 0.45);
+      stroke-width: 1;
+    }
+
+    @keyframes nodePulse {
+      0%, 100% { opacity: 0.7;  transform: scale(1);    }
+      50%       { opacity: 1;   transform: scale(1.12); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .net-node, .net-edge { animation: none; }
+    }
+
     @supports (height: 100dvh) {
       .section-full { min-height: 100dvh; }
       .hero         { min-height: 100dvh; }
-    }
-
-    @keyframes gradientShift {
-      0% {
-        background-position: 0% 50%;
-      }
-
-      50% {
-        background-position: 100% 50%;
-      }
-
-      100% {
-        background-position: 0% 50%;
-      }
     }
 
     .hero h1.display-3 {
@@ -257,8 +330,6 @@
     }
 
     /* Numbered gutter layout for Process */
-    #process .process-rows {}
-
     #process .process-row {
       display: flex;
       align-items: flex-start;
@@ -363,12 +434,6 @@
     /* body{
     color: #081b43;
 } */
-    .feature-icon {
-      width: 8rem;
-      height: 8rem;
-      border-radius: 50%;
-    }
-
     .navbar-brand img {
       height: 50px;
       /* Adjust as needed */
@@ -442,121 +507,11 @@
       transition: transform 0.25s ease-out;
     }
 
-    /* Team Card Styling */
-    .card-team {
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      /* Smooth transition for transform and shadow */
-    }
-
-    .card-team:hover {
-      transform: translateY(-10px);
-      /* Slightly raise the card */
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-      /* Add shadow for depth */
-    }
-
     .footer .footer-heading {
       font-size: 1.15rem;
       /* Slightly larger font size for headings */
       font-weight: 500;
       /* Medium font weight for slight emphasis */
-    }
-
-    .image-hero {
-      background-image: linear-gradient(to right, rgba(255, 255, 255, 0)70%, #f8f9fa), url('/assets/images/hero-background.jpg');
-      background-size: cover;
-      background-position: center;
-      height: 720px;
-    }
-
-    /* Adjust the height for devices with a width of 768px or less (Tablets and mobile phones) */
-    @media (max-width: 768px) {
-      .image-hero {
-        height: 400px;
-        /* Smaller height for mobile devices */
-      }
-    }
-
-    /* Further adjust for very small devices if necessary */
-    @media (max-width: 480px) {
-      .image-hero {
-        height: 300px;
-        /* Even smaller height for very small devices */
-      }
-    }
-
-
-
-    .hero-subheadline {
-      max-width: 400px;
-      /* Ensures text is not too wide on larger screens */
-    }
-
-    .bg-body-team {
-      background-color: #f8f9fa;
-      background-image: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-    }
-
-    .team-member.card {
-      border: none;
-      overflow: hidden;
-
-      border-radius: 15px;
-      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    }
-
-    .team-member.card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-    }
-
-    .team-member.card-body {
-      background-color: white;
-      transition: background-color 0.3s ease;
-    }
-
-    .team-member.card-title,
-    .team-member.role {
-      font-weight: 600;
-    }
-
-    .team-member.description {
-      color: #666;
-    }
-
-    @media (min-width: 992px) {
-      .team-member {
-        max-width: 350px;
-        margin: auto;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .team-member.card {
-        margin-bottom: 30px;
-      }
-    }
-
-    .page-title {
-      letter-spacing: -.035em;
-      color: #081b43;
-      line-height: 0.9;
-      text-transform: uppercase;
-      height: 100%;
-      width: 100%;
-      display: flex;
-      align-items: center
-    }
-
-    .page-title-long {
-      letter-spacing: -.035em;
-      color: #081b43;
-      line-height: 0.9;
-      text-transform: uppercase;
-      height: 100%;
-      width: 100%;
-      display: flex;
-      align-items: center
     }
 
     .hero-subheadline {
@@ -565,62 +520,6 @@
       line-height: 1.245;
       font-weight: 400;
       margin-top: 2em;
-    }
-
-    .hero-section {
-      padding-top: 120px;
-      padding-bottom: 50px;
-    }
-
-    .hero-image {
-      max-width: 90%;
-      /* Adjust based on your layout */
-      margin: auto;
-      /* animation: float 5s ease-in-out infinite; */
-      /* Adds a subtle floating animation */
-    }
-
-    .hero-image img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 20px;
-      /* Softens the edges of your image */
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-      /* Adds depth to your image */
-    }
-
-    @media (min-width: 1680px) {
-      .page-title {
-        font-size: 9.375vw
-      }
-
-      .page-title-long {
-        font-size: 6vw
-      }
-
-    }
-
-    @media (max-width: 1024px) {
-      .page-title {
-        font-size: 105px
-      }
-
-      .page-title-long {
-        font-size: 90px
-      }
-
-
-    }
-
-    @media (max-width: 640px) {
-      .page-title {
-        font-size: 12.5vw
-      }
-
-      .page-title-long {
-        font-size: 10.5vw
-      }
-
     }
 
     .gradient-text-darkblue {
@@ -1404,9 +1303,9 @@
       outline: 1px solid rgba(60, 182, 163, .2)
     }
 
-    /* === Typography pass (Manrope/Inter) === */
+    /* === Typography (Manrope headings / Figtree body) === */
     body {
-      font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      font-family: 'Figtree', system-ui, -apple-system, sans-serif;
       color: #495057;
       overflow-x: hidden;           /* NEW: prevents tiny horizontal scroll without touching container widths */
     }
@@ -1418,10 +1317,6 @@
     .nav-link {
       font-family: 'Manrope', sans-serif;
       color: #0b1221;
-    }
-
-    :root {
-      --hr: rgba(11, 18, 33, .15);
     }
 
     /* Nav uppercase + tracking and subtle baseline rule */
@@ -1540,8 +1435,6 @@
       }
     }
 
-    #skills .cap-rows {}
-
     #skills .cap-row {
       display: flex;
       align-items: flex-start;
@@ -1616,7 +1509,9 @@
   "@type": "Person",
   "name": "Diego Alcocer",
   "jobTitle": "Engineering Leader",
+  "description": "Engineering Leader and Project Manager with 10+ years delivering AI, data, and enterprise systems at international institutions.",
   "url": "https://diegoalcocer.github.io/",
+  "image": "https://diegoalcocer.github.io/assets/og-card.png",
   "alumniOf": [
     { "@type": "CollegeOrUniversity", "name": "Pontificia Universidad Católica de Chile", "sameAs": "https://www.uc.cl/" },
     { "@type": "CollegeOrUniversity", "name": "George Washington University — FinTech Program", "sameAs": "https://www.gwu.edu/" }
@@ -1643,10 +1538,10 @@
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
           <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="#nanay">Nanay</a></li>
-          <li class="nav-item"><a class="nav-link" href="#process">Skills</a></li>
-          <li class="nav-item"><a class="nav-link" href="#achievements">Highlights</a></li>
-          <!-- <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li> -->
+          <li class="nav-item"><a class="nav-link" href="#nanay">Case Study</a></li>
+          <li class="nav-item"><a class="nav-link" href="#process">How I Work</a></li>
+          <li class="nav-item"><a class="nav-link" href="#achievements">Impact</a></li>
+          <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
       </div>
@@ -1655,23 +1550,99 @@
 
   <!-- Hero Section -->
   <section class="hero">
-    <div class="container hero-container-align" data-aos="fade-up">
-      <h1 class="mega-title mega-title-hero hero-title-align text-center text-lg-start" data-aos="fade-down"
-        data-aos-delay="200">Diego Alcocer</h1>
-      <p class="lead text-secondary text-center text-lg-start" data-aos="fade-up" data-aos-delay="400">
-        Project Manager &amp; Engineering Leader.
-      </p>
-      <p class="lead text-secondary text-center text-lg-start" data-aos="fade-up" data-aos-delay="410">
-        Bridging technology, operations, and transformation.
-      </p>
-      <p class="lead text-secondary text-center text-lg-start" data-aos="fade-up" data-aos-delay="420">
-        10+ years delivering AI, data, and enterprise systems.
-      </p>
-      <div class="hero-awards text-center text-lg-start" data-aos="fade-up" data-aos-delay="450">
-        <i class="bi bi-trophy-fill icon" aria-hidden="true"></i> Institutional awards — IDB & OAS
-      </div>
-      <div class="mt-4 text-center text-lg-start" data-aos="fade-up" data-aos-delay="600">
-        <a href="#scrollIndicator" class="hero-cta mt-3">Explore my work &rarr;</a>
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-7 hero-container-align" data-aos="fade-up">
+          <h1 class="mega-title mega-title-hero hero-title-align text-center text-lg-start" data-aos="fade-down"
+            data-aos-delay="200">Diego Alcocer</h1>
+          <p class="lead text-secondary text-center text-lg-start" data-aos="fade-up" data-aos-delay="400">
+            Technology &amp; Transformation Leader.
+          </p>
+          <p class="lead text-secondary text-center text-lg-start" data-aos="fade-up" data-aos-delay="410">
+            10+ years leading digital change at institutional scale — AI strategy, data, and enterprise architecture.
+          </p>
+          <div class="hero-awards text-center text-lg-start" data-aos="fade-up" data-aos-delay="450">
+            <i class="bi bi-trophy-fill icon" aria-hidden="true"></i> Institutional awards — IDB &amp; OAS
+          </div>
+          <div class="mt-4 text-center text-lg-start" data-aos="fade-up" data-aos-delay="600">
+            <a href="#scrollIndicator" class="hero-cta mt-3">Explore my work &rarr;</a>
+          </div>
+        </div>
+        <div class="col-lg-5 d-none d-lg-flex justify-content-center align-items-center" data-aos="fade-left" data-aos-delay="300">
+          <svg class="hero-network" viewBox="0 0 380 380" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img">
+            <defs>
+              <radialGradient id="bgGrad" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#f0f7fb" stop-opacity="1"/>
+                <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+              </radialGradient>
+              <filter id="glow">
+                <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+                <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+            </defs>
+
+            <!-- Soft background wash -->
+            <circle cx="190" cy="190" r="180" fill="url(#bgGrad)"/>
+
+            <!-- ── Edges ── -->
+            <!-- Hub connections -->
+            <line x1="175" y1="175" x2="285" y2="115" class="net-edge edge-a"/>
+            <line x1="175" y1="175" x2="95"  y2="105" class="net-edge edge-b"/>
+            <line x1="175" y1="175" x2="255" y2="225" class="net-edge edge-c"/>
+            <line x1="175" y1="175" x2="115" y2="235" class="net-edge edge-d"/>
+            <line x1="175" y1="175" x2="75"  y2="175" class="net-edge edge-e"/>
+            <line x1="175" y1="175" x2="185" y2="295" class="net-edge edge-f"/>
+            <!-- Secondary connections -->
+            <line x1="285" y1="115" x2="315" y2="205" class="net-edge edge-g"/>
+            <line x1="285" y1="115" x2="235" y2="60"  class="net-edge edge-h"/>
+            <line x1="255" y1="225" x2="315" y2="205" class="net-edge edge-i"/>
+            <line x1="115" y1="235" x2="185" y2="295" class="net-edge edge-j"/>
+            <line x1="95"  y1="105" x2="235" y2="60"  class="net-edge edge-k"/>
+            <line x1="75"  y1="175" x2="60"  y2="280" class="net-edge edge-l"/>
+            <line x1="185" y1="295" x2="60"  y2="280" class="net-edge edge-m"/>
+
+            <!-- ── Travelling pulses (animateMotion on paths) ── -->
+            <circle r="3" fill="#3cb6a3" opacity="0.9" filter="url(#glow)">
+              <animateMotion dur="3s" repeatCount="indefinite" begin="0s">
+                <mpath href="#path-hub-a"/>
+              </animateMotion>
+            </circle>
+            <circle r="2.5" fill="#96c3dc" opacity="0.85">
+              <animateMotion dur="4s" repeatCount="indefinite" begin="1.2s">
+                <mpath href="#path-hub-c"/>
+              </animateMotion>
+            </circle>
+            <circle r="2" fill="#3cb6a3" opacity="0.7">
+              <animateMotion dur="3.5s" repeatCount="indefinite" begin="2s">
+                <mpath href="#path-hub-d"/>
+              </animateMotion>
+            </circle>
+
+            <!-- Hidden paths for animateMotion -->
+            <path id="path-hub-a" d="M175,175 L285,115" fill="none"/>
+            <path id="path-hub-c" d="M175,175 L255,225 L315,205" fill="none"/>
+            <path id="path-hub-d" d="M95,105 L175,175 L115,235 L185,295" fill="none"/>
+
+            <!-- ── Nodes ── -->
+            <!-- Primary hub — largest, teal -->
+            <circle cx="175" cy="175" r="11" class="net-node node-hub" filter="url(#glow)"/>
+
+            <!-- Secondary hub — sky, slightly smaller -->
+            <circle cx="285" cy="115" r="8" class="net-node node-secondary"/>
+
+            <!-- Tertiary nodes — mix of teal light and sky -->
+            <circle cx="95"  cy="105" r="6.5" class="net-node node-teal-light" style="animation-delay:.4s"/>
+            <circle cx="255" cy="225" r="6"   class="net-node node-sky"        style="animation-delay:.8s"/>
+            <circle cx="115" cy="235" r="6"   class="net-node node-teal-light" style="animation-delay:1.2s"/>
+            <circle cx="75"  cy="175" r="5.5" class="net-node node-sky"        style="animation-delay:1.6s"/>
+            <circle cx="185" cy="295" r="5.5" class="net-node node-teal-light" style="animation-delay:.6s"/>
+
+            <!-- Outer nodes — smallest -->
+            <circle cx="315" cy="205" r="4.5" class="net-node node-outer"     style="animation-delay:2s"/>
+            <circle cx="235" cy="60"  r="4"   class="net-node node-outer"     style="animation-delay:1s"/>
+            <circle cx="60"  cy="280" r="4"   class="net-node node-outer"     style="animation-delay:1.8s"/>
+          </svg>
+        </div>
       </div>
     </div>
     <hr class="title-rule">
@@ -1688,19 +1659,19 @@
       <hr class="title-rule">
       <div class="about-preface" data-aos="fade-right" data-aos-delay="50"></div>
       <div class="lead about-lead text-center text-lg-start" data-aos="fade-up">
-        <p>I lead projects that connect <b>technology with institutional transformation</b>, keeping discovery, governance, and delivery tied to the roadmap.</p>
-        <p>My work blends <b>architecture, process, and business</b> so executive intent becomes measurable workstreams.</p>
-        <p>I manage <b>vendors and cross-functional teams</b>, guide RFI/RFP evaluations, and collaborate with finance and operations on ROI, planning, and chronograms. My focus is execution that stays <b>predictable, data-driven, and scalable.</b></p>
-        <p>Previously with ThoughtWorks, Halliburton, OAS, and IDB. Master’s in Data Science (UC Chile) and Master’s in Data Management &amp; Technology Innovation (Universitat de Barcelona).</p>
+        <p>I lead <b>digital transformation</b> at the intersection of AI strategy, enterprise architecture, and organizational change — helping institutions modernize not just their tools, but the delivery structures that make change durable.</p>
+        <p>My work connects <b>technology vision with execution</b>: building AI roadmaps, re-platforming legacy systems, and aligning vendors, finance, and operations on shared technology goals. Executive intent becomes measurable institutional capability.</p>
+        <p>I’ve driven programs at <b>IDB, OAS, ThoughtWorks, and Halliburton</b> — leading cross-functional teams, guiding technology evaluations (RFI/RFP), and building the bridges between what’s technically possible and what the organization actually needs.</p>
+        <p>Formally trained across both dimensions: <b>MSc in Data Science</b> (Pontificia Universidad Católica de Chile) and <b>MSc in Data Management &amp; Technology Innovation</b> (Universitat de Barcelona).</p>
       </div>
       <div class="about-skim text-center text-lg-start my-5" data-aos="fade-up" data-aos-delay="100">
-        <strong>Focus</strong> — bridging tech and transformation • <strong>Strength</strong> — data-driven delivery • <strong>Edge</strong> — design clarity at scale
+        <strong>Focus</strong> — digital transformation &amp; AI strategy • <strong>Strength</strong> — enterprise delivery • <strong>Edge</strong> — institutional credibility
       </div>
     </div>
   </section>
 
   <!-- Projects Section -->
-  <section class="py-5 bg-white section-full" id="projects">
+  <section class="py-5 section-muted section-full" id="projects">
     <div class="container">
       <div class="eyebrow" data-aos="fade-right">Work</div>
       <h2 class="mega-title" data-aos="fade-right">Projects</h2>
@@ -1716,22 +1687,22 @@
           <p>Mission-critical case &amp; document platform with multilingual workflows plus SharePoint, Lucene, and Azure AD integration.</p>
           <div class="project-stack">Stack: Agile (Scrum) · .NET · MSSQL · SharePoint · Azure AD · Lucene.NET</div>
           <div class="project-tags">
-            <span class="badge rounded-pill">Senior Software Engineer</span>
-            <span class="badge rounded-pill">Project Manager</span>
+            <span class="badge rounded-pill">Engineering Lead</span>
+            <span class="badge rounded-pill">Program Lead</span>
           </div>
         </article>
         <article class="project-card" data-aos="fade-up" data-aos-delay="100">
           <div class="project-card-icon accent-violet"><i class="bi bi-ui-checks-grid"></i></div>
           <div class="project-stat">
-            <span class="project-stat-label">Outcome</span>
-            <span class="project-stat-value">Auditable votes</span>
+            <span class="project-stat-label">Delivered</span>
+            <span class="project-stat-value">Zero disputes</span>
           </div>
           <h3 class="project-title">eVote – OAS</h3>
           <p>Secure internal voting suite covering proposals, sessions, and results with RBAC, multilingual UX, and traceable logs.</p>
           <div class="project-stack">Stack: Agile delivery · .NET · MSSQL · Azure Cognitive Services</div>
           <div class="project-tags">
-            <span class="badge rounded-pill">Senior Software Engineer</span>
-            <span class="badge rounded-pill">Project Manager</span>
+            <span class="badge rounded-pill">Engineering Lead</span>
+            <span class="badge rounded-pill">Program Lead</span>
           </div>
         </article>
         <article class="project-card" data-aos="fade-up" data-aos-delay="150">
@@ -1751,8 +1722,8 @@
         <article class="project-card" data-aos="fade-up" data-aos-delay="200">
           <div class="project-card-icon accent-mint"><i class="bi bi-robot"></i></div>
           <div class="project-stat">
-            <span class="project-stat-label">Response</span>
-            <span class="project-stat-value">Minutes, not days</span>
+            <span class="project-stat-label">Turnaround</span>
+            <span class="project-stat-value">Hours vs. days</span>
           </div>
           <h3 class="project-title">Agentic Bot</h3>
           <p>Agentic RAG assistant for mediation teams with tool orchestration, evaluation loops, and guardrails.</p>
@@ -1765,8 +1736,8 @@
         <article class="project-card" data-aos="fade-up" data-aos-delay="250">
           <div class="project-card-icon accent-amber"><i class="bi bi-currency-exchange"></i></div>
           <div class="project-stat">
-            <span class="project-stat-label">Visibility</span>
-            <span class="project-stat-value">Real-time ops</span>
+            <span class="project-stat-label">Outcome</span>
+            <span class="project-stat-value">Real-time cash ops</span>
           </div>
           <h3 class="project-title">FRIDA – IDB</h3>
           <p>Treasury platform that unified workflows and gave IDB cash operations real-time visibility and throughput.</p>
@@ -1884,17 +1855,17 @@
   <div class="nanay-divider"></div>
   <hr class="hr-hairline">
 
-  <section class="bg-white section-full" id="process">
+  <section class="section-muted section-full" id="process">
     <div class="container">
-      <div class="eyebrow text-center text-lg-start" data-aos="fade-right">How I Work &amp; What I Bring</div>
+      <div class="eyebrow text-center text-lg-start" data-aos="fade-right">Leadership Approach</div>
       <h2 class="mega-title text-center text-lg-start" data-aos="fade-right">From Vision to Execution</h2>
       <hr class="title-rule">
       <div class="process-rows" data-aos="fade-up">
         <div class="process-row">
           <div class="process-number" data-aos="fade-right">001</div>
           <div data-aos="fade-left">
-            <div class="process-title">Leadership &amp; Ownership</div>
-            <p class="process-note">From discovery to delivery, I align teams, vendors, and priorities with institutional goals. Clear direction, measurable outcomes, and predictable execution.</p>
+            <div class="process-title">Technology Vision &amp; Strategy</div>
+            <p class="process-note">I translate organizational ambition into technology direction — defining what to build, why it matters, and how to sequence it. Strategy that holds from the boardroom to the sprint.</p>
           </div>
         </div>
 
@@ -1902,31 +1873,31 @@
           <div class="process-number" data-aos="fade-right">002</div>
           <div data-aos="fade-left">
             <div class="process-title">Architecture &amp; Systems Thinking</div>
-            <p class="process-note">Scalable, maintainable systems with clean boundaries, observability, and security by default—balanced with long‑term business context.</p>
+            <p class="process-note">Scalable, maintainable systems with clean boundaries, observability, and security by design — always balanced against long-term business context and the cost of change.</p>
           </div>
         </div>
 
         <div class="process-row">
           <div class="process-number" data-aos="fade-right">003</div>
           <div data-aos="fade-left">
-            <div class="process-title">AI &amp; Data‑Driven Delivery</div>
-            <p class="process-note">RAG, automation, and analytics to accelerate decisions and build reliable assistants—with evaluation, guardrails, and governance.</p>
+            <div class="process-title">AI-First Transformation</div>
+            <p class="process-note">Deploying AI as an organizational capability, not just a feature — intelligent workflows, decision support, and data systems that compound value over time. Governance and evaluation built in from day one.</p>
           </div>
         </div>
 
         <div class="process-row">
           <div class="process-number" data-aos="fade-right">004</div>
           <div data-aos="fade-left">
-            <div class="process-title">Operational Excellence</div>
-            <p class="process-note">Planning, ROI analysis, RFI/RFP leadership, and cross‑team coordination. Structure and rhythm for complex initiatives—without slowing innovation.</p>
+            <div class="process-title">Building Delivery Capability</div>
+            <p class="process-note">Designing the structures organizations need to execute at scale — program governance, vendor strategy, team architecture, and the metrics that keep complex initiatives honest without slowing them down.</p>
           </div>
         </div>
 
         <div class="process-row">
           <div class="process-number" data-aos="fade-right">005</div>
           <div data-aos="fade-left">
-            <div class="process-title">Collaboration &amp; Communication</div>
-            <p class="process-note">Partnering across legal, finance, and tech to translate business needs into shippable products. Transparent documentation and clear narratives that build trust.</p>
+            <div class="process-title">Executive Partnership</div>
+            <p class="process-note">The bridge between the boardroom and the engine room. I make technology legible to executives and business priorities legible to engineering teams — keeping both sides aligned on what actually matters.</p>
           </div>
         </div>
       </div>
@@ -1953,19 +1924,19 @@
           <div class="note accent-teal">Honors for innovation and delivery.</div>
         </div>
         <div class="impact-tile">
-          <!-- <div class="kpi-icon accent-blue"><i class="bi bi-speedometer2" aria-hidden="true"></i></div> -->
+          <div class="kpi-icon accent-blue"><i class="bi bi-speedometer2" aria-hidden="true"></i></div>
           <div class="kpi">95%</div>
           <div class="label">Faster archiving</div>
           <div class="note">Gaia – OAS workflow + UX overhaul.</div>
         </div>
         <div class="impact-tile">
-          <!-- <div class="kpi-icon accent-orange"><i class="bi bi-lightning-charge" aria-hidden="true"></i></div> -->
+          <div class="kpi-icon accent-orange"><i class="bi bi-lightning-charge" aria-hidden="true"></i></div>
           <div class="kpi">2×</div>
           <div class="label">Throughput increase</div>
           <div class="note">Weekly delivery rate at IDB Invest.</div>
         </div>
         <div class="impact-tile">
-          <!-- <div class="kpi-icon accent-teal"><i class="bi bi-person-gear" aria-hidden="true"></i></div> -->
+          <div class="kpi-icon accent-teal"><i class="bi bi-person-gear" aria-hidden="true"></i></div>
           <div class="kpi">10+ yrs</div>
           <div class="label">Engineering</div>
           <div class="note">Product, architecture, delivery.</div>
@@ -2015,18 +1986,20 @@
       <div class="eyebrow" data-aos="fade-up">Contact</div>
       <h2 class="mega-title" data-aos="fade-up">Let’s Connect</h2>
       <hr class="title-rule">
-      <p data-aos="fade-up">I'm open to impactful collaborations, senior tech leadership roles, and sharing ideas about the future of software.</p>
+      <p data-aos="fade-up" style="max-width:52ch; margin: 0 auto 0.5rem;">
+        Open to senior engineering leadership roles, technical advisory work, and meaningful collaborations — especially at the intersection of AI and institutional impact.
+      </p>
+      <p class="text-muted" data-aos="fade-up" style="font-size:.9rem; margin-bottom:1.5rem;">Washington, D.C. area &middot; Available for remote and hybrid roles</p>
       <div class="d-flex justify-content-center gap-3 mt-3 contact-buttons" data-aos="fade-up" data-aos-delay="100">
         <a href="https://linkedin.com/in/diego-alcocer-palacios" class="btn btn-outline-dark" rel="noopener noreferrer" target="_blank"><i class="bi bi-linkedin"></i> LinkedIn</a>
         <a href="https://github.com/diegoalcocer" class="btn btn-outline-dark" rel="noopener noreferrer" target="_blank"><i class="bi bi-github"></i> GitHub</a>
-        <!-- <a href="CV_Diego_Alcocer.pdf" class="btn btn-info text-white"><i class="bi bi-download"></i> Download CV</a> -->
       </div>
     </div>
   </section>
 
   <!-- Footer -->
   <footer class="bg-dark text-center text-white py-3">
-    <small>© 2025 Diego Alcocer — Building AI‑driven systems that compound value.
+    <small>© 2026 Diego Alcocer — Engineering systems that deliver lasting impact.
       <span class="ms-3">
         <a href="#about" class="text-white text-decoration-none">About</a> ·
         <a href="#projects" class="text-white text-decoration-none">Projects</a> ·
