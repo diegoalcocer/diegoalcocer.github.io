@@ -43,7 +43,6 @@
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link
     href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap"
     rel="stylesheet">
@@ -63,6 +62,9 @@
       --sky: #96c3dc;
       --light: #f5f7fa;
       --hr: rgba(11, 18, 33, .15);
+      --ease-apple: cubic-bezier(0.16, 1, 0.3, 1);
+      --reveal-distance: 24px;
+      --reveal-duration: 700ms;
     }
 
     html {
@@ -99,9 +101,12 @@
 
     .hero {
       min-height: 100svh;
-      background-color: #ffffff;
-      background-image: radial-gradient(circle, rgba(11,18,33,0.07) 1px, transparent 1px);
-      background-size: 28px 28px;
+      background-color: #f7fafa;
+      background-image:
+        radial-gradient(circle, rgba(11,18,33,0.07) 1px, transparent 1px),
+        linear-gradient(180deg, #ffffff 0%, transparent 100%);
+      background-size: 28px 28px, 100% 100%;
+      background-repeat: repeat, no-repeat;
       color: inherit;
       display: flex;
       align-items: center;
@@ -222,7 +227,7 @@
       text-decoration: none;
       border-bottom: 1px solid var(--navy);
       padding-bottom: 2px;
-      transition: all 0.2s ease;
+      transition: all 0.2s var(--ease-apple);
       color: var(--navy);
       display: inline-block;
     }
@@ -422,7 +427,7 @@
     }
 
     .project-card {
-      transition: transform .3s ease;
+      transition: transform .3s var(--ease-apple);
     }
 
     .project-card:hover {
@@ -446,7 +451,7 @@
     }
 
     .navbar {
-      transition: background-color .3s ease, box-shadow .3s ease;
+      transition: background-color .3s var(--ease-apple), box-shadow .3s var(--ease-apple);
     }
 
     .navbar.nav-top {
@@ -475,7 +480,7 @@
 
     .nav-top {
       background-color: #0b1221 !important;
-      transition: background-color 0.3s ease;
+      transition: background-color 0.3s var(--ease-apple);
     }
 
     /* Create the underline effect on hover */
@@ -490,7 +495,7 @@
       left: 0;
       background-color: #3cb6a3;
       transform-origin: bottom left;
-      transition: transform 0.25s ease-out;
+      transition: transform 0.25s var(--ease-apple);
     }
 
     /* Initially, the underline should not be visible */
@@ -504,7 +509,7 @@
       left: 0;
       background-color: var(--teal);
       transform-origin: bottom left;
-      transition: transform 0.25s ease-out;
+      transition: transform 0.25s var(--ease-apple);
     }
 
     .footer .footer-heading {
@@ -551,13 +556,13 @@
       display: flex;
       flex-direction: column;
       gap: 1rem;
-      transition: transform .25s ease, box-shadow .25s ease;
+      transition: transform .25s var(--ease-apple), box-shadow .25s var(--ease-apple);
       height: 100%;
     }
 
     #projects .project-card:hover {
       transform: translateY(-4px);
-      box-shadow: 0 8px 24px -12px rgba(11, 18, 33, .20); /* soft hover effect */
+      box-shadow: 0 20px 40px -20px rgba(60, 182, 163, 0.28);
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -592,7 +597,11 @@
       font-size: 2rem;
       font-weight: 800;
       letter-spacing: -.01em;
-      color: #0f172a;
+      background: linear-gradient(135deg, var(--navy) 0%, var(--teal) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: var(--navy);
     }
 
     #projects .project-stack {
@@ -668,7 +677,7 @@
       height: 1px;
       background: currentColor;
       opacity: .3;
-      transition: opacity .25s ease;
+      transition: opacity .25s var(--ease-apple);
     }
 
     #nanay .nanay-link:hover::after {
@@ -783,12 +792,12 @@
       flex-direction: column;
       gap: 1.25rem;
       min-height: 220px;
-      transition: transform .25s ease, box-shadow .25s ease;
+      transition: transform .25s var(--ease-apple), box-shadow .25s var(--ease-apple);
     }
 
     #nanay .nanay-stat-card:hover {
       transform: translateY(-4px);
-      box-shadow: 0 25px 55px -30px rgba(10, 18, 33, 0.6);
+      box-shadow: 0 25px 55px -25px rgba(60, 182, 163, 0.28);
     }
 
     #nanay .nanay-card-icon {
@@ -840,7 +849,7 @@
       flex-direction: column;
       gap: 1.25rem;
       box-shadow: none;
-      transition: transform .25s ease, box-shadow .25s ease;
+      transition: transform .25s var(--ease-apple), box-shadow .25s var(--ease-apple);
     }
 
     #nanay .nanay-press-card:hover {
@@ -883,13 +892,13 @@
       letter-spacing: .05em;
       padding-bottom: .35rem;
       border-bottom: 1px solid rgba(11, 18, 33, 0.18);
-      transition: border-color .2s ease, color .2s ease;
+      transition: border-color .2s var(--ease-apple), color .2s var(--ease-apple);
     }
 
     #nanay .press-link::after {
       content: '→';
       font-size: 1rem;
-      transition: transform .2s ease;
+      transition: transform .2s var(--ease-apple);
     }
 
     #nanay .press-link:hover {
@@ -993,12 +1002,40 @@
       flex-direction: column;
       gap: .6rem;
       min-height: 220px;
-      transition: transform .25s ease, box-shadow .25s ease;
+      transition: transform .25s var(--ease-apple), box-shadow .25s var(--ease-apple);
+      border-top: 3px solid transparent;
     }
 
     .impact-tile:hover {
       transform: translateY(-4px);
-      box-shadow: 0 25px 55px -30px rgba(10, 18, 33, 0.6);
+      box-shadow: 0 25px 55px -25px rgba(60, 182, 163, 0.32);
+    }
+
+    /* Impact tile color personalities */
+    .impact-tile.tile-speed { border-top-color: #2563eb; }
+    .impact-tile.tile-throughput { border-top-color: #ff7a18; }
+    .impact-tile.tile-experience { border-top-color: var(--teal); }
+
+    .impact-tile.tile-speed .kpi {
+      background: linear-gradient(135deg, #1e40af, #3b82f6);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: #2563eb;
+    }
+    .impact-tile.tile-throughput .kpi {
+      background: linear-gradient(135deg, #c2410c, #ff7a18);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: #ff7a18;
+    }
+    .impact-tile.tile-experience .kpi {
+      background: linear-gradient(135deg, var(--navy), var(--teal));
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: var(--teal);
     }
 
     .impact-tile .kpi-icon {
@@ -1337,6 +1374,16 @@
       color: #6c757d;
       font-weight: 600;
     }
+    .eyebrow::before {
+      content: '';
+      display: inline-block;
+      width: 24px;
+      height: 2px;
+      background: var(--teal);
+      vertical-align: middle;
+      margin-right: 0.75rem;
+      transform: translateY(-2px);
+    }
 
     .mega-title {
       font-family: 'Manrope', sans-serif;
@@ -1410,7 +1457,7 @@
     }
 
     .contact-buttons a {
-      transition: all 0.2s ease-in-out;
+      transition: all 0.2s var(--ease-apple);
     }
 
     .contact-buttons a:hover {
@@ -1484,6 +1531,43 @@
     }
     .mega-title { overflow-wrap: anywhere; word-break: break-word; }
     img, svg { max-width: 100%; height: auto; display: block; }
+
+    /* === Reveal-on-scroll system (replaces AOS) === */
+    /* Default state: visible — keeps content available for SEO and no-JS users */
+    [data-reveal] { opacity: 1; transform: none; }
+
+    /* JS-enabled: prepare elements for animation */
+    .js-reveal [data-reveal] {
+      opacity: 0;
+      transition:
+        opacity var(--reveal-duration) var(--ease-apple),
+        transform var(--reveal-duration) var(--ease-apple);
+      transition-delay: var(--reveal-delay, 0ms);
+      will-change: opacity, transform;
+    }
+
+    .js-reveal [data-reveal="up"]    { transform: translateY(var(--reveal-distance)); }
+    .js-reveal [data-reveal="down"]  { transform: translateY(calc(var(--reveal-distance) * -1)); }
+    .js-reveal [data-reveal="left"]  { transform: translateX(var(--reveal-distance)); }
+    .js-reveal [data-reveal="right"] { transform: translateX(calc(var(--reveal-distance) * -1)); }
+    .js-reveal [data-reveal="scale"] { transform: scale(0.96); }
+    .js-reveal [data-reveal="fade"]  { transform: none; }
+
+    .js-reveal [data-reveal].revealed {
+      opacity: 1;
+      transform: none;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .js-reveal [data-reveal] {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+    }
+
+    /* Count-up: tabular nums prevent text width jitter while animating */
+    [data-countup] { font-variant-numeric: tabular-nums; }
   </style>
   <script type="application/ld+json">
   {
@@ -1526,6 +1610,12 @@
 
 <body class="bg-body-tertiary">
 
+  <script>
+    // Add .js-reveal immediately so [data-reveal] elements start hidden when JS is enabled.
+    // Place at top of <body> to apply before content paints.
+    document.documentElement.classList.add('js-reveal');
+  </script>
+
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark sticky-top nav-top bg-transparent">
     <div class="container">
@@ -1552,23 +1642,23 @@
   <section class="hero">
     <div class="container">
       <div class="row align-items-center g-5">
-        <div class="col-lg-7 hero-container-align" data-aos="fade-up">
-          <h1 class="mega-title mega-title-hero hero-title-align text-center text-lg-start" data-aos="fade-down"
-            data-aos-delay="200">Diego Alcocer</h1>
-          <p class="lead text-secondary text-center text-lg-start" data-aos="fade-up" data-aos-delay="400">
+        <div class="col-lg-7 hero-container-align" data-reveal="up">
+          <h1 class="mega-title mega-title-hero hero-title-align text-center text-lg-start" data-reveal="down"
+            style="--reveal-delay: 200ms">Diego Alcocer</h1>
+          <p class="lead text-secondary text-center text-lg-start" data-reveal="up" style="--reveal-delay: 400ms">
             Technology &amp; Transformation Leader.
           </p>
-          <p class="lead text-secondary text-center text-lg-start" data-aos="fade-up" data-aos-delay="410">
+          <p class="lead text-secondary text-center text-lg-start" data-reveal="up" style="--reveal-delay: 410ms">
             10+ years leading digital change at institutional scale — AI strategy, data, and enterprise architecture.
           </p>
-          <div class="hero-awards text-center text-lg-start" data-aos="fade-up" data-aos-delay="450">
+          <div class="hero-awards text-center text-lg-start" data-reveal="up" style="--reveal-delay: 450ms">
             <i class="bi bi-trophy-fill icon" aria-hidden="true"></i> Institutional awards — IDB &amp; OAS
           </div>
-          <div class="mt-4 text-center text-lg-start" data-aos="fade-up" data-aos-delay="600">
+          <div class="mt-4 text-center text-lg-start" data-reveal="up" style="--reveal-delay: 600ms">
             <a href="#scrollIndicator" class="hero-cta mt-3">Explore my work &rarr;</a>
           </div>
         </div>
-        <div class="col-lg-5 d-none d-lg-flex justify-content-center align-items-center" data-aos="fade-left" data-aos-delay="300">
+        <div class="col-lg-5 d-none d-lg-flex justify-content-center align-items-center" data-reveal="left" style="--reveal-delay: 300ms">
           <svg class="hero-network" viewBox="0 0 380 380" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img">
             <defs>
               <radialGradient id="bgGrad" cx="50%" cy="50%" r="50%">
@@ -1654,17 +1744,17 @@
   <!-- About Section -->
   <section class="bg-white section-full" id="about">
     <div class="container">
-      <div class="eyebrow text-center text-lg-start" data-aos="fade-right">Profile</div>
-      <h2 class="mega-title text-center text-lg-start" data-aos="fade-right">About Me</h2>
+      <div class="eyebrow text-center text-lg-start" data-reveal="right">Profile</div>
+      <h2 class="mega-title text-center text-lg-start" data-reveal="right">About Me</h2>
       <hr class="title-rule">
-      <div class="about-preface" data-aos="fade-right" data-aos-delay="50"></div>
-      <div class="lead about-lead text-center text-lg-start" data-aos="fade-up">
+      <div class="about-preface" data-reveal="right" style="--reveal-delay: 50ms"></div>
+      <div class="lead about-lead text-center text-lg-start" data-reveal="up">
         <p>I lead <b>digital transformation</b> at the intersection of AI strategy, enterprise architecture, and organizational change — helping institutions modernize not just their tools, but the delivery structures that make change durable.</p>
         <p>My work connects <b>technology vision with execution</b>: building AI roadmaps, re-platforming legacy systems, and aligning vendors, finance, and operations on shared technology goals. Executive intent becomes measurable institutional capability.</p>
         <p>I’ve driven programs at <b>IDB, OAS, ThoughtWorks, and Halliburton</b> — leading cross-functional teams, guiding technology evaluations (RFI/RFP), and building the bridges between what’s technically possible and what the organization actually needs.</p>
         <p>Formally trained across both dimensions: <b>MSc in Data Science</b> (Pontificia Universidad Católica de Chile) and <b>MSc in Data Management &amp; Technology Innovation</b> (Universitat de Barcelona).</p>
       </div>
-      <div class="about-skim text-center text-lg-start my-5" data-aos="fade-up" data-aos-delay="100">
+      <div class="about-skim text-center text-lg-start my-5" data-reveal="up" style="--reveal-delay: 100ms">
         <strong>Focus</strong> — digital transformation &amp; AI strategy • <strong>Strength</strong> — enterprise delivery • <strong>Edge</strong> — institutional credibility
       </div>
     </div>
@@ -1673,11 +1763,11 @@
   <!-- Projects Section -->
   <section class="py-5 section-muted section-full" id="projects">
     <div class="container">
-      <div class="eyebrow" data-aos="fade-right">Work</div>
-      <h2 class="mega-title" data-aos="fade-right">Projects</h2>
+      <div class="eyebrow" data-reveal="right">Work</div>
+      <h2 class="mega-title" data-reveal="right">Projects</h2>
       <hr class="title-rule">
       <div class="projects-grid">
-        <article class="project-card" data-aos="fade-up">
+        <article class="project-card" data-reveal="up">
           <div class="project-card-icon accent-sky"><i class="bi bi-archive"></i></div>
           <div class="project-stat">
             <span class="project-stat-label">Result</span>
@@ -1691,7 +1781,7 @@
             <span class="badge rounded-pill">Program Lead</span>
           </div>
         </article>
-        <article class="project-card" data-aos="fade-up" data-aos-delay="100">
+        <article class="project-card" data-reveal="up" style="--reveal-delay: 80ms">
           <div class="project-card-icon accent-violet"><i class="bi bi-ui-checks-grid"></i></div>
           <div class="project-stat">
             <span class="project-stat-label">Delivered</span>
@@ -1705,7 +1795,7 @@
             <span class="badge rounded-pill">Program Lead</span>
           </div>
         </article>
-        <article class="project-card" data-aos="fade-up" data-aos-delay="150">
+        <article class="project-card" data-reveal="up" style="--reveal-delay: 160ms">
           <div class="project-card-icon accent-rose"><i class="bi bi-heart-pulse"></i></div>
           <div class="project-stat">
             <span class="project-stat-label">Reach</span>
@@ -1719,7 +1809,7 @@
             <span class="badge rounded-pill">CTO</span>
           </div>
         </article>
-        <article class="project-card" data-aos="fade-up" data-aos-delay="200">
+        <article class="project-card" data-reveal="up" style="--reveal-delay: 240ms">
           <div class="project-card-icon accent-mint"><i class="bi bi-robot"></i></div>
           <div class="project-stat">
             <span class="project-stat-label">Turnaround</span>
@@ -1733,7 +1823,7 @@
             <span class="badge rounded-pill">CEO</span>
           </div>
         </article>
-        <article class="project-card" data-aos="fade-up" data-aos-delay="250">
+        <article class="project-card" data-reveal="up" style="--reveal-delay: 320ms">
           <div class="project-card-icon accent-amber"><i class="bi bi-currency-exchange"></i></div>
           <div class="project-stat">
             <span class="project-stat-label">Outcome</span>
@@ -1754,11 +1844,11 @@
   <!-- Nanay Case Study -->
   <section class="py-5 bg-white section-full" id="nanay">
     <div class="container">
-      <div class="eyebrow text-center text-lg-start" data-aos="fade-right">Technology for empathy.</div>
-      <h2 class="mega-title text-center text-lg-start" data-aos="fade-right" data-aos-delay="50">Nanay</h2>
+      <div class="eyebrow text-center text-lg-start" data-reveal="right">Technology for empathy.</div>
+      <h2 class="mega-title text-center text-lg-start" data-reveal="right" style="--reveal-delay: 50ms">Nanay</h2>
       <hr class="title-rule">
 
-      <div class="row g-4 g-lg-5 nanay-hero" data-aos="fade-up">
+      <div class="row g-4 g-lg-5 nanay-hero" data-reveal="up">
         <div class="col-lg-6">
           <div class="nanay-hero-copy">
             <p>When the world stopped, connection became essential. We created Nanay: a web platform that matched people asking for help with volunteers who could safely deliver it.</p>
@@ -1784,7 +1874,7 @@
         </div>
       </div>
 
-      <div class="nanay-story-grid" data-aos="fade-up" data-aos-delay="100">
+      <div class="nanay-story-grid" data-reveal="up" style="--reveal-delay: 100ms">
         <article class="nanay-story-card">
           <div class="nanay-panel-eyebrow">Meaning</div>
           <h3>Why we called it Nanay</h3>
@@ -1812,26 +1902,26 @@
         </article>
       </div>
 
-      <div class="mt-5 py-3" data-aos="fade-up" data-aos-delay="150">
+      <div class="mt-5 py-3" data-reveal="up" style="--reveal-delay: 150ms">
         <h3 class="section-title mb-3">The impact</h3>
         <p>In a few months, more than <strong>1,000</strong> people joined, <strong>250+</strong> families received essentials, and our Christmas drive supported <strong>90+</strong> families.</p>
         <div class="nanay-stats">
-          <div class="nanay-stat-card">
+          <div class="nanay-stat-card" data-reveal="up">
             <div class="nanay-card-icon accent-purple"><i class="bi bi-people" aria-hidden="true"></i></div>
-            <p class="nanay-card-copy">Connected with <span class="nanay-card-accent accent-purple">1,000+</span> registered users ready to help.</p>
+            <p class="nanay-card-copy">Connected with <span class="nanay-card-accent accent-purple" data-countup>1,000+</span> registered users ready to help.</p>
           </div>
-          <div class="nanay-stat-card">
+          <div class="nanay-stat-card" data-reveal="up" style="--reveal-delay: 100ms">
             <div class="nanay-card-icon accent-orange"><i class="bi bi-heart" aria-hidden="true"></i></div>
-            <p class="nanay-card-copy">Brought essentials to <span class="nanay-card-accent accent-orange">250+</span> families—food, medicine, and care.</p>
+            <p class="nanay-card-copy">Brought essentials to <span class="nanay-card-accent accent-orange" data-countup>250+</span> families—food, medicine, and care.</p>
           </div>
-          <div class="nanay-stat-card">
+          <div class="nanay-stat-card" data-reveal="up" style="--reveal-delay: 200ms">
             <div class="nanay-card-icon accent-teal"><i class="bi bi-gift" aria-hidden="true"></i></div>
-            <p class="nanay-card-copy">Delivered holiday kits to <span class="nanay-card-accent accent-teal">90+</span> families through community donations.</p>
+            <p class="nanay-card-copy">Delivered holiday kits to <span class="nanay-card-accent accent-teal" data-countup>90+</span> families through community donations.</p>
           </div>
         </div>
       </div>
 
-      <div class="my-5" data-aos="fade-up" data-aos-delay="250">
+      <div class="my-5" data-reveal="up" style="--reveal-delay: 250ms">
         <h3 class="section-title mb-3">Press</h3>
         <div class="nanay-press">
           <div class="nanay-press-card">
@@ -1857,45 +1947,45 @@
 
   <section class="section-muted section-full" id="process">
     <div class="container">
-      <div class="eyebrow text-center text-lg-start" data-aos="fade-right">Leadership Approach</div>
-      <h2 class="mega-title text-center text-lg-start" data-aos="fade-right">From Vision to Execution</h2>
+      <div class="eyebrow text-center text-lg-start" data-reveal="right">Leadership Approach</div>
+      <h2 class="mega-title text-center text-lg-start" data-reveal="right">From Vision to Execution</h2>
       <hr class="title-rule">
-      <div class="process-rows" data-aos="fade-up">
+      <div class="process-rows" data-reveal="up">
         <div class="process-row">
-          <div class="process-number" data-aos="fade-right">001</div>
-          <div data-aos="fade-left">
+          <div class="process-number" data-reveal="right">001</div>
+          <div data-reveal="left">
             <div class="process-title">Technology Vision &amp; Strategy</div>
             <p class="process-note">I translate organizational ambition into technology direction — defining what to build, why it matters, and how to sequence it. Strategy that holds from the boardroom to the sprint.</p>
           </div>
         </div>
 
         <div class="process-row">
-          <div class="process-number" data-aos="fade-right">002</div>
-          <div data-aos="fade-left">
+          <div class="process-number" data-reveal="right">002</div>
+          <div data-reveal="left">
             <div class="process-title">Architecture &amp; Systems Thinking</div>
             <p class="process-note">Scalable, maintainable systems with clean boundaries, observability, and security by design — always balanced against long-term business context and the cost of change.</p>
           </div>
         </div>
 
         <div class="process-row">
-          <div class="process-number" data-aos="fade-right">003</div>
-          <div data-aos="fade-left">
+          <div class="process-number" data-reveal="right">003</div>
+          <div data-reveal="left">
             <div class="process-title">AI-First Transformation</div>
             <p class="process-note">Deploying AI as an organizational capability, not just a feature — intelligent workflows, decision support, and data systems that compound value over time. Governance and evaluation built in from day one.</p>
           </div>
         </div>
 
         <div class="process-row">
-          <div class="process-number" data-aos="fade-right">004</div>
-          <div data-aos="fade-left">
+          <div class="process-number" data-reveal="right">004</div>
+          <div data-reveal="left">
             <div class="process-title">Building Delivery Capability</div>
             <p class="process-note">Designing the structures organizations need to execute at scale — program governance, vendor strategy, team architecture, and the metrics that keep complex initiatives honest without slowing them down.</p>
           </div>
         </div>
 
         <div class="process-row">
-          <div class="process-number" data-aos="fade-right">005</div>
-          <div data-aos="fade-left">
+          <div class="process-number" data-reveal="right">005</div>
+          <div data-reveal="left">
             <div class="process-title">Executive Partnership</div>
             <p class="process-note">The bridge between the boardroom and the engine room. I make technology legible to executives and business priorities legible to engineering teams — keeping both sides aligned on what actually matters.</p>
           </div>
@@ -1912,32 +2002,32 @@
   <!-- Achievements -->
   <section class="py-5 bg-light section-full" id="achievements">
     <div class="container">
-      <div class="eyebrow" data-aos="fade-right">Measurable Results</div>
-      <h2 class="mega-title" data-aos="fade-right">Impact &amp; Recognition</h2>
+      <div class="eyebrow" data-reveal="right">Measurable Results</div>
+      <h2 class="mega-title" data-reveal="right">Impact &amp; Recognition</h2>
       <hr class="title-rule">
-      <div class="impact-grid" data-aos="fade-up">
-        <div class="impact-tile awards-tile" id="awardsTile">
+      <div class="impact-grid">
+        <div class="impact-tile awards-tile" id="awardsTile" data-reveal="up">
           <div class="kpi accent-gold"><i class="bi bi-trophy-fill" aria-hidden="true"></i></div>
           <div class="label">Institutional recognition</div>
           <div class="note">OAS — Impact Award</div>
           <div class="note">IDB — Extra Mile Award</div>
           <div class="note accent-teal">Honors for innovation and delivery.</div>
         </div>
-        <div class="impact-tile">
+        <div class="impact-tile tile-speed" data-reveal="up" style="--reveal-delay: 80ms">
           <div class="kpi-icon accent-blue"><i class="bi bi-speedometer2" aria-hidden="true"></i></div>
-          <div class="kpi">95%</div>
+          <div class="kpi" data-countup>95%</div>
           <div class="label">Faster archiving</div>
           <div class="note">Gaia – OAS workflow + UX overhaul.</div>
         </div>
-        <div class="impact-tile">
+        <div class="impact-tile tile-throughput" data-reveal="up" style="--reveal-delay: 160ms">
           <div class="kpi-icon accent-orange"><i class="bi bi-lightning-charge" aria-hidden="true"></i></div>
-          <div class="kpi">2×</div>
+          <div class="kpi" data-countup>2×</div>
           <div class="label">Throughput increase</div>
           <div class="note">Weekly delivery rate at IDB Invest.</div>
         </div>
-        <div class="impact-tile">
+        <div class="impact-tile tile-experience" data-reveal="up" style="--reveal-delay: 240ms">
           <div class="kpi-icon accent-teal"><i class="bi bi-person-gear" aria-hidden="true"></i></div>
-          <div class="kpi">10+ yrs</div>
+          <div class="kpi" data-countup>10+ yrs</div>
           <div class="label">Engineering</div>
           <div class="note">Product, architecture, delivery.</div>
         </div>
@@ -1949,11 +2039,11 @@
 
   <section class="py-5 bg-white section-full" id="testimonials">
     <div class="container">
-      <div class="eyebrow" data-aos="fade-right">What others say</div>
-      <h2 class="mega-title" data-aos="fade-right">Testimonials</h2>
+      <div class="eyebrow" data-reveal="right">What others say</div>
+      <h2 class="mega-title" data-reveal="right">Testimonials</h2>
       <hr class="title-rule">
-      <div class="testi-list" data-aos="fade-up">
-        <div class="testi-item" data-aos="fade-up" data-aos-delay="50">
+      <div class="testi-list" data-reveal="up">
+        <div class="testi-item" data-reveal="up" style="--reveal-delay: 50ms">
           <figure class="testi-figure">
             <blockquote class="testi-quote">
               Diego worked under my supervision in a project to develop an accounting interface between the Summit Treasury System and the ERP SAP. He is an outstanding developer. His work is solid and he performs in a timely manner. He is the type of developer that can design both the backbone of a system as well as the look and feel of it. His GUI designs were very visually appealing and easy to use. I was fortunate to have Diego in my team and highly recommend him for any position or project where his valuable skills can be put to use.
@@ -1965,7 +2055,7 @@
           </figure>
           <hr class="testi-divider">
         </div>
-        <div class="testi-item" data-aos="fade-up" data-aos-delay="100">
+        <div class="testi-item" data-reveal="up" style="--reveal-delay: 100ms">
           <figure class="testi-figure">
             <blockquote class="testi-quote">
               Diego was a wonderful student of mine and he will be a great asset on any team he joins. He consistently asked insightful questions during class and was always looking for ways to apply what he was learning to outside projects. Not only did he demonstrate technical skills that will help him succeed in the workplace, he also showed leadership and communication skills that will take him far. I strongly recommend Diego!
@@ -1983,14 +2073,14 @@
   <!-- Contact -->
   <section class="py-5 bg-white section-full" id="contact">
     <div class="container text-center">
-      <div class="eyebrow" data-aos="fade-up">Contact</div>
-      <h2 class="mega-title" data-aos="fade-up">Let’s Connect</h2>
+      <div class="eyebrow" data-reveal="up">Contact</div>
+      <h2 class="mega-title" data-reveal="up">Let’s Connect</h2>
       <hr class="title-rule">
-      <p data-aos="fade-up" style="max-width:52ch; margin: 0 auto 0.5rem;">
+      <p data-reveal="up" style="max-width:52ch; margin: 0 auto 0.5rem;">
         Open to senior engineering leadership roles, technical advisory work, and meaningful collaborations — especially at the intersection of AI and institutional impact.
       </p>
-      <p class="text-muted" data-aos="fade-up" style="font-size:.9rem; margin-bottom:1.5rem;">Washington, D.C. area &middot; Available for remote and hybrid roles</p>
-      <div class="d-flex justify-content-center gap-3 mt-3 contact-buttons" data-aos="fade-up" data-aos-delay="100">
+      <p class="text-muted" data-reveal="up" style="font-size:.9rem; margin-bottom:1.5rem;">Washington, D.C. area &middot; Available for remote and hybrid roles</p>
+      <div class="d-flex justify-content-center gap-3 mt-3 contact-buttons" data-reveal="up" style="--reveal-delay: 100ms">
         <a href="https://linkedin.com/in/diego-alcocer-palacios" class="btn btn-outline-dark" rel="noopener noreferrer" target="_blank"><i class="bi bi-linkedin"></i> LinkedIn</a>
         <a href="https://github.com/diegoalcocer" class="btn btn-outline-dark" rel="noopener noreferrer" target="_blank"><i class="bi bi-github"></i> GitHub</a>
       </div>
@@ -2010,9 +2100,70 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
   <script>
-    AOS.init();
+    // === Reveal-on-scroll observer (replaces AOS) ===
+    (function() {
+      const reveals = document.querySelectorAll('[data-reveal]');
+      if (!reveals.length) return;
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduceMotion || !('IntersectionObserver' in window)) {
+        reveals.forEach(el => el.classList.add('revealed'));
+        return;
+      }
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
+      reveals.forEach(el => io.observe(el));
+    })();
+
+    // === Number count-up on scroll-into-view ===
+    (function() {
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const targets = document.querySelectorAll('[data-countup]');
+      if (!targets.length || reduceMotion || !('IntersectionObserver' in window)) return;
+
+      function animateValue(el, target, duration, formatter) {
+        const start = performance.now();
+        function frame(now) {
+          const t = Math.min(1, (now - start) / duration);
+          const eased = 1 - Math.pow(1 - t, 3);
+          el.textContent = formatter(Math.round(target * eased));
+          if (t < 1) requestAnimationFrame(frame);
+        }
+        requestAnimationFrame(frame);
+      }
+
+      function setupCountUp(el) {
+        const original = el.textContent.trim();
+        const match = original.match(/^(\D*?)([\d,]+)(.*)$/);
+        if (!match) return false;
+        const [, prefix, numStr, suffix] = match;
+        const target = parseInt(numStr.replace(/,/g, ''), 10);
+        if (isNaN(target)) return false;
+        const hasComma = numStr.includes(',');
+        const formatter = (v) => `${prefix}${hasComma ? v.toLocaleString() : v}${suffix}`;
+        el.textContent = formatter(0);
+        animateValue(el, target, 1500, formatter);
+        return true;
+      }
+
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            setupCountUp(entry.target);
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.4 });
+
+      targets.forEach(el => io.observe(el));
+    })();
+
     // Toggle navbar background on scroll
     const nav = document.querySelector('.navbar');
     const hero = document.querySelector('.hero');
