@@ -2,3 +2,4 @@ docs/
 CLAUDE.md
 .playwright-mcp/
 baseline-*.png
+session*.png
