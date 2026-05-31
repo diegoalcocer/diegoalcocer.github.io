@@ -58,9 +58,13 @@
 
     :root {
       --navy: #0b1221;
+      --navy-soft: rgba(11, 18, 33, .7); /* muted navy text */
       --teal: #3cb6a3;
+      --teal-deep: #2a8475;              /* third accent in the in-family ladder */
       --sky: #96c3dc;
       --light: #f5f7fa;
+      --muted: #f6f8fb;                  /* section-muted band */
+      --ink-soft: #515866;               /* secondary body text */
       --hr: rgba(11, 18, 33, .15);
       --ease-apple: cubic-bezier(0.16, 1, 0.3, 1);
       --reveal-distance: 24px;
@@ -75,10 +79,15 @@
     .btn-primary {
       background-color: var(--teal);
       border-color: var(--teal);
+      transition: filter 160ms ease-out, transform 160ms ease-out;
     }
 
     .btn-primary:hover {
       filter: brightness(1.05);
+    }
+
+    .btn-primary:active {
+      transform: scale(0.97);
     }
 
     .section-title {
@@ -101,7 +110,7 @@
 
     .hero {
       min-height: 100svh;
-      background-color: #f7fafa;
+      background-color: var(--light);
       background-image:
         radial-gradient(circle, rgba(11,18,33,0.07) 1px, transparent 1px),
         linear-gradient(180deg, #ffffff 0%, transparent 100%);
@@ -123,80 +132,6 @@
       border-radius: 24px;
       box-shadow: 0 32px 64px -20px rgba(11,18,33,0.22);
       object-fit: cover;
-    }
-
-    /* Animated network SVG */
-    .hero-network {
-      width: min(360px, 100%);
-      height: auto;
-    }
-
-    /* Edges */
-    .net-edge {
-      stroke: rgba(60, 182, 163, 0.28);
-      stroke-width: 1.2;
-      animation: edgePulse 4s ease-in-out infinite;
-    }
-    .edge-a { animation-delay: 0s; }
-    .edge-b { animation-delay: .5s; }
-    .edge-c { animation-delay: 1s; }
-    .edge-d { animation-delay: 1.5s; }
-    .edge-e { animation-delay: 2s; }
-    .edge-f { animation-delay: 2.5s; }
-    .edge-g { animation-delay: .3s; }
-    .edge-h { animation-delay: .8s; }
-    .edge-i { animation-delay: 1.3s; }
-    .edge-j { animation-delay: 1.8s; }
-    .edge-k { animation-delay: 2.3s; }
-    .edge-l { animation-delay: 2.8s; }
-    .edge-m { animation-delay: .1s; }
-
-    @keyframes edgePulse {
-      0%, 100% { stroke-opacity: 0.18; }
-      50%       { stroke-opacity: 0.6;  }
-    }
-
-    /* Node base */
-    .net-node {
-      animation: nodePulse 3.5s ease-in-out infinite;
-    }
-
-    /* Node variants */
-    .node-hub {
-      fill: #3cb6a3;
-      stroke: #0b1221;
-      stroke-width: 2;
-      animation-duration: 2.8s;
-    }
-    .node-secondary {
-      fill: #96c3dc;
-      stroke: #3cb6a3;
-      stroke-width: 1.5;
-      animation-delay: .3s;
-    }
-    .node-teal-light {
-      fill: rgba(60, 182, 163, 0.55);
-      stroke: #3cb6a3;
-      stroke-width: 1;
-    }
-    .node-sky {
-      fill: rgba(150, 195, 220, 0.6);
-      stroke: #96c3dc;
-      stroke-width: 1;
-    }
-    .node-outer {
-      fill: rgba(11, 18, 33, 0.12);
-      stroke: rgba(60, 182, 163, 0.45);
-      stroke-width: 1;
-    }
-
-    @keyframes nodePulse {
-      0%, 100% { opacity: 0.7;  transform: scale(1);    }
-      50%       { opacity: 1;   transform: scale(1.12); }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      .net-node, .net-edge { animation: none; }
     }
 
     @supports (height: 100dvh) {
@@ -227,7 +162,7 @@
       text-decoration: none;
       border-bottom: 1px solid var(--navy);
       padding-bottom: 2px;
-      transition: all 0.2s var(--ease-apple);
+      transition: color 0.2s var(--ease-apple), border-color 0.2s var(--ease-apple), transform 0.12s ease-out;
       color: var(--navy);
       display: inline-block;
     }
@@ -235,6 +170,10 @@
     .hero-cta:hover {
       border-bottom-color: var(--teal);
       color: var(--teal);
+    }
+
+    .hero-cta:active {
+      transform: scale(0.97);
     }
 
     /* About section refinements */
@@ -430,14 +369,16 @@
       transition: transform .3s var(--ease-apple);
     }
 
-    .project-card:hover {
-      transform: scale(1.02);
+    @media (hover: hover) and (pointer: fine) {
+      .project-card:hover {
+        transform: scale(1.02);
+      }
     }
 
 
 
     /* body{
-    color: #081b43;
+    color: var(--navy);
 } */
     .navbar-brand img {
       height: 50px;
@@ -528,9 +469,9 @@
     }
 
     .gradient-text-darkblue {
-      color: #111c41;
+      color: var(--navy);
       /* Fallback color */
-      background: linear-gradient(to right, #111c41, #96c3dc, #6db3a3);
+      background: linear-gradient(to right, var(--navy), var(--sky), var(--teal));
       -webkit-background-clip: text;
       /* For Safari */
       background-clip: text;
@@ -551,7 +492,7 @@
     #projects .project-card {
       border-radius: 24px;
       padding: 1.75rem;
-      border: 1px solid rgba(15, 23, 42, 0.08);
+      border: 1px solid rgba(11, 18, 33, 0.08);
       box-shadow: none; /* flattened */
       display: flex;
       flex-direction: column;
@@ -560,9 +501,11 @@
       height: 100%;
     }
 
-    #projects .project-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 20px 40px -20px rgba(60, 182, 163, 0.28);
+    @media (hover: hover) and (pointer: fine) {
+      #projects .project-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 20px 40px -20px rgba(60, 182, 163, 0.28);
+      }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -573,11 +516,13 @@
       font-size: 1.6rem;
       color: var(--navy);
     }
-    #projects .project-card-icon.accent-sky { color: #7b87ff; }
-    #projects .project-card-icon.accent-violet { color: #a985ff; }
-    #projects .project-card-icon.accent-rose { color: #ff86b1; }
-    #projects .project-card-icon.accent-mint { color: #3dcfb0; }
-    #projects .project-card-icon.accent-amber { color: #f6a85d; }
+    /* In-family accent ladder (teal / teal-deep / sky), rotated so adjacent cards differ.
+       Class names are legacy; the colours are now all on-brand. */
+    #projects .project-card-icon.accent-sky    { color: var(--teal); }
+    #projects .project-card-icon.accent-violet { color: var(--teal-deep); }
+    #projects .project-card-icon.accent-rose   { color: var(--sky); }
+    #projects .project-card-icon.accent-mint   { color: var(--teal); }
+    #projects .project-card-icon.accent-amber  { color: var(--teal-deep); }
 
     #projects .project-stat {
       display: flex;
@@ -606,7 +551,7 @@
 
     #projects .project-stack {
       font-size: .85rem;
-      color: rgba(16, 34, 65, 0.7);
+      color: var(--navy-soft);
     }
 
     #projects .project-tags {
@@ -618,7 +563,7 @@
 
     #projects .project-tags .badge {
       background: rgba(10, 18, 33, 0.08);
-      color: #0a1221;
+      color: var(--navy);
     }
 
     /* --- Nanay case study --- */
@@ -795,9 +740,11 @@
       transition: transform .25s var(--ease-apple), box-shadow .25s var(--ease-apple);
     }
 
-    #nanay .nanay-stat-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 25px 55px -25px rgba(60, 182, 163, 0.28);
+    @media (hover: hover) and (pointer: fine) {
+      #nanay .nanay-stat-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 25px 55px -25px rgba(60, 182, 163, 0.28);
+      }
     }
 
     #nanay .nanay-card-icon {
@@ -808,7 +755,7 @@
     #nanay .nanay-card-copy {
       font-size: 1.15rem;
       line-height: 1.5;
-      color: #0f172a;
+      color: var(--navy);
       max-width: 32ch;
     }
 
@@ -817,9 +764,9 @@
       display: inline-block;
     }
 
-    #nanay .accent-purple { color: #7a5cff; }
-    #nanay .accent-orange { color: #ff7a18; }
-    #nanay .accent-teal { color: #00a6c2; }
+    #nanay .accent-purple { color: var(--teal); }
+    #nanay .accent-orange { color: var(--teal-deep); }
+    #nanay .accent-teal   { color: var(--sky); }
 
     #nanay .nanay-scope {
       display: flex;
@@ -906,8 +853,10 @@
       color: var(--teal);
     }
 
-    #nanay .press-link:hover::after {
-      transform: translateX(4px);
+    @media (hover: hover) and (pointer: fine) {
+      #nanay .press-link:hover::after {
+        transform: translateX(4px);
+      }
     }
 
     /* Nanay section divider */
@@ -1006,29 +955,31 @@
       border-top: 3px solid transparent;
     }
 
-    .impact-tile:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 25px 55px -25px rgba(60, 182, 163, 0.32);
+    @media (hover: hover) and (pointer: fine) {
+      .impact-tile:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 25px 55px -25px rgba(60, 182, 163, 0.32);
+      }
     }
 
     /* Impact tile color personalities */
-    .impact-tile.tile-speed { border-top-color: #2563eb; }
-    .impact-tile.tile-throughput { border-top-color: #ff7a18; }
+    .impact-tile.tile-speed { border-top-color: var(--sky); }
+    .impact-tile.tile-throughput { border-top-color: var(--teal-deep); }
     .impact-tile.tile-experience { border-top-color: var(--teal); }
 
     .impact-tile.tile-speed .kpi {
-      background: linear-gradient(135deg, #1e40af, #3b82f6);
+      background: linear-gradient(135deg, var(--navy), var(--sky));
       -webkit-background-clip: text;
       background-clip: text;
       -webkit-text-fill-color: transparent;
-      color: #2563eb;
+      color: var(--sky);
     }
     .impact-tile.tile-throughput .kpi {
-      background: linear-gradient(135deg, #c2410c, #ff7a18);
+      background: linear-gradient(135deg, var(--teal-deep), var(--teal));
       -webkit-background-clip: text;
       background-clip: text;
       -webkit-text-fill-color: transparent;
-      color: #ff7a18;
+      color: var(--teal-deep);
     }
     .impact-tile.tile-experience .kpi {
       background: linear-gradient(135deg, var(--navy), var(--teal));
@@ -1135,7 +1086,7 @@
     }
 
     .section-muted {
-      background: #f6f8fb;
+      background: var(--muted);
     }
 
     /* --- How I Work (Process) --- */
@@ -1193,10 +1144,10 @@
 
     /* Apple-style accents for cards */
     .accent-teal{ color: var(--teal); }
-    .accent-orange{ color: #ff7a18; }
-    .accent-purple{ color: #7a5cff; }
-    .accent-blue{ color: #2563eb; }
-    .accent-gold{ color: #ffb347; }
+    .accent-orange{ color: var(--teal-deep); }
+    .accent-purple{ color: var(--teal); }
+    .accent-blue{ color: var(--sky); }
+    .accent-gold{ color: var(--teal-deep); }
 
     .nanay-card-icon{ font-size:1.25rem; margin-bottom:.75rem; display:inline-block; }
 
@@ -1343,7 +1294,7 @@
     /* === Typography (Manrope headings / Figtree body) === */
     body {
       font-family: 'Figtree', system-ui, -apple-system, sans-serif;
-      color: #495057;
+      color: var(--ink-soft);
       overflow-x: hidden;           /* NEW: prevents tiny horizontal scroll without touching container widths */
     }
 
@@ -1371,7 +1322,7 @@
     .eyebrow {
       text-transform: uppercase;
       letter-spacing: .18em;
-      color: #6c757d;
+      color: var(--ink-soft);
       font-weight: 600;
     }
     .eyebrow::before {
@@ -1409,13 +1360,13 @@
 
     /* Paragraph tone */
     .lead {
-      color: #333;
+      color: var(--ink-soft);
       font-weight: 400;
       text-shadow: none;
     }
 
     .hero .lead {
-      color: #515866;
+      color: var(--ink-soft);
       text-shadow: none;
     }
 
@@ -1457,17 +1408,23 @@
     }
 
     .contact-buttons a {
-      transition: all 0.2s var(--ease-apple);
+      transition: background-color 0.2s var(--ease-apple), color 0.2s var(--ease-apple), transform 0.2s var(--ease-apple);
     }
 
-    .contact-buttons a:hover {
-      transform: translateY(-2px);
-      background-color: #333;
-      color: #fff;
+    @media (hover: hover) and (pointer: fine) {
+      .contact-buttons a:hover {
+        transform: translateY(-2px);
+        background-color: var(--navy);
+        color: #fff;
+      }
+    }
+
+    .contact-buttons a:active {
+      transform: scale(0.97);
     }
 
     .contact-buttons a.cv-button {
-      background-color: #015056;
+      background-color: var(--teal-deep);
       color: white;
     }
 
@@ -1641,8 +1598,8 @@
   <!-- Hero Section -->
   <section class="hero">
     <div class="container">
-      <div class="row align-items-center g-5">
-        <div class="col-lg-7 hero-container-align" data-reveal="up">
+      <div class="row">
+        <div class="col-lg-10 hero-container-align" data-reveal="up">
           <h1 class="mega-title mega-title-hero hero-title-align text-center text-lg-start" data-reveal="down"
             style="--reveal-delay: 200ms">Diego Alcocer</h1>
           <p class="lead text-secondary text-center text-lg-start" data-reveal="up" style="--reveal-delay: 400ms">
@@ -1657,81 +1614,6 @@
           <div class="mt-4 text-center text-lg-start" data-reveal="up" style="--reveal-delay: 600ms">
             <a href="#scrollIndicator" class="hero-cta mt-3">Explore my work &rarr;</a>
           </div>
-        </div>
-        <div class="col-lg-5 d-none d-lg-flex justify-content-center align-items-center" data-reveal="left" style="--reveal-delay: 300ms">
-          <svg class="hero-network" viewBox="0 0 380 380" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img">
-            <defs>
-              <radialGradient id="bgGrad" cx="50%" cy="50%" r="50%">
-                <stop offset="0%" stop-color="#f0f7fb" stop-opacity="1"/>
-                <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
-              </radialGradient>
-              <filter id="glow">
-                <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
-                <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
-              </filter>
-            </defs>
-
-            <!-- Soft background wash -->
-            <circle cx="190" cy="190" r="180" fill="url(#bgGrad)"/>
-
-            <!-- ── Edges ── -->
-            <!-- Hub connections -->
-            <line x1="175" y1="175" x2="285" y2="115" class="net-edge edge-a"/>
-            <line x1="175" y1="175" x2="95"  y2="105" class="net-edge edge-b"/>
-            <line x1="175" y1="175" x2="255" y2="225" class="net-edge edge-c"/>
-            <line x1="175" y1="175" x2="115" y2="235" class="net-edge edge-d"/>
-            <line x1="175" y1="175" x2="75"  y2="175" class="net-edge edge-e"/>
-            <line x1="175" y1="175" x2="185" y2="295" class="net-edge edge-f"/>
-            <!-- Secondary connections -->
-            <line x1="285" y1="115" x2="315" y2="205" class="net-edge edge-g"/>
-            <line x1="285" y1="115" x2="235" y2="60"  class="net-edge edge-h"/>
-            <line x1="255" y1="225" x2="315" y2="205" class="net-edge edge-i"/>
-            <line x1="115" y1="235" x2="185" y2="295" class="net-edge edge-j"/>
-            <line x1="95"  y1="105" x2="235" y2="60"  class="net-edge edge-k"/>
-            <line x1="75"  y1="175" x2="60"  y2="280" class="net-edge edge-l"/>
-            <line x1="185" y1="295" x2="60"  y2="280" class="net-edge edge-m"/>
-
-            <!-- ── Travelling pulses (animateMotion on paths) ── -->
-            <circle r="3" fill="#3cb6a3" opacity="0.9" filter="url(#glow)">
-              <animateMotion dur="3s" repeatCount="indefinite" begin="0s">
-                <mpath href="#path-hub-a"/>
-              </animateMotion>
-            </circle>
-            <circle r="2.5" fill="#96c3dc" opacity="0.85">
-              <animateMotion dur="4s" repeatCount="indefinite" begin="1.2s">
-                <mpath href="#path-hub-c"/>
-              </animateMotion>
-            </circle>
-            <circle r="2" fill="#3cb6a3" opacity="0.7">
-              <animateMotion dur="3.5s" repeatCount="indefinite" begin="2s">
-                <mpath href="#path-hub-d"/>
-              </animateMotion>
-            </circle>
-
-            <!-- Hidden paths for animateMotion -->
-            <path id="path-hub-a" d="M175,175 L285,115" fill="none"/>
-            <path id="path-hub-c" d="M175,175 L255,225 L315,205" fill="none"/>
-            <path id="path-hub-d" d="M95,105 L175,175 L115,235 L185,295" fill="none"/>
-
-            <!-- ── Nodes ── -->
-            <!-- Primary hub — largest, teal -->
-            <circle cx="175" cy="175" r="11" class="net-node node-hub" filter="url(#glow)"/>
-
-            <!-- Secondary hub — sky, slightly smaller -->
-            <circle cx="285" cy="115" r="8" class="net-node node-secondary"/>
-
-            <!-- Tertiary nodes — mix of teal light and sky -->
-            <circle cx="95"  cy="105" r="6.5" class="net-node node-teal-light" style="animation-delay:.4s"/>
-            <circle cx="255" cy="225" r="6"   class="net-node node-sky"        style="animation-delay:.8s"/>
-            <circle cx="115" cy="235" r="6"   class="net-node node-teal-light" style="animation-delay:1.2s"/>
-            <circle cx="75"  cy="175" r="5.5" class="net-node node-sky"        style="animation-delay:1.6s"/>
-            <circle cx="185" cy="295" r="5.5" class="net-node node-teal-light" style="animation-delay:.6s"/>
-
-            <!-- Outer nodes — smallest -->
-            <circle cx="315" cy="205" r="4.5" class="net-node node-outer"     style="animation-delay:2s"/>
-            <circle cx="235" cy="60"  r="4"   class="net-node node-outer"     style="animation-delay:1s"/>
-            <circle cx="60"  cy="280" r="4"   class="net-node node-outer"     style="animation-delay:1.8s"/>
-          </svg>
         </div>
       </div>
     </div>

@@ -3,3 +3,9 @@ CLAUDE.md
 .playwright-mcp/
 baseline-*.png
 session*.png
+emil-*.png
+
+# Locally-installed design skills (npx skills add) — not part of the deployed site
+.agents/
+.claude/
+skills-lock.json
