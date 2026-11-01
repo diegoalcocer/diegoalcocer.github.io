@@ -14,26 +14,29 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Diego Alcocer | Technology & Transformation Leader</title>
-  <meta name="description" content="Diego Alcocer, Technology &amp; Transformation Leader. I build and modernize the core systems institutions run on, from financial systems to AI. Award recipient at the IDB and OAS.">
+  <title>Diego Alcocer | Core systems, workflow automation, applied AI</title>
+  <meta name="description" content="Diego Alcocer. I lead the modernization of core systems and use AI to automate the repetitive work around them.">
   <meta name="robots" content="index,follow">
   <meta name="author" content="Diego Alcocer">
-  <link rel="icon" type="image/png" href="/assets/og-card.png">
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <link rel="alternate icon" type="image/png" href="/assets/favicon-64.png">
   <link rel="canonical" href="https://diegoalcocer.github.io/">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Diego Alcocer">
-  <meta property="og:title" content="Diego Alcocer | Technology &amp; Transformation Leader">
-  <meta property="og:description" content="I build and modernize the core systems institutions run on, from financial systems to AI. Award recipient at the IDB and OAS.">
+  <meta property="og:title" content="Diego Alcocer">
+  <meta property="og:description" content="I lead the modernization of core systems and use AI to automate the repetitive work around them.">
   <meta property="og:url" content="https://diegoalcocer.github.io/">
-  <meta property="og:image" content="https://diegoalcocer.github.io/assets/og-card.png">
+  <meta property="og:image" content="https://diegoalcocer.github.io/assets/og-card-2026.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Diego Alcocer | Technology &amp; Transformation Leader">
-  <meta name="twitter:description" content="Technology &amp; Transformation Leader. I build and modernize the core systems institutions run on, from financial systems to AI. Award recipient at the IDB and OAS.">
-  <meta name="twitter:image" content="https://diegoalcocer.github.io/assets/og-card.png">
+  <meta name="twitter:title" content="Diego Alcocer">
+  <meta name="twitter:description" content="I lead the modernization of core systems and use AI to automate the repetitive work around them.">
+  <meta name="twitter:image" content="https://diegoalcocer.github.io/assets/og-card-2026.png">
 
   <!-- Performance & preconnects -->
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
@@ -41,1349 +44,12 @@
   <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
   <meta name="theme-color" content="#0b1221">
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" integrity="sha384-XGjxtQfXaH2tnPFa9x+ruJTuLE3Aa6LhHSWRr1XeTyhezb4abCG4ccI5AkVDxqC+" crossorigin="anonymous">
   <link
     href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap"
     rel="stylesheet">
-  <style>
-    :root {
-      --navy: #0b1221;
-      --navy-soft: rgba(11, 18, 33, .7); /* muted navy text */
-      --teal: #3cb6a3;
-      --teal-deep: #2a8475;              /* third accent in the in-family ladder */
-      --sky: #96c3dc;
-      --light: #f5f7fa;
-      --muted: #f6f8fb;                  /* section-muted band */
-      --ink-soft: #515866;               /* secondary body text */
-      --hr: rgba(11, 18, 33, .15);
-      --ease-apple: cubic-bezier(0.16, 1, 0.3, 1);
-      --reveal-distance: 24px;
-      --reveal-duration: 700ms;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-    html { overflow-x: hidden; }
-
-    .btn-primary {
-      background-color: var(--teal);
-      border-color: var(--teal);
-      transition: filter 160ms ease-out, transform 160ms ease-out;
-    }
-
-    .btn-primary:hover {
-      filter: brightness(1.05);
-    }
-
-    .btn-primary:active {
-      transform: scale(0.97);
-    }
-
-    .section-full {
-      min-height: 100svh;
-      display: flex;
-      align-items: center;
-      padding-top: 8rem;
-      /* space for nav on small screens */
-      padding-bottom: 6rem;
-    }
-
-    .nav-scrolled {
-      background-color: rgba(11, 18, 33, 0.9) !important;
-      box-shadow: 0 4px 30px rgba(0, 0, 0, .2);
-    }
-
-    .hero {
-      min-height: 100svh;
-      background-color: var(--light);
-      background-image:
-        radial-gradient(circle, rgba(11,18,33,0.07) 1px, transparent 1px),
-        linear-gradient(180deg, #ffffff 0%, transparent 100%);
-      background-size: 28px 28px, 100% 100%;
-      background-repeat: repeat, no-repeat;
-      color: inherit;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      padding: 0 1rem;
-      padding-top: 10rem;
-      padding-bottom: 8rem;
-    }
-
-    @supports (height: 100dvh) {
-      .section-full { min-height: 100dvh; }
-      .hero         { min-height: 100dvh; }
-    }
-
-    .hero h1.display-3 {
-      font-weight: 700;
-      letter-spacing: -0.03em;
-    }
-
-    .hero .lead {
-      line-height: 1.5;
-      max-width: 46ch;
-      margin-top: 1.5rem;
-    }
-
-    .hero .btn-primary {
-      margin-right: 1rem;
-      min-width: 150px;
-    }
-
-    .hero-cta {
-      font-weight: 600;
-      text-decoration: none;
-      border-bottom: 1px solid var(--navy);
-      padding-bottom: 2px;
-      transition: color 0.2s var(--ease-apple), border-color 0.2s var(--ease-apple), transform 0.12s ease-out;
-      color: var(--navy);
-      display: inline-block;
-    }
-
-    .hero-cta:hover {
-      border-bottom-color: var(--teal);
-      color: var(--teal);
-    }
-
-    .hero-cta:active {
-      transform: scale(0.97);
-    }
-
-    /* About section refinements */
-    .about-lead {
-      max-width: 58ch;
-      line-height: 1.65;
-      font-size: 1.05rem;
-      margin: 0 auto;
-      position: relative;
-      padding-left: 2.5rem;
-      border-left: 1px solid rgba(11, 18, 33, 0.12);
-    }
-    .about-lead::before {
-      content: "001";
-      position: absolute;
-      left: -2.6rem;
-      top: 0;
-      font-size: .78rem;
-      letter-spacing: .3em;
-      color: rgba(11, 18, 33, 0.4);
-      font-weight: 600;
-    }
-    .about-lead p { margin: 0; }
-    .about-lead p + p { margin-top: 1.2rem; }
-    .about-preface{
-      display:inline-block;
-      font-size:.78rem;
-      letter-spacing:.32em;
-      text-transform:uppercase;
-      color:rgba(11,18,33,0.55);
-      margin-bottom:1.5rem;
-    }
-    @media(max-width:768px){
-      .about-lead{
-        padding-left:1.5rem;
-      }
-      .about-lead::before{
-        left:-1.5rem;
-      }
-    }
-    /* Extra breathing room under the About title rule */
-    #about .title-rule{ margin:0 0 2.5rem; }
-
-    @media (min-width: 992px) {
-      #about .container {
-        text-align: left;
-      }
-
-      #about .mega-title,
-      #about .eyebrow {
-        text-align: left;
-      }
-    }
-
-    @media (max-width: 991.98px) {
-      #about .container {
-        text-align: center;
-      }
-    }
-
-    /* Process section refinements */
-    #process .container {
-      text-align: center;
-    }
-
-    @media (min-width: 992px) {
-      #process .container {
-        text-align: left;
-      }
-    }
-
-    /* Editorial step title */
-    #process .process-title {
-      font-family: 'Manrope', sans-serif;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: -.01em;
-      font-size: clamp(20px, 2.2vw, 28px);
-      margin: 0 0 .35rem;
-    }
-
-    /* Comfortable line-length for notes */
-
-    #process .process-note {
-      max-width: 56ch;
-    }
-
-    /* Numbered gutter layout for Process */
-    #process .process-row {
-      display: flex;
-      align-items: flex-start;
-      gap: 2rem;
-      padding: 3rem 0;
-      border-top: 1px solid var(--hr);
-    }
-
-    #process .process-row:first-child {
-      border-top: 1px solid var(--hr);
-    }
-
-    #process .process-number {
-      font-family: 'Manrope', sans-serif;
-      font-weight: 600;
-      color: var(--navy);
-      /* was clamp(40px,6vw,64px) */
-      font-size: clamp(36px, 5.5vw, 56px);
-      line-height: 1;
-      min-width: 5ch;
-    }
-
-    @media(max-width:768px) {
-      #process .process-row {
-        flex-direction: column;
-        gap: 1rem;
-      }
-
-      #process .process-number {
-        font-size: clamp(28px, 10vw, 48px);
-        min-width: auto;
-      }
-    }
-
-    /* Responsive text alignment for hero */
-    @media (min-width: 992px) {
-      .hero .hero-container-align {
-        text-align: left !important;
-      }
-
-      .hero .hero-title-align {
-        text-align: left !important;
-      }
-
-      .hero .lead {
-        text-align: left !important;
-        margin-left: 0;
-        margin-right: 0;
-      }
-    }
-
-    @media (max-width: 991.98px) {
-      .hero .hero-container-align {
-        text-align: center !important;
-      }
-
-      .hero .hero-title-align {
-        text-align: center !important;
-      }
-
-      .hero .lead {
-        text-align: center !important;
-        margin-left: auto;
-        margin-right: auto;
-      }
-      .hero { padding-top: 7rem; padding-bottom: 4rem; }
-    }
-
-    .scroll-indicator {
-      position: absolute;
-      bottom: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      font-size: 2rem;
-      color: rgba(11, 18, 33, 0.5);
-      animation: bounce 2s infinite;
-      cursor: pointer;
-    }
-
-    @keyframes bounce {
-
-      0%,
-      100% {
-        transform: translateX(-50%) translateY(0);
-      }
-
-      50% {
-        transform: translateX(-50%) translateY(10px);
-      }
-    }
-
-    .project-card {
-      transition: transform .3s var(--ease-apple);
-    }
-
-    @media (hover: hover) and (pointer: fine) {
-      .project-card:hover {
-        transform: scale(1.02);
-      }
-    }
-
-
-
-    /* body{
-    color: var(--navy);
-} */
-    .navbar-brand img {
-      height: 50px;
-      /* Adjust as needed */
-      width: auto;
-      /* Adjust width automatically to keep the aspect ratio */
-      object-fit: contain;
-      /* This will make sure all parts of your image are visible, including transparent parts */
-      object-position: left;
-      /* Align the image to the left, it might help to cut off some of the blue if it's not needed */
-    }
-
-    .navbar {
-      transition: background-color .3s var(--ease-apple), box-shadow .3s var(--ease-apple);
-    }
-
-    .navbar.nav-top {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 1200;
-      width: 100%;
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-    }
-
-    .navbar .nav-link,
-    .navbar .navbar-brand {
-      color: #fff;
-    }
-
-    /* Basic styles for navbar links */
-    .nav-link {
-      position: relative;
-      display: inline-block;
-      text-decoration: none;
-      /* Remove default underline */
-    }
-
-    .nav-top {
-      background-color: #0b1221 !important;
-      transition: background-color 0.3s var(--ease-apple);
-    }
-
-    /* Create the underline effect on hover */
-    .nav-link:hover::after,
-    .nav-link.active::after {
-      content: '';
-      position: absolute;
-      width: 100%;
-      transform: scaleX(1);
-      height: 2px;
-      bottom: 0;
-      left: 0;
-      background-color: #3cb6a3;
-      transform-origin: bottom left;
-      transition: transform 0.25s var(--ease-apple);
-    }
-
-    /* Initially, the underline should not be visible */
-    .nav-link::after {
-      content: '';
-      position: absolute;
-      width: 100%;
-      transform: scaleX(0);
-      height: 2px;
-      bottom: 0;
-      left: 0;
-      background-color: var(--teal);
-      transform-origin: bottom left;
-      transition: transform 0.25s var(--ease-apple);
-    }
-
-    /* Projects */
-    #projects .projects-grid {
-      margin-top: 2rem;
-      display: grid;
-      gap: 1.5rem;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    }
-
-    #projects .project-card {
-      border-radius: 24px;
-      padding: 1.75rem;
-      border: 1px solid rgba(11, 18, 33, 0.08);
-      box-shadow: none; /* flattened */
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      transition: transform .25s var(--ease-apple), box-shadow .25s var(--ease-apple);
-      height: 100%;
-    }
-
-    @media (hover: hover) and (pointer: fine) {
-      #projects .project-card:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 20px 40px -20px rgba(60, 182, 163, 0.28);
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      #projects .project-card:hover { transform: none; }
-    }
-
-    #projects .project-card-icon {
-      font-size: 1.6rem;
-      color: var(--navy);
-    }
-    /* In-family accent ladder (teal / teal-deep / sky), rotated so adjacent cards differ.
-       Class names are legacy; the colours are now all on-brand. */
-    #projects .project-card-icon.accent-sky    { color: var(--teal); }
-    #projects .project-card-icon.accent-violet { color: var(--teal-deep); }
-    #projects .project-card-icon.accent-rose   { color: var(--sky); }
-    #projects .project-card-icon.accent-mint   { color: var(--teal); }
-    #projects .project-card-icon.accent-amber  { color: var(--teal-deep); }
-
-    #projects .project-stat {
-      display: flex;
-      flex-direction: column;
-      gap: .2rem;
-      margin: .75rem 0 1rem;
-    }
-
-    #projects .project-stat-label {
-      text-transform: uppercase;
-      letter-spacing: .18em;
-      font-size: .75rem;
-      color: rgba(11, 18, 33, 0.55);
-    }
-
-    #projects .project-stat-value {
-      font-size: 2rem;
-      font-weight: 800;
-      letter-spacing: -.01em;
-      background: linear-gradient(135deg, var(--navy) 0%, var(--teal) 100%);
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-      color: var(--navy);
-    }
-
-    #projects .project-stack {
-      font-size: .85rem;
-      color: var(--navy-soft);
-    }
-
-    #projects .project-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: .4rem;
-      margin-top: auto;
-    }
-
-    #projects .project-tags .badge {
-      background: rgba(10, 18, 33, 0.08);
-      color: var(--navy);
-    }
-
-    /* Big-type editorial titles for projects */
-    .project-title {
-      font-family: 'Manrope', sans-serif;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: -.02em;
-      line-height: .95;
-      /* was clamp(28px,4.8vw,56px) */
-      font-size: clamp(24px, 3.8vw, 48px);
-      margin: 0 0 .35rem;
-    }
-
-    .impact-grid {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 1.5rem;
-    }
-
-    @media(max-width:992px) {
-      .impact-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media(max-width:576px) {
-      .impact-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .impact-tile {
-      border: 1px solid rgba(11, 18, 33, 0.08);
-      border-radius: 28px;
-      padding: 2.5rem;
-      background: #fff;
-      box-shadow: 0 22px 45px -28px rgba(10, 18, 33, 0.55);
-      display: flex;
-      flex-direction: column;
-      gap: .6rem;
-      min-height: 220px;
-      transition: transform .25s var(--ease-apple), box-shadow .25s var(--ease-apple);
-      border-top: 3px solid transparent;
-    }
-
-    @media (hover: hover) and (pointer: fine) {
-      .impact-tile:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 25px 55px -25px rgba(60, 182, 163, 0.32);
-      }
-    }
-
-    .impact-tile.tile-experience { border-top-color: var(--teal); }
-
-    .impact-tile.tile-experience .kpi {
-      background: linear-gradient(135deg, var(--navy), var(--teal));
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-      color: var(--teal);
-    }
-
-    .impact-tile .kpi-icon {
-      font-size: 1.8rem;
-      margin-bottom: .15rem;
-    }
-
-    .impact-tile .kpi {
-      font-size: 2.75rem;
-      font-weight: 800;
-      letter-spacing: -.02em;
-    }
-
-    .impact-tile .label {
-      font-weight: 600;
-      opacity: .92;
-      margin-top: .2rem;
-    }
-
-    .impact-tile .note {
-      opacity: .75;
-      font-size: 1rem;
-    }
-
-    /* --- Section dividers & rhythm --- */
-    .hr-hairline {
-      height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(11, 18, 33, .12), transparent);
-      border: 0;
-      margin: 0
-    }
-
-    .section-muted {
-      background: var(--muted);
-    }
-
-
-    .process-title {
-      font-size: 1.5rem;
-      font-weight: 700;
-      letter-spacing: -.01em
-    }
-
-    .process-note {
-      opacity: .85;
-    }
-
-    /* --- Projects additions --- */
-
-    /* Apple-style accents for cards */
-    .accent-teal{ color: var(--teal); }
-    .accent-blue{ color: var(--sky); }
-    .accent-gold{ color: var(--teal-deep); }
-
-    /* --- Impact: Awards tile special styling --- */
-    .impact-tile.awards-tile { border-color: rgba(60,182,163,.3); position: relative; }
-    .impact-tile.awards-tile:hover, .impact-tile.awards-tile:focus { border-color: rgba(60,182,163,.5); }
-    @media (prefers-reduced-motion: reduce) {
-      .impact-tile.awards-tile:hover, .impact-tile.awards-tile:focus { transform: none; }
-    }
-    /* One-time gentle ping */
-    .impact-tile.awards-tile.ping::after { content: ""; position: absolute; inset: -6px; border-radius: 32px; box-shadow: 0 0 0 6px rgba(60,182,163,.10); animation: awardsPing 900ms ease-out 1 forwards; }
-    @keyframes awardsPing { from { opacity: .8; } to { opacity: 0; box-shadow: 0 0 0 14px rgba(60,182,163,0); } }
-
-    /* --- Hero awards badge --- */
-    .hero-awards{margin-top:.75rem; opacity:.9; font-weight:600; letter-spacing:.04em}
-    .hero-awards .icon{margin-right:.4rem}
-
-    /* --- Testimonials --- */
-    .testi-list{
-      list-style:none;
-      padding:0;
-      margin:0;
-      display:grid;
-      gap:2.25rem;
-    }
-    .testi-item{ padding:0; }
-    .testi-figure{ margin:0; }
-    .testi-quote{
-      position:relative;
-      font-size: clamp(1.1rem, 1.2rem + 0.4vw, 1.5rem);
-      line-height:1.8;
-      font-style:italic;
-      color:#0b1221;
-      max-width: 72ch;
-      margin: 0 auto 0.75rem;
-    }
-    .testi-quote:before{
-      content:"“";
-      position:absolute;
-      left:-0.6em;
-      top:-0.15em;
-      font-size:2.75rem;
-      line-height:1;
-      color: var(--teal);
-      opacity:.3;
-      pointer-events:none;
-    }
-    .testi-quote:after{
-      content:"”";
-      position:absolute;
-      right:-0.4em;
-      bottom:-0.5em;
-      font-size:2.75rem;
-      line-height:1;
-      color: var(--teal);
-      opacity:.25;
-      pointer-events:none;
-    }
-    .testi-meta{
-      text-align:center;
-      font-weight:600;
-      color: var(--navy);
-    }
-    .testi-meta .role{
-      display:block;
-      font-weight:400;
-      opacity:.7;
-      margin-top:.15rem;
-      letter-spacing:.01em;
-    }
-    .testi-divider{
-      height:1px;
-      background: linear-gradient(90deg, transparent, rgba(11,18,33,.12), transparent);
-      border:0;
-      margin:.75rem auto 0;
-      width:min(640px, 90%);
-    }
-
-    /* === Typography (Manrope headings / Figtree body) === */
-    body {
-      font-family: 'Figtree', system-ui, -apple-system, sans-serif;
-      color: var(--ink-soft);
-      /* clip (not hidden): hidden makes <body> a scroll container, which breaks
-         position: sticky in the Journey scene; clip contains the pre-reveal
-         translate bleed without creating one. */
-      overflow-x: clip;
-    }
-
-    h1,
-    h2,
-    h3,
-    .navbar,
-    .nav-link {
-      font-family: 'Manrope', sans-serif;
-      color: #0b1221;
-    }
-
-    /* Nav uppercase + tracking and subtle baseline rule */
-    .navbar {
-      border-bottom: 1px solid var(--hr);
-    }
-
-    .navbar .nav-link {
-      text-transform: uppercase;
-      letter-spacing: .08em;
-      font-weight: 700;
-    }
-
-    /* Eyebrow + billboard titles */
-    .eyebrow {
-      text-transform: uppercase;
-      letter-spacing: .18em;
-      color: var(--ink-soft);
-      font-weight: 600;
-    }
-    .eyebrow::before {
-      content: '';
-      display: inline-block;
-      width: 24px;
-      height: 2px;
-      background: var(--teal);
-      vertical-align: middle;
-      margin-right: 0.75rem;
-      transform: translateY(-2px);
-    }
-
-    .mega-title {
-      font-family: 'Manrope', sans-serif;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: -.02em;
-      line-height: .9;
-      margin: .25em 0 .35em;
-      /* was clamp(48px,10vw,150px) */
-      font-size: clamp(44px, 8vw, 120px);
-    }
-
-    .mega-title-hero {
-      font-size: clamp(46px, 9vw, 130px)
-    }
-
-    .title-rule {
-      height: 1px;
-      background: var(--hr);
-      border: 0;
-      margin: 0 0 2rem;
-    }
-
-    /* Paragraph tone */
-    .lead {
-      color: var(--ink-soft);
-      font-weight: 400;
-      text-shadow: none;
-    }
-
-    .hero .lead {
-      color: var(--ink-soft);
-      text-shadow: none;
-    }
-
-    /* Wider container on large screens */
-    @media (min-width:1400px) {
-      .container {
-        max-width: 1200px;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .contact-buttons {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .contact-buttons a {
-        width: 100%;
-        max-width: 300px;
-        margin-bottom: 16px;
-        border-radius: 8px;
-        font-size: 1.05em;
-        text-align: center;
-      }
-
-      .contact-buttons i {
-        font-size: 1.4em;
-        margin-right: 8px;
-      }
-    }
-
-    @media (min-width: 769px) {
-      .contact-buttons {
-        display: flex;
-        justify-content: center;
-        gap: 16px;
-      }
-    }
-
-    .contact-buttons a {
-      transition: background-color 0.2s var(--ease-apple), color 0.2s var(--ease-apple), transform 0.2s var(--ease-apple);
-    }
-
-    @media (hover: hover) and (pointer: fine) {
-      .contact-buttons a:hover {
-        transform: translateY(-2px);
-        background-color: var(--navy);
-        color: #fff;
-      }
-    }
-
-    .contact-buttons a:active {
-      transform: scale(0.97);
-    }
-
-    .contact-buttons a.cv-button {
-      background-color: var(--teal-deep);
-      color: white;
-    }
-
-    .mega-title { overflow-wrap: anywhere; word-break: break-word; }
-    img, svg { max-width: 100%; height: auto; display: block; }
-
-    /* === Hero career-arc link (teaser into the Journey) === */
-    .hero-arc {
-      color: var(--teal-deep);
-      font-weight: 600;
-      letter-spacing: .02em;
-      text-decoration: none;
-      display: inline-block;
-      border-bottom: 1px solid transparent;
-      padding-bottom: 2px;
-      transition: color 0.2s var(--ease-apple), border-color 0.2s var(--ease-apple), transform 0.12s ease-out;
-    }
-    .hero-arc:hover { color: var(--teal); border-bottom-color: var(--teal); }
-    .hero-arc:active { transform: scale(0.97); }
-
-    /* === Journey (career chapters) ===
-       Default: static stacked panels (mobile, reduced-motion, no-JS).
-       .journey-pinned (added by JS on ≥992px + motion OK): sticky horizontal scene. */
-    .journey { position: relative; background: #fff; }
-    .journey-panel { background: var(--panel-bg, #fff); padding: 4.5rem 0; }
-    .journey-panel-grid {
-      display: grid;
-      grid-template-columns: auto 1fr;
-      gap: clamp(1rem, 4vw, 3.5rem);
-      align-items: center;
-    }
-    .journey-num {
-      font-family: 'Manrope', sans-serif;
-      font-weight: 800;
-      font-size: clamp(4.5rem, 15vw, 12rem);
-      line-height: .85;
-      color: rgba(11, 18, 33, .055);
-      user-select: none;
-    }
-    .journey-panel.on-dark .journey-num { color: rgba(255, 255, 255, .07); }
-    .journey-eyebrow {
-      font-family: 'Manrope', sans-serif;
-      font-weight: 700;
-      font-size: .74rem;
-      letter-spacing: .18em;
-      text-transform: uppercase;
-      color: var(--teal-deep);
-      margin-bottom: .9rem;
-    }
-    .journey-panel.on-dark .journey-eyebrow { color: var(--teal); }
-    .journey-chapter-title {
-      font-family: 'Manrope', sans-serif;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: -.01em;
-      font-size: clamp(1.7rem, 3.6vw, 2.9rem);
-      line-height: 1.05;
-      color: var(--navy);
-      margin: 0 0 1rem;
-    }
-    .journey-panel.on-dark .journey-chapter-title { color: #fff; }
-    .journey-body {
-      color: var(--ink-soft);
-      font-size: 1.05rem;
-      line-height: 1.7;
-      max-width: 52ch;
-      margin: 0;
-    }
-    .journey-panel.on-dark .journey-body { color: rgba(255, 255, 255, .72); }
-    .journey-years {
-      margin-top: 1.3rem;
-      font-family: 'Manrope', sans-serif;
-      font-weight: 700;
-      font-size: .78rem;
-      letter-spacing: .14em;
-      color: var(--sky);
-    }
-    .journey-motif { display: none; }
-    @media (min-width: 1200px) {
-      .journey-panel-grid { grid-template-columns: auto 1fr auto; }
-      .journey-motif { display: block; }
-      .journey-motif svg { width: clamp(180px, 20vw, 300px); height: auto; }
-    }
-    @media (max-width: 576px) {
-      .journey-panel-grid { grid-template-columns: 1fr; gap: .75rem; }
-      .journey-num { font-size: 4rem; line-height: 1; }
-    }
-    /* Static section header (matches the site's standard header treatment) */
-    .journey-head { padding: 5.5rem 0 0; background: #fff; }
-    .journey-head-inner { display: block; }
-    .journey-ticks { display: none; }
-
-    /* --- Pinned scene overrides --- */
-    .journey-pinned .journey-runway { height: 340vh; }
-    .journey-pinned .journey-sticky {
-      position: sticky;
-      top: 0;
-      height: 100vh;
-      overflow: hidden;
-    }
-    .journey-pinned .journey-track {
-      display: flex;
-      height: 100%;
-      will-change: transform;
-    }
-    .journey-pinned .journey-panel {
-      flex: 0 0 100%;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      padding: 0;
-    }
-    .journey-pinned .journey-head {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 5;
-      padding: 5.2rem 0 0;
-      background: transparent;
-      mix-blend-mode: difference;
-      pointer-events: none;
-    }
-    .journey-pinned .journey-head-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-    }
-    .journey-pinned .journey-head .eyebrow,
-    .journey-pinned .journey-head .title-rule { display: none; }
-    .journey-pinned .journey-mt {
-      font-size: 1.05rem;
-      letter-spacing: .16em;
-      line-height: 1;
-      margin: 0;
-      color: #fff;
-    }
-    .journey-pinned .journey-ticks { display: flex; gap: 10px; pointer-events: auto; }
-    .journey-tick {
-      width: 26px;
-      height: 4px;
-      border-radius: 2px;
-      border: 0;
-      padding: 0;
-      background: rgba(255, 255, 255, .35);
-      cursor: pointer;
-      transition: background .3s var(--ease-apple);
-    }
-    .journey-tick.on { background: #fff; }
-    .journey-tick:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
-
-    /* === Projects: compact secondary row === */
-    #projects .projects-compact {
-      margin-top: 1.5rem;
-      display: grid;
-      gap: 1.5rem;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    }
-    #projects .project-card-compact {
-      flex-direction: row;
-      align-items: center;
-      gap: 1.25rem;
-      padding: 1.25rem 1.5rem;
-    }
-    #projects .project-card-compact .project-card-icon { font-size: 1.35rem; }
-    #projects .project-title-sm {
-      font-family: 'Manrope', sans-serif;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: -.01em;
-      font-size: 1.05rem;
-      color: var(--navy);
-      margin: 0 0 .25rem;
-    }
-    #projects .project-card-compact p {
-      font-size: .9rem;
-      line-height: 1.55;
-      margin: 0 0 .45rem;
-    }
-    #projects .project-chip {
-      display: inline-block;
-      font-size: .72rem;
-      font-weight: 700;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-      padding: .18rem .6rem;
-      border: 1px solid rgba(60, 182, 163, .4);
-      border-radius: 999px;
-      color: var(--teal-deep);
-    }
-
-    /* === Notes (short writing) === */
-    #notes .note-list {
-      margin-top: 2.5rem;
-      display: grid;
-      gap: 1.5rem;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    }
-    #notes .note-card {
-      background: #fff;
-      border: 1px solid rgba(11, 18, 33, 0.08);
-      border-radius: 24px;
-      padding: 1.75rem;
-      display: flex;
-      flex-direction: column;
-      gap: .8rem;
-    }
-    #notes .note-pillar {
-      font-family: 'Manrope', sans-serif;
-      font-weight: 700;
-      font-size: .68rem;
-      letter-spacing: .16em;
-      text-transform: uppercase;
-      color: var(--teal-deep);
-    }
-    #notes .note-card p {
-      color: var(--navy);
-      font-size: .98rem;
-      line-height: 1.7;
-      margin: 0;
-    }
-    #notes .note-date {
-      margin-top: auto;
-      padding-top: .4rem;
-      font-size: .8rem;
-      color: var(--ink-soft);
-    }
-
-    /* === Reveal-on-scroll system (replaces AOS) === */
-    /* Default state: visible — keeps content available for SEO and no-JS users */
-    [data-reveal] { opacity: 1; transform: none; }
-
-    /* JS-enabled: prepare elements for animation */
-    .js-reveal [data-reveal] {
-      opacity: 0;
-      transition:
-        opacity var(--reveal-duration) var(--ease-apple),
-        transform var(--reveal-duration) var(--ease-apple);
-      transition-delay: var(--reveal-delay, 0ms);
-      will-change: opacity, transform;
-    }
-
-    .js-reveal [data-reveal="up"]    { transform: translateY(var(--reveal-distance)); }
-    .js-reveal [data-reveal="down"]  { transform: translateY(calc(var(--reveal-distance) * -1)); }
-    .js-reveal [data-reveal="left"]  { transform: translateX(var(--reveal-distance)); }
-    .js-reveal [data-reveal="right"] { transform: translateX(calc(var(--reveal-distance) * -1)); }
-    .js-reveal [data-reveal="scale"] { transform: scale(0.96); }
-    .js-reveal [data-reveal="fade"]  { transform: none; }
-
-    .js-reveal [data-reveal].revealed {
-      opacity: 1;
-      transform: none;
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      .js-reveal [data-reveal] {
-        opacity: 1;
-        transform: none;
-        transition: none;
-      }
-    }
-
-    /* Count-up: tabular nums prevent text width jitter while animating */
-    [data-countup] { font-variant-numeric: tabular-nums; }
-  
-    /* === Nanay case study (restored 2026-09-22) === */
-.section-title {
-      color: var(--navy);
-    }
-/* --- Nanay case study --- */
-    #nanay .nanay-hero {
-      margin-bottom: 3.5rem;
-      align-items: center;
-    }
-#nanay .nanay-hero-copy {
-      max-width: 52ch;
-    }
-#nanay .nanay-hero-copy p {
-      font-size: 1.05rem;
-      color: rgba(11, 18, 33, 0.82);
-    }
-#nanay .nanay-hero-chips {
-      display: flex;
-      flex-wrap: wrap;
-      gap: .7rem;
-      margin: 1.5rem 0 2rem;
-    }
-#nanay .nanay-chip {
-      padding: .45rem .9rem;
-      border-radius: 999px;
-      background: rgba(11, 18, 33, 0.06);
-      text-transform: uppercase;
-      letter-spacing: .08em;
-      font-size: .78rem;
-      font-weight: 600;
-    }
-#nanay .nanay-hero-cta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      align-items: center;
-    }
-#nanay .nanay-link {
-      text-decoration: none;
-      font-weight: 600;
-      color: var(--navy);
-      position: relative;
-      padding-bottom: .2rem;
-    }
-#nanay .nanay-link::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 100%;
-      height: 1px;
-      background: currentColor;
-      opacity: .3;
-      transition: opacity .25s var(--ease-apple);
-    }
-#nanay .nanay-link:hover::after {
-      opacity: 1;
-    }
-#nanay .nanay-media-stack {
-      display: flex;
-      flex-direction: column;
-      gap: 1.25rem;
-    }
-#nanay .nanay-media-stack figure {
-      border: 1px solid var(--hr);
-      border-radius: 16px;
-      overflow: hidden;
-      background: #fff;
-      box-shadow: none;
-    }
-#nanay .nanay-media-stack figure img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-#nanay .nanay-story-grid {
-      margin-top: 3.5rem;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-    }
-#nanay .nanay-story-card {
-      border: 1px solid rgba(11, 18, 33, 0.08);
-      border-radius: 20px;
-      padding: 2rem;
-      background: #fff;
-      box-shadow: none;
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-#nanay .nanay-story-card figure {
-      margin: 0;
-      border-radius: 16px;
-      overflow: hidden;
-      border: 1px solid var(--hr);
-    }
-#nanay .nanay-story-card figure img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-#nanay .nanay-story-card .nanay-panel-eyebrow {
-      font-size: .78rem;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      color: rgba(11, 18, 33, 0.6);
-    }
-#nanay .nanay-story-card h3 {
-      margin-bottom: .35rem;
-    }
-#nanay .nanay-story-list {
-      list-style: none;
-      padding: 0;
-      margin: .5rem 0 0;
-      display: grid;
-      gap: .35rem;
-      font-size: .95rem;
-      color: rgba(11, 18, 33, 0.8);
-    }
-#nanay .nanay-story-list li {
-      padding-left: 1rem;
-      position: relative;
-    }
-#nanay .nanay-story-list li::before {
-      content: "";
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: var(--teal);
-      position: absolute;
-      top: .45rem;
-      left: 0;
-    }
-#nanay .nanay-stats {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 1.5rem;
-      margin-top: 2.5rem;
-    }
-#nanay .nanay-stat-card {
-      border: 1px solid rgba(11, 18, 33, 0.08);
-      border-radius: 28px;
-      padding: 2.5rem;
-      background: #fff;
-      position: relative;
-      box-shadow: 0 22px 45px -28px rgba(10, 18, 33, 0.55);
-      display: flex;
-      flex-direction: column;
-      gap: 1.25rem;
-      min-height: 220px;
-      transition: transform .25s var(--ease-apple), box-shadow .25s var(--ease-apple);
-    }
-@media (hover: hover) and (pointer: fine) {
-  #nanay .nanay-stat-card:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 25px 55px -25px rgba(60, 182, 163, 0.28);
-      }
-}
-#nanay .nanay-card-icon {
-      font-size: 1.8rem;
-      line-height: 1;
-    }
-#nanay .nanay-card-copy {
-      font-size: 1.15rem;
-      line-height: 1.5;
-      color: var(--navy);
-      max-width: 32ch;
-    }
-#nanay .nanay-card-copy .nanay-card-accent {
-      font-weight: 700;
-      display: inline-block;
-    }
-#nanay .accent-purple { color: var(--teal); }
-#nanay .accent-orange { color: var(--teal-deep); }
-#nanay .nanay-scope {
-      display: flex;
-      flex-wrap: wrap;
-      gap: .65rem;
-      margin-top: .5rem;
-      text-transform: uppercase;
-      letter-spacing: .1em;
-      font-size: .75rem;
-      color: rgba(11, 18, 33, 0.65);
-    }
-#nanay .nanay-press {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 1.5rem;
-      margin-top: 2rem;
-    }
-#nanay .nanay-press-card {
-      border: 1px solid rgba(11, 18, 33, 0.08);
-      border-radius: 28px;
-      padding: 2.5rem;
-      background: #fff;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      gap: 1.25rem;
-      box-shadow: none;
-      transition: transform .25s var(--ease-apple), box-shadow .25s var(--ease-apple);
-    }
-#nanay .nanay-press-card:hover {
-      transform: none;
-      box-shadow: none;
-    }
-#nanay .press-source {
-      font-size: .7rem;
-      text-transform: uppercase;
-      letter-spacing: .16em;
-      font-weight: 600;
-      color: rgba(11, 18, 33, 0.5);
-      display: flex;
-      align-items: center;
-      gap: .65rem;
-    }
-#nanay .press-source span {
-      display: inline-block;
-      height: 3px;
-      width: 3px;
-      border-radius: 50%;
-      background: rgba(11, 18, 33, 0.35);
-    }
-#nanay .press-quote {
-      font-size: 1.05rem;
-      line-height: 1.75;
-      color: var(--navy);
-      margin: 0;
-      max-width: 42ch;
-    }
-#nanay .press-link {
-      display: inline-flex;
-      align-items: center;
-      gap: .35rem;
-      font-weight: 600;
-      letter-spacing: .05em;
-      padding-bottom: .35rem;
-      border-bottom: 1px solid rgba(11, 18, 33, 0.18);
-      transition: border-color .2s var(--ease-apple), color .2s var(--ease-apple);
-    }
-#nanay .press-link::after {
-      content: '→';
-      font-size: 1rem;
-      transition: transform .2s var(--ease-apple);
-    }
-#nanay .press-link:hover {
-      border-bottom-color: var(--teal);
-      color: var(--teal);
-    }
-@media (hover: hover) and (pointer: fine) {
-  #nanay .press-link:hover::after {
-        transform: translateX(4px);
-      }
-}
-/* Nanay section divider */
-    .nanay-divider {
-      height: 80px;
-      background: linear-gradient(to bottom, rgba(11,18,33,0.04), transparent 60%);
-      border-top: 1px solid rgba(11,18,33,0.08);
-      margin-top: 4rem;
-      margin-bottom: 4rem;
-    }
-#nanay .nanay-outro {
-      max-width: 58ch;
-      margin: 0 auto;
-      text-align: center;
-    }
-#nanay .nanay-outro p {
-      margin-bottom: 1.1rem;
-    }
-@media(max-width:992px) {
-  #nanay .nanay-stats {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-  #nanay .nanay-press {
-        grid-template-columns: 1fr;
-      }
-}
-@media(max-width:576px) {
-  #nanay .nanay-stats {
-        grid-template-columns: 1fr;
-      }
-}
-.accent-orange{ color: var(--teal-deep); }
-.accent-purple{ color: var(--teal); }
-.nanay-card-icon{ font-size:1.25rem; margin-bottom:.75rem; display:inline-block; }
-  </style>
+  <link rel="stylesheet" href="/assets/css/site.css?v=20261101">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -1394,10 +60,8 @@
     "publisher": {
       "@type": "Person",
       "name": "Diego Alcocer",
-      "jobTitle": "Technology and Transformation Leader",
       "sameAs": [
-        "https://www.linkedin.com/in/diego-alcocer-palacios",
-        "https://github.com/diegoalcocer"
+        "https://www.linkedin.com/in/diego-alcocer-palacios"
       ]
     }
   }
@@ -1407,18 +71,17 @@
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Diego Alcocer",
-  "jobTitle": "Technology and Transformation Leader",
-  "description": "Technology and transformation leader who builds and modernizes the core systems institutions run on, from financial systems to AI.",
+  "description": "I lead the modernization of core systems and use AI to automate the repetitive work around them.",
+  "worksFor": { "@type": "Organization", "name": "IDB Invest", "url": "https://idbinvest.org/" },
   "url": "https://diegoalcocer.github.io/",
-  "image": "https://diegoalcocer.github.io/assets/og-card.png",
+  "image": "https://diegoalcocer.github.io/assets/og-card-2026.png",
   "alumniOf": [
     { "@type": "CollegeOrUniversity", "name": "Pontificia Universidad Católica de Chile", "sameAs": "https://www.uc.cl/" },
     { "@type": "CollegeOrUniversity", "name": "Universitat de Barcelona", "sameAs": "https://www.ub.edu/" },
     { "@type": "CollegeOrUniversity", "name": "George Washington University, FinTech Program", "sameAs": "https://www.gwu.edu/" }
   ],
   "sameAs": [
-    "https://www.linkedin.com/in/diego-alcocer-palacios",
-    "https://github.com/diegoalcocer"
+    "https://www.linkedin.com/in/diego-alcocer-palacios"
   ]
 }
 </script>
@@ -1435,6 +98,7 @@
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark sticky-top nav-top bg-transparent">
     <div class="container">
+      <a class="navbar-brand brand-on-scroll" href="#">Diego Alcocer</a>
 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
         aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -1443,10 +107,8 @@
       <div class="collapse navbar-collapse" id="mainNav">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#work">Work</a></li>
           <li class="nav-item"><a class="nav-link" href="#journey">Journey</a></li>
-          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="#nanay">Case Study</a></li>
-          <li class="nav-item"><a class="nav-link" href="#process">How I Work</a></li>
           <li class="nav-item"><a class="nav-link" href="#notes">Notes</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
@@ -1462,19 +124,16 @@
           <h1 class="mega-title mega-title-hero hero-title-align text-center text-lg-start" data-reveal="down"
             style="--reveal-delay: 200ms">Diego Alcocer</h1>
           <p class="lead text-secondary text-center text-lg-start" data-reveal="up" style="--reveal-delay: 400ms">
-            Technology &amp; Transformation Leader
-          </p>
-          <p class="lead text-secondary text-center text-lg-start" data-reveal="up" style="--reveal-delay: 410ms">
-            I build and modernize the core systems institutions run on.
+            I lead the modernization of core systems and use AI to automate the repetitive work around them.
           </p>
           <p class="text-center text-lg-start" data-reveal="up" style="--reveal-delay: 420ms">
-            <a href="#journey" class="hero-arc">Oil &amp; gas → Financial systems → Human rights → AI</a>
+            <a href="#work" class="hero-arc">Core systems · Workflow automation · Applied AI</a>
           </p>
           <div class="hero-awards text-center text-lg-start" data-reveal="up" style="--reveal-delay: 450ms">
-            <i class="bi bi-trophy-fill icon" aria-hidden="true"></i> Recognized with awards from the OAS and IDB
+            <i class="bi bi-trophy-fill icon" aria-hidden="true"></i> OAS Staff Award · IDB Extra Mile Award
           </div>
           <div class="mt-4 text-center text-lg-start" data-reveal="up" style="--reveal-delay: 600ms">
-            <a href="#about" class="hero-cta mt-3">Explore my work &rarr;</a>
+            <a href="#work" class="hero-cta mt-3">Explore my work &rarr;</a>
           </div>
         </div>
       </div>
@@ -1493,8 +152,117 @@
       <hr class="title-rule">
       <div class="about-preface" data-reveal="right" style="--reveal-delay: 50ms"></div>
       <div class="lead about-lead text-center text-lg-start" data-reveal="up">
-        <p>I work in <b>technology and transformation</b> at IDB Invest, in Washington, D.C. My career has crossed unusually different worlds, oil rigs, financial systems, human rights and now AI, and what connects them is that being wrong has real consequences. That shaped how I build: I <b>own systems end to end</b>, modernize them without breaking what already works, and keep executives and engineers pointed at the same goal.</p>
-        <p>My focus now is <b>AI</b>: deploying it as a capability institutions can actually trust. I'm trained in both worlds: an <b>MSc in Data Science</b> in progress at Pontificia Universidad Católica de Chile, after an MSc in Data Management &amp; Technology Innovation in Barcelona.</p>
+        <p>I lead <b>technology programs for legal and risk operations</b> at IDB Invest in Washington, D.C. The work runs from vendor selection and contract negotiation, service levels included, to writing the terms of reference for the teams that deliver. Earlier, I built and modernized systems for the IDB and the OAS, and I started out as a field engineer in the energy industry. In all of it, accuracy mattered, so I'm careful with change, and I keep executives, vendors and engineers working toward the same goal.</p>
+        <p>I'm completing an <b>MSc in Data Science</b> at Pontificia Universidad Católica de Chile, after an MSc in Data Management &amp; Technology Innovation in Barcelona. I work in Spanish and English.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Work: three areas -->
+  <section class="py-5 section-muted section-full" id="work">
+    <div class="container">
+      <div class="eyebrow" data-reveal="right">What I do</div>
+      <h2 class="mega-title" data-reveal="right">Work</h2>
+      <hr class="title-rule">
+
+      <div class="work-block">
+        <div class="work-block-head" data-reveal="right">
+          <div class="work-block-num">01</div>
+          <h3 class="work-block-title">Core systems</h3>
+          <p class="work-block-intro">Institutions can't stop while you replace what they run on. I modernize systems in place, keep people working through the change, and leave them documented so they keep running after I move on.</p>
+        </div>
+        <div class="projects-grid">
+          <article class="project-card" data-reveal="up">
+            <div class="project-card-icon accent-amber"><i class="bi bi-currency-exchange"></i></div>
+            <div class="project-stat">
+              <span class="project-stat-label">Live migrations</span>
+              <span class="project-stat-value">3</span>
+            </div>
+            <h3 class="project-title">FRIDA · IDB</h3>
+            <p>Bond-issuance and interest-rate-swap management for a development bank's treasury. I modernized it over two years, including three authentication migrations while the system stayed in use.</p>
+            <div class="project-stack">.NET · Oracle PL/SQL · Azure AD</div>
+            <div class="project-tags">
+              <span class="badge rounded-pill">Senior Engineer</span>
+            </div>
+          </article>
+          <article class="project-card" data-reveal="up" style="--reveal-delay: 80ms">
+            <div class="project-card-icon accent-violet"><i class="bi bi-ui-checks-grid"></i></div>
+            <div class="project-stat">
+              <span class="project-stat-label">Languages</span>
+              <span class="project-stat-value">4</span>
+            </div>
+            <h3 class="project-title">eVote · OAS</h3>
+            <p>I led the redesign of the organization's internal voting system: voting, notifications and results reporting in four languages, with a full audit trail. We worked in sprints, and I started the regular feedback sessions and retrospectives, a new way of working for the team.</p>
+            <div class="project-stack">ASP.NET MVC · SQL Server · Azure</div>
+            <div class="project-tags">
+              <span class="badge rounded-pill">Project Manager</span>
+              <span class="badge rounded-pill">Senior Engineer</span>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="work-block">
+        <div class="work-block-head" data-reveal="right">
+          <div class="work-block-num">02</div>
+          <h3 class="work-block-title">Workflow automation</h3>
+          <p class="work-block-intro">I look for the manual steps that take up people's time, like copying, routing, signing and filing. I learn how the work really happens, then automate what doesn't need a person.</p>
+        </div>
+        <div class="projects-grid">
+          <article class="project-card" data-reveal="up">
+            <div class="project-card-icon accent-sky"><i class="bi bi-archive"></i></div>
+            <div class="project-stat">
+              <span class="project-stat-label">Manual deliveries</span>
+              <span class="project-stat-value">90% fewer</span>
+            </div>
+            <h3 class="project-title">Gaia · OAS</h3>
+            <p>Case management and document workflows for one of the organization's legal bodies: intake, tracking, e-signatures and archiving. I led it from design to delivery. It automated archiving and a fifth of all document signings, and cut manual deliveries by 90%.</p>
+            <div class="project-stack">.NET · SQL Server · SharePoint · Azure AD · Lucene</div>
+            <div class="project-tags">
+              <span class="badge rounded-pill">Project Manager</span>
+              <span class="badge rounded-pill">Senior Engineer</span>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="work-block">
+        <div class="work-block-head" data-reveal="right">
+          <div class="work-block-num">03</div>
+          <h3 class="work-block-title">Applied AI</h3>
+          <p class="work-block-intro">I work on projects that use AI to draft documents from templates, summarize what comes in, answer routine questions, and handle scheduling and follow-ups. People stay in charge of the decisions, and nothing goes live untested.</p>
+        </div>
+        <div class="projects-grid">
+          <article class="project-card" data-reveal="up">
+            <div class="project-card-icon accent-mint"><i class="bi bi-robot"></i></div>
+            <div class="project-stat">
+              <span class="project-stat-label">Status</span>
+              <span class="project-stat-value">In production</span>
+            </div>
+            <h3 class="project-title">Alpesbot</h3>
+            <p>An AI product I designed, built and run end to end: a conversational agent that answers customers, books appointments and sends automated follow-ups, with evaluation and adversarial testing in place. It's live with its first customer.</p>
+            <div class="project-stack">FastAPI · LlamaIndex</div>
+            <div class="project-tags">
+              <span class="badge rounded-pill">Founder</span>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="work-block work-block-also">
+        <div class="work-block-head" data-reveal="right">
+          <h3 class="work-block-title">Also</h3>
+        </div>
+        <div class="projects-compact">
+          <article class="project-card project-card-compact" data-reveal="up">
+            <div class="project-card-icon accent-rose"><i class="bi bi-heart-pulse"></i></div>
+            <div>
+              <h3 class="project-title-sm">Nanay</h3>
+              <p>A volunteer platform I co-founded and led during the pandemic, from the technology to the teams around it. <a href="/nanay/" class="project-link">Read the story &rarr;</a></p>
+              <span class="project-chip">1,000+ helpers</span>
+            </div>
+          </article>
+        </div>
       </div>
     </div>
   </section>
@@ -1519,9 +287,9 @@
             <div class="container journey-panel-grid">
               <div class="journey-num" aria-hidden="true">01</div>
               <div>
-                <div class="journey-eyebrow">The field · Amazon basin</div>
+                <div class="journey-eyebrow">The field · Energy</div>
                 <h3 class="journey-chapter-title">Reading the earth</h3>
-                <p class="journey-body">Measurement-while-drilling engineering for Halliburton, deep in the jungle. Three years reading live data from two kilometres down, where a bad call cost days of rig time and there was no way to take it back.</p>
+                <p class="journey-body">Measurement-while-drilling engineering for Halliburton. Three years reading live data from two kilometres down, where every decision had to be right the first time.</p>
                 <div class="journey-years">2010 – 2014</div>
               </div>
               <div class="journey-motif" aria-hidden="true">
@@ -1541,10 +309,10 @@
             <div class="container journey-panel-grid">
               <div class="journey-num" aria-hidden="true">02</div>
               <div>
-                <div class="journey-eyebrow">The institutions · Washington, D.C.</div>
+                <div class="journey-eyebrow">The institutions</div>
                 <h3 class="journey-chapter-title">Systems people depend on</h3>
-                <p class="journey-body">The case-management backbone the Inter-American Commission on Human Rights runs on. A treasury platform behind a development bank's bond and swap operation. Modernizing what can't afford to break.</p>
-                <div class="journey-years">2014 – NOW</div>
+                <p class="journey-body">Treasury systems at the IDB, consulting at ThoughtWorks, then six years at the OAS. The job each time: change the system without stopping the work.</p>
+                <div class="journey-years">2014 – 2025</div>
               </div>
               <div class="journey-motif" aria-hidden="true">
                 <svg viewBox="0 0 320 200" fill="none">
@@ -1567,7 +335,7 @@
               <div>
                 <div class="journey-eyebrow">The builder</div>
                 <h3 class="journey-chapter-title">Owning it end to end</h3>
-                <p class="journey-body">Nanay, built during COVID to match volunteers with people in need. More than 1,000 signed up, with press coverage in El Universo and Vistazo. Then Alpesbot. Building, pricing, and learning to wind things down well.</p>
+                <p class="journey-body">Nanay, a volunteer platform built during COVID. Then Alpesbot, now live with its first customer. Building, pricing, and learning to wind things down well.</p>
                 <div class="journey-years">2020 – NOW</div>
               </div>
               <div class="journey-motif" aria-hidden="true">
@@ -1587,9 +355,9 @@
             <div class="container journey-panel-grid">
               <div class="journey-num" aria-hidden="true">04</div>
               <div>
-                <div class="journey-eyebrow">AI · the current chapter</div>
-                <h3 class="journey-chapter-title">Making it trustworthy</h3>
-                <p class="journey-body">An MSc in Data Science at Universidad Católica de Chile, taken mid-career on purpose. The work now: deploying AI as a capability institutions can actually trust.</p>
+                <div class="journey-eyebrow">The current chapter</div>
+                <h3 class="journey-chapter-title">Putting AI to work</h3>
+                <p class="journey-body">Now at IDB Invest, with a data-science master's taken mid-career on purpose. AI is part of the work, at the bank and in my own product.</p>
                 <div class="journey-years">NOW</div>
               </div>
               <div class="journey-motif" aria-hidden="true">
@@ -1613,243 +381,6 @@
     </div>
   </section>
 
-  <!-- Projects Section -->
-  <section class="py-5 section-muted section-full" id="projects">
-    <div class="container">
-      <div class="eyebrow" data-reveal="right">Work</div>
-      <h2 class="mega-title" data-reveal="right">Projects</h2>
-      <hr class="title-rule">
-      <div class="projects-grid">
-        <article class="project-card" data-reveal="up">
-          <div class="project-card-icon accent-sky"><i class="bi bi-archive"></i></div>
-          <div class="project-stat">
-            <span class="project-stat-label">Result</span>
-            <span class="project-stat-value">95% faster</span>
-          </div>
-          <h3 class="project-title">Gaia · OAS</h3>
-          <p>The case-management backbone the Inter-American Commission on Human Rights uses for petitions, precautionary measures, and court cases across the Americas. I owned it from design to delivery. It cut petition archiving by 95%, manual deliveries by 90%, and automated a fifth of all signings.</p>
-          <div class="project-stack">.NET · SQL Server · SharePoint · Azure AD · Lucene</div>
-          <div class="project-tags">
-            <span class="badge rounded-pill">Senior Engineer</span>
-            <span class="badge rounded-pill">Project Manager</span>
-          </div>
-        </article>
-        <article class="project-card" data-reveal="up" style="--reveal-delay: 80ms">
-          <div class="project-card-icon accent-amber"><i class="bi bi-currency-exchange"></i></div>
-          <div class="project-stat">
-            <span class="project-stat-label">Delivery</span>
-            <span class="project-stat-value">Solo · 2 years</span>
-          </div>
-          <h3 class="project-title">FRIDA · IDB</h3>
-          <p>Bond-issuance and interest-rate-swap management for a development bank's treasury funding operation, about twenty domain entities. I modernized it largely solo over two years, including three authentication migrations on a live system.</p>
-          <div class="project-stack">.NET · Oracle PL/SQL · Azure AD</div>
-          <div class="project-tags">
-            <span class="badge rounded-pill">Senior Engineer</span>
-          </div>
-        </article>
-        <article class="project-card" data-reveal="up" style="--reveal-delay: 160ms">
-          <div class="project-card-icon accent-mint"><i class="bi bi-robot"></i></div>
-          <div class="project-stat">
-            <span class="project-stat-label">Status</span>
-            <span class="project-stat-value">In beta</span>
-          </div>
-          <h3 class="project-title">Alpesbot</h3>
-          <p>An AI assistant for service businesses, with tool orchestration, evaluation loops, and guardrails built in.</p>
-          <div class="project-stack">FastAPI · LangChain · LlamaIndex</div>
-          <div class="project-tags">
-            <span class="badge rounded-pill">Founder</span>
-          </div>
-        </article>
-      </div>
-      <div class="projects-compact">
-        <article class="project-card project-card-compact" data-reveal="up" style="--reveal-delay: 240ms">
-          <div class="project-card-icon accent-violet"><i class="bi bi-ui-checks-grid"></i></div>
-          <div>
-            <h3 class="project-title-sm">eVote · OAS</h3>
-            <p>Secure internal voting for proposals, sessions, and results: role-based access, full audit trail, four languages.</p>
-            <span class="project-chip">Zero disputes</span>
-          </div>
-        </article>
-        <article class="project-card project-card-compact" data-reveal="up" style="--reveal-delay: 300ms">
-          <div class="project-card-icon accent-rose"><i class="bi bi-heart-pulse"></i></div>
-          <div>
-            <h3 class="project-title-sm">Nanay</h3>
-            <p>Pandemic platform matching volunteers with people in need. The story lives in chapter 03 above.</p>
-            <span class="project-chip">1,000+ helpers</span>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-<section class="py-5 bg-white section-full" id="nanay">
-    <div class="container">
-      <div class="eyebrow text-center text-lg-start" data-reveal="right">Technology for empathy.</div>
-      <h2 class="mega-title text-center text-lg-start" data-reveal="right" style="--reveal-delay: 50ms">Nanay</h2>
-      <hr class="title-rule">
-
-      <div class="row g-4 g-lg-5 nanay-hero" data-reveal="up">
-        <div class="col-lg-6">
-          <div class="nanay-hero-copy">
-            <p>When the world stopped, connection became essential. We created Nanay: a web platform that matched people asking for help with volunteers who could safely deliver it.</p>
-            <p>We designed every flow for clarity under pressure: categorized requests, verifiable identities, and transparent follow-ups so regulators, donors, and communities could trust the outcome.</p>
-            <div class="nanay-hero-chips">
-              <span class="nanay-chip">Mutual aid</span>
-              <span class="nanay-chip">Geo-located</span>
-              <span class="nanay-chip">Verified volunteers</span>
-            </div>
-            <div class="nanay-hero-cta">
-              
-              <a class="nanay-link" href="https://www.eluniverso.com/larevista/2020/05/12/nota/7839771/nanay-app-ayuda-creada-dos-ecuatorianos-contra-coronavirus/" target="_blank" rel="noopener noreferrer">See it in the news</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-5 offset-lg-1">
-          <div class="nanay-media-stack">
-            <figure class="nanay-media-primary m-0">
-              <img src="/assets/images/nanay_joinus.jpg" alt="Nanay platform join-us screen inviting volunteers to participate" width="1080" height="1080" loading="lazy" decoding="async">
-              <figcaption class="visually-hidden">Screenshot of the Nanay platform showing a join-us call to action.</figcaption>
-            </figure>
-          </div>
-        </div>
-      </div>
-
-      <div class="nanay-story-grid" data-reveal="up" style="--reveal-delay: 100ms">
-        <article class="nanay-story-card">
-          <div class="nanay-panel-eyebrow">Meaning</div>
-          <h3>Why we called it Nanay</h3>
-          <p>In Quichua, Nanay means pain. In other languages, it evokes a caring mother. We embraced both ideas: naming a platform that listens to each story and responds with dignity.</p>
-          <figure>
-            <img src="/assets/images/nanay_meaning.jpg" alt="Meaning of Nanay illustrated with caring hands supporting each other" width="1080" height="1080" loading="lazy" decoding="async">
-            <figcaption class="visually-hidden">Photograph illustrating the meaning of Nanay with supportive hands.</figcaption>
-          </figure>
-        </article>
-        <article class="nanay-story-card">
-          <div class="nanay-panel-eyebrow">Operations</div>
-          <h3>More than an app</h3>
-          <p>Nanay ran as an ecosystem: volunteers, donors, and on-call coordinators working in sync. We verified helpers, routed requests by proximity and urgency, and kept every case transparent from start to finish.</p>
-          <figure>
-            <img src="/assets/images/nanay_historias.jpg" alt="Volunteer stories highlighted within the Nanay community platform" width="1080" height="1080" loading="lazy" decoding="async">
-            <figcaption class="visually-hidden">Screenshot showcasing volunteer stories shared through Nanay.</figcaption>
-          </figure>
-          <div class="nanay-scope">
-            <span>Volunteers</span>
-            <span>Logistics</span>
-            <span>Campaigns</span>
-            <span>Operations</span>
-            <span>Engineering</span>
-          </div>
-        </article>
-      </div>
-
-      <div class="mt-5 py-3" data-reveal="up" style="--reveal-delay: 150ms">
-        <h3 class="section-title mb-3">The impact</h3>
-        <p>In a few months, more than <strong>1,000</strong> people joined, <strong>250+</strong> families received essentials, and our Christmas drive supported <strong>90+</strong> families.</p>
-        <div class="nanay-stats">
-          <div class="nanay-stat-card" data-reveal="up">
-            <div class="nanay-card-icon accent-purple"><i class="bi bi-people" aria-hidden="true"></i></div>
-            <p class="nanay-card-copy">Connected with <span class="nanay-card-accent accent-purple" data-countup>1,000+</span> registered users ready to help.</p>
-          </div>
-          <div class="nanay-stat-card" data-reveal="up" style="--reveal-delay: 100ms">
-            <div class="nanay-card-icon accent-orange"><i class="bi bi-heart" aria-hidden="true"></i></div>
-            <p class="nanay-card-copy">Brought essentials to <span class="nanay-card-accent accent-orange" data-countup>250+</span> families: food, medicine, and care.</p>
-          </div>
-          <div class="nanay-stat-card" data-reveal="up" style="--reveal-delay: 200ms">
-            <div class="nanay-card-icon accent-teal"><i class="bi bi-gift" aria-hidden="true"></i></div>
-            <p class="nanay-card-copy">Delivered holiday kits to <span class="nanay-card-accent accent-teal" data-countup>90+</span> families through community donations.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="my-5" data-reveal="up" style="--reveal-delay: 250ms">
-        <h3 class="section-title mb-3">Press</h3>
-        <div class="nanay-press">
-          <div class="nanay-press-card">
-            <div class="press-icon"><i class="bi bi-newspaper" aria-hidden="true"></i></div>
-            <span class="press-source">El Universo <span></span> May 2020</span>
-            <p class="press-quote mb-0">Nanay, una app de ayuda creada por dos ecuatorianos contra el coronavirus.</p>
-            <a class="hero-cta press-link" href="https://www.eluniverso.com/larevista/2020/05/12/nota/7839771/nanay-app-ayuda-creada-dos-ecuatorianos-contra-coronavirus/" target="_blank" rel="noopener noreferrer">Read the article</a>
-          </div>
-          <div class="nanay-press-card">
-            <div class="press-icon"><i class="bi bi-newspaper" aria-hidden="true"></i></div>
-            <span class="press-source">Vistazo <span></span> 2020</span>
-            <p class="press-quote mb-0">Una plataforma para unir a personas con necesidad y voluntarios dispuestos a ayudar.</p>
-            <a class="hero-cta press-link" href="https://www.vistazo.com/actualidad/nacional/dos-ecuatorianos-crean-una-plataforma-de-ayuda-durante-la-pandemia-HWVI181556" target="_blank" rel="noopener noreferrer">Read the article</a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <section class="section-muted section-full" id="process">
-    <div class="container">
-      <div class="eyebrow text-center text-lg-start" data-reveal="right">Leadership</div>
-      <h2 class="mega-title text-center text-lg-start" data-reveal="right">How I Work</h2>
-      <hr class="title-rule">
-      <div class="process-rows" data-reveal="up">
-        <div class="process-row">
-          <div class="process-number" data-reveal="right">001</div>
-          <div data-reveal="left">
-            <div class="process-title">I build for correctness.</div>
-            <p class="process-note">Audit trails, validation, and tests are not overhead. On the systems I've built, from treasury accounting to human-rights records, a wrong entry has consequences for real people.</p>
-          </div>
-        </div>
-
-        <div class="process-row">
-          <div class="process-number" data-reveal="right">002</div>
-          <div data-reveal="left">
-            <div class="process-title">I modernize without breaking what works.</div>
-            <p class="process-note">Institutions can't stop running while you upgrade them. I've replaced core systems and migrated authentication on live platforms, sequencing change so the lights stay on the whole way through.</p>
-          </div>
-        </div>
-
-        <div class="process-row">
-          <div class="process-number" data-reveal="right">003</div>
-          <div data-reveal="left">
-            <div class="process-title">I treat AI as a capability to govern, not a feature to ship.</div>
-            <p class="process-note">AI earns its place when it changes how work gets done and you can measure the result. I build evaluation and guardrails in from the start, because an assistant you can't trust is worse than none.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <hr class="hr-hairline">
-
-
-
-
-  <!-- Achievements -->
-  <section class="py-5 bg-light section-full" id="achievements">
-    <div class="container">
-      <div class="eyebrow" data-reveal="right">Recognition</div>
-      <h2 class="mega-title" data-reveal="right">Recognition</h2>
-      <hr class="title-rule">
-      <div class="impact-grid">
-        <div class="impact-tile awards-tile" id="awardsTile" data-reveal="up">
-          <div class="kpi accent-gold"><i class="bi bi-trophy-fill" aria-hidden="true"></i></div>
-          <div class="label">Institutional recognition</div>
-          <div class="note">OAS Staff Award for High-Quality Consulting Services</div>
-          <div class="note">IDB Extra Mile Award</div>
-          <div class="note accent-teal">For innovation and delivery.</div>
-        </div>
-        <div class="impact-tile tile-experience" data-reveal="up" style="--reveal-delay: 80ms">
-          <div class="kpi-icon accent-teal"><i class="bi bi-person-gear" aria-hidden="true"></i></div>
-          <div class="kpi" data-countup>10+ yrs</div>
-          <div class="label">Experience</div>
-          <div class="note">Engineering, product, and delivery.</div>
-        </div>
-        <div class="impact-tile tile-languages" data-reveal="up" style="--reveal-delay: 160ms">
-          <div class="kpi-icon accent-blue"><i class="bi bi-translate" aria-hidden="true"></i></div>
-          <div class="kpi">EN · ES</div>
-          <div class="label">Languages</div>
-          <div class="note">Native Spanish, fluent English.</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- Notes: short writing -->
   <section class="py-5 section-muted" id="notes">
     <div class="container">
@@ -1859,52 +390,19 @@
       <div class="note-list">
         <article class="note-card" data-reveal="up">
           <div class="note-pillar">The instrument and the read</div>
-          <p>In my twenties I worked on oil rigs deep in the Amazon, reading the data as we drilled. Everything out there was noisy: the jungle, the rig, even the data. So you followed the procedure and checked every detail. Some of those procedures had saved lives.</p>
+          <p>In my twenties I was a field engineer in the energy industry, reading drilling data in real time. The work demanded precision and quick, well-founded decisions. That's where I learned to trust a clear process, check every detail, and then make the call.</p>
           <div class="note-date">June 2026</div>
         </article>
         <article class="note-card" data-reveal="up" style="--reveal-delay: 80ms">
           <div class="note-pillar">Replacing systems</div>
-          <p>I've spent years replacing systems people depend on. The hard part is never the code. The old system encodes how people actually work; the new one encodes how someone thinks they should.</p>
+          <p>I've spent years replacing systems people depend on. The old system holds years of knowledge about how the work gets done, and the new one has to capture it before anything is switched off.</p>
           <div class="note-date">July 2026</div>
         </article>
         <article class="note-card" data-reveal="up" style="--reveal-delay: 160ms">
           <div class="note-pillar">Learning mid-career</div>
-          <p>I'm doing a data-science master's at forty, while working full time. Problem sets on weeknights, exams between releases. I'd forgotten what it feels like to be the slowest person in the room.</p>
+          <p>I'm doing a data-science master's while working full time. Problem sets on weeknights, exams between releases. It keeps me humble, and it keeps me current.</p>
           <div class="note-date">July 2026</div>
         </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="py-5 bg-white section-full" id="testimonials">
-    <div class="container">
-      <div class="eyebrow" data-reveal="right">What others say</div>
-      <h2 class="mega-title" data-reveal="right">Testimonials</h2>
-      <hr class="title-rule">
-      <div class="testi-list" data-reveal="up">
-        <div class="testi-item" data-reveal="up" style="--reveal-delay: 50ms">
-          <figure class="testi-figure">
-            <blockquote class="testi-quote">
-              Diego worked under my supervision in a project to develop an accounting interface between the Summit Treasury System and the ERP SAP. He is an outstanding developer. His work is solid and he performs in a timely manner. He is the type of developer that can design both the backbone of a system as well as the look and feel of it. His GUI designs were very visually appealing and easy to use. I was fortunate to have Diego in my team and highly recommend him for any position or project where his valuable skills can be put to use.
-            </blockquote>
-            <figcaption class="testi-meta">
-              Ivo Maric
-              <span class="role">Systems Analyst, Direct Manager · November 2022</span>
-            </figcaption>
-          </figure>
-          <hr class="testi-divider">
-        </div>
-        <div class="testi-item" data-reveal="up" style="--reveal-delay: 100ms">
-          <figure class="testi-figure">
-            <blockquote class="testi-quote">
-              Diego was a wonderful student of mine and he will be a great asset on any team he joins. He consistently asked insightful questions during class and was always looking for ways to apply what he was learning to outside projects. Not only did he demonstrate technical skills that will help him succeed in the workplace, he also showed leadership and communication skills that will take him far. I strongly recommend Diego!
-            </blockquote>
-            <figcaption class="testi-meta">
-              Alexi Himarios
-              <span class="role">Technical Architect, Course Instructor, GW FinTech Program · November 2022</span>
-            </figcaption>
-          </figure>
-        </div>
       </div>
     </div>
   </section>
@@ -1916,12 +414,11 @@
       <h2 class="mega-title" data-reveal="up">Let’s Connect</h2>
       <hr class="title-rule">
       <p data-reveal="up" style="max-width:52ch; margin: 0 auto 0.5rem;">
-        Open to senior technology leadership roles, technical advisory work, and collaborations, especially where AI meets institutional-scale problems.
+        Happy to talk about modernizing core systems or putting AI to work on everyday tasks.
       </p>
-      <p class="text-muted" data-reveal="up" style="font-size:.9rem; margin-bottom:1.5rem;">Washington, D.C. area &middot; Available for remote and hybrid roles</p>
+      <p class="text-muted" data-reveal="up" style="font-size:.9rem; margin-bottom:1.5rem;">Washington, D.C.</p>
       <div class="d-flex justify-content-center gap-3 mt-3 contact-buttons" data-reveal="up" style="--reveal-delay: 100ms">
         <a href="https://linkedin.com/in/diego-alcocer-palacios" class="btn btn-outline-dark" rel="noopener noreferrer" target="_blank"><i class="bi bi-linkedin"></i> LinkedIn</a>
-        <a href="https://github.com/diegoalcocer" class="btn btn-outline-dark" rel="noopener noreferrer" target="_blank"><i class="bi bi-github"></i> GitHub</a>
       </div>
     </div>
   </section>
@@ -1931,222 +428,16 @@
     <small>© 2026 Diego Alcocer.
       <span class="ms-3">
         <a href="#about" class="text-white text-decoration-none">About</a> ·
+        <a href="#work" class="text-white text-decoration-none">Work</a> ·
         <a href="#journey" class="text-white text-decoration-none">Journey</a> ·
-        <a href="#projects" class="text-white text-decoration-none">Projects</a> ·
         <a href="#notes" class="text-white text-decoration-none">Notes</a> ·
         <a href="#contact" class="text-white text-decoration-none">Contact</a>
       </span>
     </small>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    // === Reveal-on-scroll observer (replaces AOS) ===
-    (function() {
-      const reveals = document.querySelectorAll('[data-reveal]');
-      if (!reveals.length) return;
-      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      if (reduceMotion || !('IntersectionObserver' in window)) {
-        reveals.forEach(el => el.classList.add('revealed'));
-        return;
-      }
-      const io = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('revealed');
-            io.unobserve(entry.target);
-          }
-        });
-      }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
-      reveals.forEach(el => io.observe(el));
-    })();
-
-    // === Number count-up on scroll-into-view ===
-    (function() {
-      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      const targets = document.querySelectorAll('[data-countup]');
-      if (!targets.length || reduceMotion || !('IntersectionObserver' in window)) return;
-
-      function animateValue(el, target, duration, formatter) {
-        const start = performance.now();
-        function frame(now) {
-          const t = Math.min(1, (now - start) / duration);
-          const eased = 1 - Math.pow(1 - t, 3);
-          el.textContent = formatter(Math.round(target * eased));
-          if (t < 1) requestAnimationFrame(frame);
-        }
-        requestAnimationFrame(frame);
-      }
-
-      function setupCountUp(el) {
-        const original = el.textContent.trim();
-        const match = original.match(/^(\D*?)([\d,]+)(.*)$/);
-        if (!match) return false;
-        const [, prefix, numStr, suffix] = match;
-        const target = parseInt(numStr.replace(/,/g, ''), 10);
-        if (isNaN(target)) return false;
-        const hasComma = numStr.includes(',');
-        const formatter = (v) => `${prefix}${hasComma ? v.toLocaleString() : v}${suffix}`;
-        el.textContent = formatter(0);
-        animateValue(el, target, 1500, formatter);
-        return true;
-      }
-
-      const io = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            setupCountUp(entry.target);
-            io.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.4 });
-
-      targets.forEach(el => io.observe(el));
-    })();
-
-    // Toggle navbar background on scroll
-    const nav = document.querySelector('.navbar');
-    const hero = document.querySelector('.hero');
-    function onScroll() {
-      const offset = window.scrollY || window.pageYOffset;
-      if (offset > (hero.offsetHeight - 80)) { nav.classList.add('nav-scrolled'); }
-      else { nav.classList.remove('nav-scrolled'); }
-    }
-    document.addEventListener('scroll', onScroll, { passive: true });
-    onScroll();
-
-    // Awards tile: one-time gentle ping when entering viewport
-    (function(){
-      var el = document.getElementById('awardsTile');
-      if (!el) return;
-      var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      if (!reduceMotion && 'IntersectionObserver' in window) {
-        var seen = false;
-        var io = new IntersectionObserver(function(entries){
-          entries.forEach(function(entry){
-            if (!seen && entry.isIntersecting) {
-              seen = true;
-              el.classList.add('ping');
-              setTimeout(function(){ el.classList.remove('ping'); }, 1000);
-              io.disconnect();
-            }
-          });
-        }, { threshold: 0.5 });
-        io.observe(el);
-      }
-    })();
-
-    // === Journey: pinned horizontal scene (≥992px, motion allowed) ===
-    // Scroll is never intercepted — the track position is a pure function of
-    // scroll progress through the runway. Below 992px or under reduced motion
-    // the section stays a static stack (no .journey-pinned class).
-    (function(){
-      var section = document.getElementById('journey');
-      if (!section) return;
-      var runway = section.querySelector('.journey-runway');
-      var sticky = section.querySelector('.journey-sticky');
-      var track = section.querySelector('.journey-track');
-      var ticksWrap = section.querySelector('.journey-ticks');
-      var panels = track.children;
-      var n = panels.length;
-      var wideMq = window.matchMedia('(min-width: 992px)');
-      var motionMq = window.matchMedia('(prefers-reduced-motion: reduce)');
-      var enabled = false, raf = null, ticks = [];
-
-      var chapterNames = Array.prototype.map.call(
-        section.querySelectorAll('.journey-chapter-title'),
-        function (el) { return el.textContent.trim(); }
-      );
-
-      function jump(idx) {
-        var top = runway.getBoundingClientRect().top + window.scrollY;
-        var span = runway.offsetHeight - window.innerHeight;
-        window.scrollTo({
-          top: top + span * idx / (n - 1) + 1,
-          behavior: motionMq.matches ? 'auto' : 'smooth'
-        });
-      }
-
-      for (var i = 0; i < n; i++) {
-        (function (idx) {
-          var b = document.createElement('button');
-          b.className = 'journey-tick' + (idx === 0 ? ' on' : '');
-          b.type = 'button';
-          b.setAttribute('aria-label', 'Chapter ' + (idx + 1) + ': ' + chapterNames[idx]);
-          b.addEventListener('click', function () { jump(idx); });
-          ticksWrap.appendChild(b);
-          ticks.push(b);
-        })(i);
-      }
-
-      function setTicks(active) {
-        for (var i = 0; i < ticks.length; i++) ticks[i].classList.toggle('on', i === active);
-      }
-
-      function update() {
-        raf = null;
-        if (!enabled) return;
-        var vh = window.innerHeight;
-        var rect = runway.getBoundingClientRect();
-        if (rect.bottom < 0 || rect.top > vh) return;
-        var span = runway.offsetHeight - vh;
-        var p = Math.min(1, Math.max(0, -rect.top / span));
-        var pos = p * (n - 1);
-        track.style.transform = 'translate3d(' + (-pos * sticky.clientWidth).toFixed(1) + 'px,0,0)';
-        setTicks(Math.round(pos));
-      }
-
-      function onScroll() { if (!raf) raf = requestAnimationFrame(update); }
-
-      function evaluate() {
-        var want = wideMq.matches && !motionMq.matches;
-        if (want !== enabled) {
-          enabled = want;
-          section.classList.toggle('journey-pinned', want);
-          if (!want) track.style.transform = '';
-        }
-        if (enabled) onScroll();
-      }
-
-      window.addEventListener('scroll', onScroll, { passive: true });
-      window.addEventListener('resize', evaluate);
-      if (wideMq.addEventListener) {
-        wideMq.addEventListener('change', evaluate);
-        motionMq.addEventListener('change', evaluate);
-      }
-      evaluate();
-    })();
-
-    // === Scrollspy: highlight the nav link for the section in view ===
-    (function(){
-      var links = document.querySelectorAll('.navbar .nav-link[href^="#"]');
-      if (!links.length) return;
-      var pairs = [];
-      links.forEach(function (link) {
-        var target = document.getElementById(link.getAttribute('href').slice(1));
-        if (target) pairs.push({ link: link, target: target });
-      });
-      var raf = null;
-      function update() {
-        raf = null;
-        var probe = window.scrollY + window.innerHeight * 0.35;
-        var current = null;
-        pairs.forEach(function (p) {
-          if (p.target.getBoundingClientRect().top + window.scrollY <= probe) current = p;
-        });
-        pairs.forEach(function (p) {
-          var on = p === current;
-          p.link.classList.toggle('active', on);
-          if (on) p.link.setAttribute('aria-current', 'true');
-          else p.link.removeAttribute('aria-current');
-        });
-      }
-      window.addEventListener('scroll', function () {
-        if (!raf) raf = requestAnimationFrame(update);
-      }, { passive: true });
-      update();
-    })();
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+  <script src="/assets/js/site.js?v=20261101"></script>
 </body>
 
 </html>
