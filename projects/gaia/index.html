@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1H1FXFEMLF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-1H1FXFEMLF');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Gaia · Diego Alcocer</title>
+  <meta name="description" content="Gaia: replacing a legal case system at the OAS while people kept using it.">
+  <meta name="robots" content="index,follow">
+  <meta name="author" content="Diego Alcocer">
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <link rel="alternate icon" type="image/png" href="/assets/favicon-64.png">
+  <link rel="canonical" href="https://diegoalcocer.github.io/projects/gaia/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Diego Alcocer">
+  <meta property="og:title" content="Gaia · Diego Alcocer">
+  <meta property="og:description" content="Gaia: replacing a legal case system at the OAS while people kept using it.">
+  <meta property="og:url" content="https://diegoalcocer.github.io/projects/gaia/">
+  <meta property="og:image" content="https://diegoalcocer.github.io/assets/og-card-2026.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Gaia · Diego Alcocer">
+  <meta name="twitter:description" content="Gaia: replacing a legal case system at the OAS while people kept using it.">
+  <meta name="twitter:image" content="https://diegoalcocer.github.io/assets/og-card-2026.png">
+
+  <!-- Performance & preconnects -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+  <meta name="theme-color" content="#0b1221">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" integrity="sha384-XGjxtQfXaH2tnPFa9x+ruJTuLE3Aa6LhHSWRr1XeTyhezb4abCG4ccI5AkVDxqC+" crossorigin="anonymous">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/site.css?v=20261101c">
+</head>
+
+<body class="bg-body-tertiary">
+
+  <script>
+    // Add .js-reveal immediately so [data-reveal] elements start hidden when JS is enabled.
+    // Place at top of <body> to apply before content paints.
+    document.documentElement.classList.add('js-reveal');
+  </script>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top nav-top bg-transparent">
+    <div class="container">
+      <a class="navbar-brand" href="/">Diego Alcocer</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+        aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="/#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="/#work">Work</a></li>
+          <li class="nav-item"><a class="nav-link" href="/#journey">Journey</a></li>
+          <li class="nav-item"><a class="nav-link" href="/#notes">Notes</a></li>
+          <li class="nav-item"><a class="nav-link" href="/#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="py-5 bg-white" id="case">
+    <div class="container">
+      <a href="/#work" class="hero-arc nanay-back" data-reveal="right">&larr; Diego Alcocer</a>
+      <div class="eyebrow" data-reveal="right">OAS · 2019 – 2025</div>
+      <h2 class="mega-title" data-reveal="right" style="--reveal-delay: 50ms">Gaia</h2>
+      <hr class="title-rule">
+      <p class="case-lead" data-reveal="up">Replacing a legal case system while people kept using it.</p>
+      <p class="case-role" data-reveal="up">Senior engineer and project manager</p>
+
+      <article class="case-body" data-reveal="up" style="--reveal-delay: 100ms">
+        <p>Gaia is the case management and document workflow system for one of the OAS's legal bodies. Staff use it every day to open cases, move them through procedural steps, generate and sign documents, and archive them. It replaced two older systems. I led it from design to delivery for six years.</p>
+
+        <h3>How I ran it</h3>
+        <p>I designed the workflow engine so that every step leaves a record: it checks who may take each step, logs who did what and when, and rolls back cleanly if something fails. New features shipped behind switches, so we could test them, roll them out gradually or turn them off without redeploying a system people relied on daily.</p>
+        <p>Usage data and user feedback set the priorities: the slowest modules first, then simpler screens. Before building, we reviewed designs with real users, and a monthly bulletin kept several departments informed about what had changed, what was coming and what the data showed.</p>
+
+        <h3>What changed</h3>
+        <p>Archiving and a fifth of all document signings were automated, manual deliveries fell by 90%, and page performance scores rose from about 40 to over 90. When I left, the team had the documentation, tests and a written handover, so the system didn't depend on me.</p>
+
+        <h3>What I took from it</h3>
+        <p>Keep the backbone simple, and make the work visible. Delivery that nobody hears about loses much of its value.</p>
+      </article>
+
+      <a href="/#work" class="hero-arc nanay-back">&larr; Diego Alcocer</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-center text-white py-3">
+    <small>© 2026 Diego Alcocer.
+      <span class="ms-3">
+        <a href="/#about" class="text-white text-decoration-none">About</a> ·
+        <a href="/#work" class="text-white text-decoration-none">Work</a> ·
+        <a href="/#journey" class="text-white text-decoration-none">Journey</a> ·
+        <a href="/#notes" class="text-white text-decoration-none">Notes</a> ·
+        <a href="/#contact" class="text-white text-decoration-none">Contact</a>
+      </span>
+    </small>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+  <script src="/assets/js/site.js?v=20261101"></script>
+</body>
+
+</html>

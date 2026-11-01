@@ -1429,3 +1429,48 @@ html { scroll-padding-top: 76px; }
   opacity: 1;
   pointer-events: auto;
 }
+
+/* Today at IDB Invest: prose instead of cards, same two-column layout */
+#work .work-today-body p {
+  color: var(--navy);
+  font-size: 1.08rem;
+  line-height: 1.75;
+  max-width: 62ch;
+  margin: 0 0 1rem;
+}
+#work .work-today-body p:last-child { margin-bottom: 0; }
+
+/* Case pages (Gaia) */
+#case .case-lead {
+  font-size: 1.3rem;
+  line-height: 1.5;
+  color: var(--ink-soft);
+  max-width: 48ch;
+  margin: 0 0 .75rem;
+}
+#case .case-role {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;
+  font-size: .74rem;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--teal-deep);
+  margin: 0;
+}
+#case .case-body { max-width: 64ch; margin-top: 2.5rem; }
+#case .case-body h3 {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -.01em;
+  font-size: clamp(1.1rem, 1.8vw, 1.4rem);
+  color: var(--navy);
+  margin: 2.25rem 0 .75rem;
+}
+#case .case-body p {
+  font-size: 1.08rem;
+  line-height: 1.75;
+  color: var(--navy);
+  margin: 0 0 1rem;
+}
+#case .container > .nanay-back:last-child { margin-top: 2.5rem; margin-bottom: 0; }
